@@ -52,6 +52,8 @@ This project strictly satisfies all requirements specified in **Project 23: Hosp
 - **Supported Classifiers**:
   - **Decision Tree Classifier** *(INT315 Primary Required Model)*
   - **Random Forest Classifier** *(Benchmark Ensemble)*
+  - **Gradient Boosting Classifier** *(Boosting Benchmark)*
+  - **Extra Trees Classifier** *(Ensemble Benchmark)*
   - **Logistic Regression** *(Linear Baseline)*
 - **Live Hyperparameter Tuning**: Adjust Max Tree Depth (2–16), Min Samples Split (5–100), and Class Weighting.
 - **Dynamic Decision Threshold Slider**: Real-time threshold tuning (0.10 to 0.90) with an interactive **Confusion Matrix Heatmap** and **ROC Curves** that update dynamically without requiring page reloads.
@@ -87,6 +89,8 @@ Evaluated on held-out test partitions (stratified split, positive class: readmit
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Weighted Decision Tree (Required)** | **0.45** | **0.6474** | **66.62%** | **16.49%** | **0.2566** | **60.57%** |
 | **Random Forest Benchmark** | **0.45** | **0.6631** | **75.74%** | **15.31%** | **0.2543** | **53.84%** |
+| **Gradient Boosting Benchmark** | **0.45** | **0.6631** | **69.26%** | **15.65%** | **0.2563** | **57.42%** |
+| **Extra Trees Benchmark** | **0.45** | **0.6523** | **81.77%** | **13.82%** | **0.2358** | **46.85%** |
 | **Logistic Regression Baseline** | **0.45** | **0.6607** | **68.52%** | **16.02%** | **0.2591** | **58.78%** |
 
 > **Clinical Note on Metric Selection:** In clinical risk stratification with an 11.3% positive prevalence, high **Recall (Sensitivity)** and **ROC-AUC** are prioritized over raw accuracy. Standard unweighted models yield 88% accuracy by predicting "No Readmission" for everyone, missing 100% of high-risk patients. Our weighted model achieves **>66% Recall**, capturing the majority of readmissions for early clinical intervention.

@@ -8,7 +8,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassifier, ExtraTreesClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
@@ -80,6 +80,27 @@ def get_classifier(model_name="Decision Tree", **kwargs):
         max_depth = kwargs.get("max_depth", 8)
         class_weight = kwargs.get("class_weight", "balanced")
         return RandomForestClassifier(
+            n_estimators=n_estimators,
+            max_depth=max_depth,
+            class_weight=class_weight,
+            random_state=42,
+            n_jobs=-1
+        )
+    elif model_name == "Gradient Boosting":
+        max_iter = kwargs.get("max_iter", 80)
+        max_depth = kwargs.get("max_depth", 6)
+        class_weight = kwargs.get("class_weight", "balanced")
+        return HistGradientBoostingClassifier(
+            max_iter=max_iter,
+            max_depth=max_depth,
+            class_weight=class_weight,
+            random_state=42
+        )
+    elif model_name == "Extra Trees":
+        n_estimators = kwargs.get("n_estimators", 50)
+        max_depth = kwargs.get("max_depth", 8)
+        class_weight = kwargs.get("class_weight", "balanced")
+        return ExtraTreesClassifier(
             n_estimators=n_estimators,
             max_depth=max_depth,
             class_weight=class_weight,
@@ -197,6 +218,8 @@ def train_and_save_all(clean_parquet_path="data/processed/diabetic_data_clean.pa
     models_to_train = [
         ("Decision Tree", {"max_depth": 6, "min_samples_split": 20, "class_weight": "balanced"}),
         ("Random Forest", {"n_estimators": 50, "max_depth": 8, "class_weight": "balanced"}),
+        ("Gradient Boosting", {"max_iter": 80, "max_depth": 6, "class_weight": "balanced"}),
+        ("Extra Trees", {"n_estimators": 50, "max_depth": 8, "class_weight": "balanced"}),
         ("Logistic Regression", {"C": 1.0, "class_weight": "balanced"})
     ]
 

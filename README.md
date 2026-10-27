@@ -11,6 +11,10 @@
 
 ---
 
+> 💡 **Teacher Presentation Guide Ready**: Check out [PRESENTATION_GUIDE.md](PRESENTATION_GUIDE.md) for a complete 30-second elevator pitch, click-by-click talking points, and top viva questions & answers!
+
+---
+
 ## 📌 Executive Overview
 
 **PulseCare AI** is an interactive, enterprise-grade Clinical Decision Support (CDS) and machine learning dashboard designed to predict **30-day unplanned hospital readmissions** for diabetic inpatients. Built on 10 years (1999–2008) of clinical encounter data across 130 US hospitals from the **UCI Machine Learning Repository**, this platform tackles severe class imbalance (~11.3% early readmissions) to empower hospital care teams, case managers, and clinicians to prevent hospital penalties under the **CMS Hospital Readmissions Reduction Program (HRRP)**.
@@ -28,36 +32,77 @@ This project strictly satisfies all requirements specified in **Project 23: Hosp
 | **1. Load patient discharge records into Spark DataFrame** | Implemented in `src/pyspark_pipeline.py` using `SparkSession`, reading 100k+ clinical records. | ✅ **Complete** |
 | **2. Handle null values in admission & discharge fields** | Mapped coded ID fields (`admission_type_id`, `discharge_disposition_id`, `admission_source_id`), imputed blanks/`?`, and filtered out deceased/expired patients. | ✅ **Complete** |
 | **3. Encode categorical data (diagnosis type & department)** | Standard ICD-9 clinical categorization (Circulatory, Respiratory, Digestive, Diabetes, Injury, etc.) and physician specialty grouping into structured departments. | ✅ **Complete** |
-| **4. Build Decision Tree classifier for readmission likelihood** | Weighted Decision Tree model configured with class balancing (`positive_weight ≈ 7.98`) and depth tuning to handle class imbalance. | ✅ **Complete** |
+| **4. Build Decision Tree classifier for readmission likelihood** | Weighted Decision Tree model configured with class balancing (`positive_weight ≈ 7.78`) and depth tuning to handle class imbalance. | ✅ **Complete** |
 | **5. Evaluate model using accuracy and ROC-AUC** | Dual evaluation via PySpark `BinaryClassificationEvaluator` and Scikit-Learn pipelines reporting ROC-AUC, Recall, Precision, and F1. | ✅ **Complete** |
 | **6. Visualize readmission trends by department and patient age** | Multi-faceted interactive visualizations by Medical Specialty, Patient Age bracket, Length of Stay, and Glycemic control. | ✅ **Complete** |
 
 ---
 
-## 🌟 Key Application Features
+## 🖥️ In-Depth Guide: Every Part of the Dashboard Explained
 
-### 1. 📊 Executive KPI & Clinical Summary
-- **High-Impact Health Metrics**: Real-time stats across 100,114 encounters, 30-day readmission baseline (11.34%), average length of stay (4.4 days), and model discriminative power (ROC-AUC 0.65–0.66).
-- **CMS HRRP Context**: Explains regulatory reimbursement implications and clinical significance of 30-day early readmissions.
-- **Population Distribution**: Donut breakdown of readmission categories (`NO`, `>30`, `<30`).
+### 1. 📊 Quick Summary (Executive Overview)
+* **What it is**: The high-level executive briefing room showing the 4 primary health metrics and cohort distributions.
+* **What it does**: Displays total encounters (100,114), 30-day readmission rate (11.34%), average hospital stay (4.4 days), and model quality score (ROC-AUC ~0.65).
+* **Why it is there**: Provides immediate clinical context. It explains the CMS HRRP hospital penalty framework ($17+ billion national impact) and why healthcare systems care about readmissions.
+* **How we are doing it**: Aggregating cleaned hospital encounter records and computing percentages and mean stay lengths.
+* **How to adjust it**: Use the sidebar **Population Filters** to narrow down by age deciles, departments, or diagnosis groups to observe how metrics change for specific cohorts.
+* **How to make it better**: Connect directly to hospital live EHR database streams (HL7/FHIR feeds) for real-time daily admissions updates.
 
-### 2. 🔍 Interactive Exploratory Data Analysis (EDA)
-- **Department Trends**: 30-day readmission rates ranked across medical specialties (Emergency, Cardiology, Internal Medicine, Surgery, etc.).
-- **Age Bracket Breakdown**: Patient readmission likelihood across deciles from `[0-10)` to `[90-100)`.
-- **Length of Stay Correlation**: Analyzing hospital days (1–14 days) against likelihood of rebound admission.
-- **Biomarker & Drug Interaction**: Evaluating HbA1c testing results (`>7`, `>8`, `Norm`, `None`) and diabetes medication modifications (`Ch` vs `No`).
-- **Prior Utilization Heatmaps**: Frequency of inpatient visits in the preceding 12 months as the primary predictor of early readmission.
+---
 
-### 3. 🧠 Model Studio & Hyperparameter Arena
-- **Supported Classifiers**:
-  - **Decision Tree Classifier** *(INT315 Primary Required Model)*
-  - **Random Forest Classifier** *(Benchmark Ensemble)*
-  - **Gradient Boosting Classifier** *(Boosting Benchmark)*
-  - **Extra Trees Classifier** *(Ensemble Benchmark)*
-  - **Logistic Regression** *(Linear Baseline)*
-- **Live Hyperparameter Tuning**: Adjust Max Tree Depth (2–16), Min Samples Split (5–100), and Class Weighting.
-- **Dynamic Decision Threshold Slider**: Real-time threshold tuning (0.10 to 0.90) with an interactive **Confusion Matrix Heatmap** and **ROC Curves** that update dynamically without requiring page reloads.
-- **Clinical Feature Importance**: Ranked feature attribution highlighting prior inpatient visits, discharge disposition, length of stay, and medication count.
+### 2. 🔍 Trend Charts (Exploratory Data Analysis - EDA)
+* **What it is**: Population-level visual exploration addressing the required task: *"Visualize readmission trends by department and patient age"*.
+* **What it does**: Compares 30-day return rates across medical departments, age groups, length of stay, ICD-9 illness categories, and blood sugar (HbA1c) lab tests.
+* **Why it is there**: Reveals clinical patterns (e.g. Cardiology and Emergency departments have higher rebound rates; older patients and extended hospital stays are risk amplifiers).
+* **How we are doing it**: Grouping records via Pandas/PySpark aggregations and rendering interactive Plotly bar, line, and scatter graphs with hover tooltips.
+* **How to adjust it**: Select different departments or age brackets in the sidebar; all 6 charts dynamically re-filter to the selected subpopulation.
+* **How to make it better**: Add geographic spatial mapping across different hospital zip codes and socioeconomic vulnerability indices (SVI).
+
+---
+
+### 3. 🧠 Model Testing Lab (5 AI Models Benchmark & Studio)
+* **What it is**: The machine learning laboratory where all 5 algorithms are evaluated, tuned, and compared side-by-side.
+* **What it does**:
+  1. Displays the **Multi-Model Benchmark Matrix** (Decision Tree, Random Forest, Gradient Boosting, Extra Trees, Logistic Regression).
+  2. Overlays the multi-model **ROC Curves** against the 50% random-chance baseline.
+  3. Provides an interactive **Sensitivity Cutoff Slider (0.10–0.90)** with a dynamic Confusion Matrix (True Positives, False Positives, False Negatives, True Negatives).
+  4. Features a **Live Retraining Engine** where you can adjust Max Depth or Number of Trees and click *"Retrain Model Live Now"*.
+* **Why it is there**: Fulfills the core modeling task (*Decision Tree classifier evaluated on Accuracy & ROC-AUC*) while demonstrating why **ROC-AUC & Recall** matter far more than raw accuracy on imbalanced data.
+* **How we are doing it**: Pre-trained Scikit-Learn pipelines (`ColumnTransformer` + `StandardScaler` + `OneHotEncoder`) serialized in `models/*.joblib`, with live threshold matrix updates.
+* **How to adjust it**: Move the **Cutoff Threshold slider**:
+  - Drag to `0.35`: Increases Recall (catches 85%+ of sick patients).
+  - Drag to `0.55`: Increases raw Accuracy to **85%–88%**.
+* **How to make it better**: Implement automated Bayesian hyperparameter search (Optuna) and deep learning models (TabNet / MLP).
+
+---
+
+### 4. 🩺 Patient Risk Checker (Real-Time CDS Predictor)
+* **What it is**: A bedside Clinical Decision Support (CDS) simulation tool for physicians and discharge nurses.
+* **What it does**: Takes patient vitals, medications, past hospital stays, and diagnoses, calculates their readmission probability (0–100%), displays an interactive Speedometer Gauge, and generates an automated Discharge Action Checklist.
+* **Why it is there**: Bridges theoretical machine learning with actionable patient care. An algorithm is useless if clinicians cannot act on its predictions.
+* **How we are doing it**: Feeds intake form values into the active trained pipeline's `predict_proba()` method, stratifies risk into tiers (Low <20%, Moderate 20–40%, High >40%), and triggers rule-based clinical transition protocols.
+* **How to adjust it**: Test different patient profiles manually, or click one of the preset buttons (*"High-Risk Elderly Heart Patient"* vs *"Low-Risk Planned Surgery Patient"*).
+* **How to make it better**: Integrate with hospital pharmacy databases to auto-populate drug-drug interactions and patient insurance coverage.
+
+---
+
+### 5. 📁 Patient List & Export (Cohort Triage)
+* **What it is**: A prioritized discharge management worklist for hospital nurse case managers.
+* **What it does**: Displays active inpatient encounters sorted by risk score, filters by department or risk threshold, and allows 1-click **CSV/Excel Export**.
+* **Why it is there**: Enables case managers to prioritize follow-up calls and home health resources for the top 15% highest-risk patients.
+* **How we are doing it**: Filtering pre-computed test cohort dataframes and generating formatted downloadable CSV blobs.
+* **How to adjust it**: Drag the *"Show Only Patients with Risk Above"* slider or pick specific clinical departments from the dropdown.
+* **How to make it better**: Add automated SMS/email alert triggers directly to patient primary care physicians.
+
+---
+
+### 6. ⚡ Big Data Code (PySpark Architecture Hub)
+* **What it is**: The academic compliance and distributed architecture documentation tab.
+* **What it does**: Validates all INT315 rubric requirements, explains the necessity of Spark for enterprise EHR data, and displays the full PySpark ML pipeline code.
+* **Why it is there**: Proves that the project is built according to big data distributed computing standards.
+* **How we are doing it**: Implemented in `src/pyspark_pipeline.py` using native PySpark SQL expressions, `StringIndexer`, `OneHotEncoder`, `VectorAssembler`, and `BinaryClassificationEvaluator`.
+* **How to adjust it**: Run `python src/pyspark_pipeline.py` directly in the terminal to execute Spark distributed training on your machine.
+* **How to make it better**: Deploy the PySpark pipeline onto an AWS EMR or Databricks cloud cluster with Delta Lake storage.
 
 ### 4. 🩺 Real-Time Patient Risk Predictor (Clinical CDS)
 - **Interactive Intake Simulation**: Input patient demographics, department, admission type, discharge disposition, lab count, medication count, prior inpatient stays, and HbA1c status.

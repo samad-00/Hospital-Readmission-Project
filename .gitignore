@@ -33,6 +33,9 @@ ENV/
 *.swp
 *.swo
 
+# Presentation Guide (Local only)
+PRESENTATION_GUIDE.md
+
 # OS files
 .DS_Store
 Thumbs.db

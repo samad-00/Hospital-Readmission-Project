@@ -47,17 +47,12 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
 
     :root {
-        --bg-main: #0B0F19;
-        --card-bg: rgba(22, 32, 50, 0.75);
-        --card-border: rgba(255, 255, 255, 0.1);
-        --blue-accent: #3B82F6;
-        --teal-accent: #06B6D4;
-        --emerald-accent: #10B981;
-        --amber-accent: #F59E0B;
-        --rose-accent: #EF4444;
+        --bg-main: #0A0E1A;
+        --card-bg: rgba(22, 30, 49, 0.82);
+        --card-border: rgba(99, 102, 241, 0.25);
         --text-primary: #F8FAFC;
-        --text-secondary: #94A3B8;
-        --text-muted: #64748B;
+        --text-secondary: #CBD5E1;
+        --text-muted: #94A3B8;
     }
 
     html, body, [class*="css"] {
@@ -66,34 +61,57 @@ st.markdown("""
     }
 
     .stApp {
-        background: radial-gradient(circle at 15% 15%, #131A2E 0%, #0B0F19 100%);
+        background: 
+            radial-gradient(circle at 10% 12%, rgba(59, 130, 246, 0.18) 0%, transparent 40%),
+            radial-gradient(circle at 90% 18%, rgba(139, 92, 246, 0.18) 0%, transparent 40%),
+            radial-gradient(circle at 50% 88%, rgba(236, 72, 153, 0.12) 0%, transparent 50%),
+            #0A0E1A;
     }
 
-    /* Top Studio Header */
+    /* Vibrant Top Studio Header */
     .studio-header {
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
-        backdrop-filter: blur(16px);
-        border: 1px solid var(--card-border);
-        border-top: 3px solid #3B82F6;
-        border-radius: 12px;
-        box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
-        padding: 1.35rem 1.75rem;
+        background: linear-gradient(135deg, #1E1B4B 0%, #312E81 40%, #0F172A 100%);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(139, 92, 246, 0.35);
+        border-left: 6px solid #8B5CF6;
+        border-radius: 14px;
+        box-shadow: 0 12px 36px -4px rgba(49, 46, 129, 0.5);
+        padding: 1.45rem 1.85rem;
         margin-bottom: 1.5rem;
     }
 
     .header-badge {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 0.74rem;
+        font-size: 0.72rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        color: #38BDF8;
-        background: rgba(56, 189, 248, 0.12);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        padding: 3px 10px;
-        border-radius: 6px;
+        padding: 4px 11px;
+        border-radius: 999px;
         display: inline-block;
+        margin-right: 6px;
         margin-bottom: 8px;
+    }
+
+    .badge-gradient-purple {
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        color: #FFFFFF;
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+    }
+    .badge-gradient-blue {
+        background: linear-gradient(135deg, #0284C7, #38BDF8);
+        color: #FFFFFF;
+        box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
+    }
+    .badge-gradient-emerald {
+        background: linear-gradient(135deg, #059669, #34D399);
+        color: #FFFFFF;
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    }
+    .badge-gradient-rose {
+        background: linear-gradient(135deg, #E11D48, #FB7185);
+        color: #FFFFFF;
+        box-shadow: 0 2px 8px rgba(244, 63, 94, 0.4);
     }
 
     .hero-title {
@@ -102,80 +120,101 @@ st.markdown("""
         font-weight: 800;
         letter-spacing: -0.025em;
         line-height: 1.2;
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.4rem;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.3);
     }
 
     .hero-subtitle {
-        color: var(--text-secondary);
+        color: #CBD5E1;
         font-size: 0.96rem;
         line-height: 1.55;
         max-width: 950px;
     }
 
-    /* Colorful Metric Cards with Colored Top Stripes */
+    /* Vibrant Rich Colorful Metric Cards */
     .metric-card-box {
-        background: rgba(22, 32, 50, 0.7);
-        backdrop-filter: blur(14px);
-        border: 1px solid var(--card-border);
-        border-radius: 12px;
-        padding: 1.25rem 1.4rem;
-        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
-        transition: transform 0.2s ease, border-color 0.2s ease;
+        border-radius: 14px;
+        padding: 1.35rem 1.45rem;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
         margin-bottom: 1.25rem;
+        color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
     }
 
     .metric-card-box:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.6);
+        transform: translateY(-4px) scale(1.01);
     }
 
-    .border-blue { border-top: 3px solid #3B82F6; }
-    .border-rose { border-top: 3px solid #EF4444; }
-    .border-amber { border-top: 3px solid #F59E0B; }
-    .border-emerald { border-top: 3px solid #10B981; }
+    .card-blue {
+        background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 55%, #38BDF8 100%);
+        border: 1px solid rgba(147, 197, 253, 0.45);
+        box-shadow: 0 10px 25px -4px rgba(37, 99, 235, 0.45);
+    }
+
+    .card-rose {
+        background: linear-gradient(135deg, #881337 0%, #BE123C 55%, #FB7185 100%);
+        border: 1px solid rgba(254, 205, 211, 0.45);
+        box-shadow: 0 10px 25px -4px rgba(225, 29, 72, 0.45);
+    }
+
+    .card-amber {
+        background: linear-gradient(135deg, #78350F 0%, #B45309 55%, #FBBF24 100%);
+        border: 1px solid rgba(253, 230, 138, 0.45);
+        box-shadow: 0 10px 25px -4px rgba(217, 119, 6, 0.45);
+    }
+
+    .card-emerald {
+        background: linear-gradient(135deg, #064E3B 0%, #047857 55%, #34D399 100%);
+        border: 1px solid rgba(167, 243, 208, 0.45);
+        box-shadow: 0 10px 25px -4px rgba(5, 150, 105, 0.45);
+    }
 
     .metric-title {
-        font-size: 0.82rem;
-        font-weight: 700;
+        font-size: 0.8rem;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--text-muted);
-        margin-bottom: 0.4rem;
+        letter-spacing: 0.07em;
+        color: rgba(255, 255, 255, 0.88);
+        margin-bottom: 0.35rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
     }
 
     .metric-number {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 2.1rem;
+        font-size: 2.35rem;
         font-weight: 800;
         color: #FFFFFF;
-        line-height: 1.1;
+        line-height: 1.05;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
     }
 
     .metric-badge {
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.72rem;
-        font-weight: 600;
+        font-weight: 700;
         display: inline-flex;
         align-items: center;
-        gap: 4px;
-        padding: 3px 8px;
-        border-radius: 6px;
-        margin-top: 0.5rem;
+        gap: 5px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        margin-top: 0.55rem;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #FFFFFF;
+        backdrop-filter: blur(8px);
     }
-
-    .badge-blue { background: rgba(59, 130, 246, 0.18); color: #93C5FD; border: 1px solid rgba(59, 130, 246, 0.4); }
-    .badge-rose { background: rgba(239, 68, 68, 0.18); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.4); }
-    .badge-amber { background: rgba(245, 158, 11, 0.18); color: #FDE68A; border: 1px solid rgba(245, 158, 11, 0.4); }
-    .badge-emerald { background: rgba(16, 185, 129, 0.18); color: #A7F3D0; border: 1px solid rgba(16, 185, 129, 0.4); }
 
     /* Content Box Containers */
     .content-box {
-        background: rgba(22, 32, 50, 0.7);
-        backdrop-filter: blur(14px);
-        border: 1px solid var(--card-border);
-        border-radius: 12px;
-        padding: 1.35rem 1.5rem;
-        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(145deg, rgba(26, 32, 54, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(99, 102, 241, 0.25);
+        border-radius: 14px;
+        padding: 1.35rem 1.55rem;
+        box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.45);
         margin-bottom: 1.5rem;
     }
 
@@ -191,95 +230,95 @@ st.markdown("""
 
     /* Risk Badges */
     .risk-pill-high {
-        background: linear-gradient(135deg, rgba(239, 68, 68, 0.3), rgba(185, 28, 28, 0.2));
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.35), rgba(185, 28, 28, 0.25));
         border: 1px solid #EF4444;
         color: #FECACA;
-        padding: 8px 18px;
+        padding: 9px 20px;
         border-radius: 8px;
         font-weight: 800;
         font-size: 1rem;
         display: inline-block;
-        box-shadow: 0 0 15px rgba(239, 68, 68, 0.25);
+        box-shadow: 0 0 18px rgba(239, 68, 68, 0.35);
     }
 
     .risk-pill-med {
-        background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(180, 83, 9, 0.2));
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.35), rgba(180, 83, 9, 0.25));
         border: 1px solid #F59E0B;
         color: #FEF08A;
-        padding: 8px 18px;
+        padding: 9px 20px;
         border-radius: 8px;
         font-weight: 800;
         font-size: 1rem;
         display: inline-block;
-        box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+        box-shadow: 0 0 18px rgba(245, 158, 11, 0.35);
     }
 
     .risk-pill-low {
-        background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(4, 120, 87, 0.2));
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(4, 120, 87, 0.25));
         border: 1px solid #10B981;
         color: #A7F3D0;
-        padding: 8px 18px;
+        padding: 9px 20px;
         border-radius: 8px;
         font-weight: 800;
         font-size: 1rem;
         display: inline-block;
-        box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+        box-shadow: 0 0 18px rgba(16, 185, 129, 0.35);
     }
 
-    /* Tabs Styling */
+    /* Tabs Styling - Vibrant Gradient Active Pill */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background: rgba(15, 23, 42, 0.8);
-        border: 1px solid var(--card-border);
+        background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+        border: 1px solid rgba(99, 102, 241, 0.25);
         border-radius: 12px;
-        padding: 6px;
+        padding: 7px;
         margin-bottom: 1.5rem;
     }
 
     .stTabs [data-baseweb="tab"] {
         border-radius: 8px;
-        padding: 8px 18px;
-        color: var(--text-secondary);
-        font-weight: 600;
+        padding: 9px 18px;
+        color: #CBD5E1;
+        font-weight: 700;
         font-size: 0.92rem;
         border: none !important;
-        transition: all 0.15s ease;
+        transition: all 0.2s ease;
     }
 
     .stTabs [data-baseweb="tab"]:hover {
         color: #FFFFFF;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(99, 102, 241, 0.15);
     }
 
     .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%) !important;
         color: #FFFFFF !important;
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45) !important;
     }
 
-    /* Buttons */
+    /* Vibrant Gradient Buttons */
     .stButton>button {
-        background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #DB2777 100%);
         color: #FFFFFF;
-        border: 1px solid #60A5FA;
-        border-radius: 8px;
-        padding: 0.6rem 1.4rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 9px;
+        padding: 0.65rem 1.45rem;
         font-weight: 700;
-        font-size: 0.92rem;
-        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
-        transition: all 0.15s ease;
+        font-size: 0.94rem;
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+        transition: all 0.2s ease;
     }
 
     .stButton>button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(219, 39, 119, 0.5);
     }
 
     /* Form and Inputs */
     div[data-testid="stForm"] {
-        border: 1px solid var(--card-border) !important;
+        border: 1px solid rgba(99, 102, 241, 0.3) !important;
         border-radius: 12px !important;
-        background: rgba(22, 32, 50, 0.5) !important;
+        background: rgba(22, 30, 49, 0.6) !important;
         padding: 1.25rem !important;
     }
 </style>
@@ -347,10 +386,10 @@ except Exception as e:
 # ---------------------------------------------------------
 with st.sidebar:
     st.markdown("""
-    <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.1); border-left: 3px solid #3B82F6; border-radius: 8px; padding: 12px; margin-bottom: 18px;">
+    <div style="background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #1E3A8A 100%); border: 1px solid rgba(139, 92, 246, 0.4); border-left: 4px solid #8B5CF6; border-radius: 10px; padding: 14px; margin-bottom: 18px; box-shadow: 0 4px 16px rgba(49, 46, 129, 0.4);">
         <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 700;">SYSTEM // CLINICAL CDS</div>
-        <div style="font-weight: 800; font-size: 1.15rem; color: #FFFFFF;">PulseCare AI</div>
-        <div style="font-size: 0.78rem; color: #94A3B8; margin-top: 2px;">Hospital Readmission Risk Suite</div>
+        <div style="font-weight: 800; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare AI 🏥</div>
+        <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 3px;">Hospital Readmission Risk Suite</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -386,10 +425,10 @@ with st.sidebar:
     st.markdown(f"**Filtered Cohort:** `{len(filtered_df):,}` / `{len(df):,}`")
 
     st.markdown("""
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px; margin-top: 15px;">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #94A3B8;">ASSIGNMENT INFO</div>
-        <div style="font-weight: 700; color: #F1F5F9; font-size: 0.85rem;">INT315 — Project 23</div>
-        <div style="font-size: 0.74rem; color: #64748B;">UCI 130-US Hospitals (1999–2008)</div>
+    <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 12px; margin-top: 15px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818CF8; font-weight: 700;">ASSIGNMENT INFO</div>
+        <div style="font-weight: 800; color: #F1F5F9; font-size: 0.9rem;">INT315 — Project 23</div>
+        <div style="font-size: 0.76rem; color: #94A3B8;">UCI 130-US Hospitals (1999–2008)</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -398,17 +437,22 @@ with st.sidebar:
 # ---------------------------------------------------------
 st.markdown("""
 <div class="studio-header">
-    <div class="header-badge">INT315 PROJECT 23 // CLINICAL INTELLIGENCE SUITE</div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+        <span class="header-badge badge-gradient-purple">INT315 PROJECT 23</span>
+        <span class="header-badge badge-gradient-blue">APACHE SPARK ML</span>
+        <span class="header-badge badge-gradient-emerald">DECISION TREE CLASSIFIER</span>
+        <span class="header-badge badge-gradient-rose">30-DAY INPATIENT TRIAGE</span>
+    </div>
     <div class="hero-title">Hospital Readmission Prediction Platform</div>
     <div class="hero-subtitle">
-        Predicting 30-day inpatient readmissions using Apache Spark (PySpark) and machine learning. 
-        Calibrated to identify high-risk diabetic patients and mitigate CMS HRRP hospital reimbursement penalties.
+        Predicting 30-day inpatient readmissions using Apache Spark (PySpark) big data pipelines and machine learning. 
+        Calibrated to identify high-risk diabetic patients, guide doctor intervention, and protect hospitals from CMS HRRP financial penalties.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
-# 4 Rich Metric Cards
+# 4 Rich Vibrant Colorful Metric Cards
 # ---------------------------------------------------------
 k1, k2, k3, k4 = st.columns(4)
 
@@ -419,37 +463,37 @@ dt_auc = metrics_cache.get("Decision Tree", {}).get("metrics", {}).get("roc_auc"
 
 with k1:
     st.markdown(f"""
-    <div class="metric-card-box border-blue">
-        <div class="metric-title">Total Patients Checked</div>
+    <div class="metric-card-box card-blue">
+        <div class="metric-title">👥 Total Patients Checked</div>
         <div class="metric-number">{total_records:,}</div>
-        <div class="metric-badge badge-blue">UCI 130-US Hospitals</div>
+        <div class="metric-badge">UCI 130-US Hospitals</div>
     </div>
     """, unsafe_allow_html=True)
 
 with k2:
     st.markdown(f"""
-    <div class="metric-card-box border-rose">
-        <div class="metric-title">Readmitted &lt;30 Days</div>
-        <div class="metric-number" style="color: #F87171;">{readmit_rate:.2f}%</div>
-        <div class="metric-badge badge-rose">High-Risk Target Class</div>
+    <div class="metric-card-box card-rose">
+        <div class="metric-title">🚨 Readmitted &lt;30 Days</div>
+        <div class="metric-number">{readmit_rate:.2f}%</div>
+        <div class="metric-badge">High-Risk Target Class</div>
     </div>
     """, unsafe_allow_html=True)
 
 with k3:
     st.markdown(f"""
-    <div class="metric-card-box border-amber">
-        <div class="metric-title">Average Hospital Stay</div>
-        <div class="metric-number">{avg_los:.1f} <span style="font-size: 1rem; color: #94A3B8;">days</span></div>
-        <div class="metric-badge badge-amber">Length of Stay (LOS)</div>
+    <div class="metric-card-box card-amber">
+        <div class="metric-title">⏱️ Average Hospital Stay</div>
+        <div class="metric-number">{avg_los:.1f} <span style="font-size: 1.1rem; opacity: 0.9;">days</span></div>
+        <div class="metric-badge">Length of Stay (LOS)</div>
     </div>
     """, unsafe_allow_html=True)
 
 with k4:
     st.markdown(f"""
-    <div class="metric-card-box border-emerald">
-        <div class="metric-title">Decision Tree AUC</div>
-        <div class="metric-number" style="color: #34D399;">{dt_auc:.3f}</div>
-        <div class="metric-badge badge-emerald">PySpark Validated</div>
+    <div class="metric-card-box card-emerald">
+        <div class="metric-title">🏆 Decision Tree AUC</div>
+        <div class="metric-number">{dt_auc:.3f}</div>
+        <div class="metric-badge">PySpark Validated</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -484,13 +528,13 @@ with tab_overview:
                 for excess readmissions. Diabetic patients present higher readmission rates due to multi-organ comorbidities and complex medication regimens.
             </p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-                <div style="background: rgba(15, 23, 42, 0.7); border-left: 3px solid #3B82F6; padding: 12px 14px; border-radius: 6px;">
-                    <div style="font-weight: 700; font-size: 0.88rem; color: #60A5FA;">Rare Outcome (Class Imbalance)</div>
-                    <div style="color: #94A3B8; font-size: 0.8rem; margin-top: 4px;">Only 11.3% of patients return within 30 days. Standard models fail by guessing "No one returns". We apply positive class weighting to catch high-risk patients.</div>
+                <div style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(15, 23, 42, 0.7)); border-left: 4px solid #38BDF8; padding: 12px 14px; border-radius: 8px;">
+                    <div style="font-weight: 700; font-size: 0.88rem; color: #38BDF8;">Rare Outcome (Class Imbalance)</div>
+                    <div style="color: #CBD5E1; font-size: 0.82rem; margin-top: 4px;">Only 11.3% of patients return within 30 days. Standard models fail by guessing "No one returns". We apply positive class weighting to catch high-risk patients.</div>
                 </div>
-                <div style="background: rgba(15, 23, 42, 0.7); border-left: 3px solid #10B981; padding: 12px 14px; border-radius: 6px;">
+                <div style="background: linear-gradient(135deg, rgba(6, 78, 59, 0.4), rgba(15, 23, 42, 0.7)); border-left: 4px solid #34D399; padding: 12px 14px; border-radius: 8px;">
                     <div style="font-weight: 700; font-size: 0.88rem; color: #34D399;">Doctor Action (Intervention)</div>
-                    <div style="color: #94A3B8; font-size: 0.8rem; margin-top: 4px;">Stratifying patients before discharge allows care coordinators to trigger pharmacist medication reconciliation and 48-hour follow-up telephone check-ins.</div>
+                    <div style="color: #CBD5E1; font-size: 0.82rem; margin-top: 4px;">Stratifying patients before discharge allows care coordinators to trigger pharmacist medication reconciliation and 48-hour follow-up telephone check-ins.</div>
                 </div>
             </div>
         </div>
@@ -510,12 +554,12 @@ with tab_overview:
             counts,
             values="Count",
             names="Status",
-            hole=0.58,
+            hole=0.55,
             title="Encounter Readmission Distribution",
             color="Status",
             color_discrete_map={
-                "No Readmission": "#475569",
-                "Readmitted >30 Days": "#3B82F6",
+                "No Readmission": "#4F46E5",
+                "Readmitted >30 Days": "#F59E0B",
                 "Readmitted <30 Days (High Risk)": "#EF4444"
             }
         )
@@ -539,7 +583,7 @@ with tab_overview:
             labels={"Rate": "30-Day Readmission Rate (%)", "department": ""},
             text="Rate",
             color="Rate",
-            color_continuous_scale=["#1D4ED8", "#3B82F6", "#EF4444"]
+            color_continuous_scale=["#06B6D4", "#3B82F6", "#8B5CF6", "#EC4899", "#EF4444"]
         )
         fig_dept_quick.update_layout(PLOTLY_LAYOUT, height=360, coloraxis_showscale=False)
         fig_dept_quick.update_traces(textposition="outside", texttemplate="%{text}%")
@@ -556,7 +600,7 @@ with tab_overview:
             y="Rate",
             title="Impact of Prior Inpatient History on 30-Day Readmission",
             color="Label",
-            color_discrete_map={"0 Prior Inpatient Visits": "#64748B", "1+ Prior Inpatient Visits": "#F59E0B"},
+            color_discrete_map={"0 Prior Inpatient Visits": "#3B82F6", "1+ Prior Inpatient Visits": "#F43F5E"},
             text="Rate",
             labels={"Rate": "Readmission Rate (%)", "Label": ""}
         )
@@ -588,7 +632,7 @@ with tab_eda:
             title="Readmission Trends by Department / Specialty",
             labels={"Readmission_Rate": "30-Day Readmission Rate (%)", "department": ""},
             color="Readmission_Rate",
-            color_continuous_scale=["#0D9488", "#2563EB", "#EF4444"]
+            color_continuous_scale=["#06B6D4", "#3B82F6", "#8B5CF6", "#EC4899", "#EF4444"]
         )
         fig_dept.update_layout(PLOTLY_LAYOUT, height=390)
         st.plotly_chart(fig_dept, use_container_width=True)
@@ -607,7 +651,7 @@ with tab_eda:
             title="Readmission Rate by Patient Age Bracket",
             labels={"Readmission_Rate": "30-Day Readmission Rate (%)", "age": "Age Decile"},
             color="Readmission_Rate",
-            color_continuous_scale=["#1E3A8A", "#3B82F6", "#93C5FD"],
+            color_continuous_scale=["#06B6D4", "#3B82F6", "#6366F1", "#8B5CF6", "#D946EF", "#F43F5E", "#EF4444"],
             text="Readmission_Rate"
         )
         fig_age.update_layout(PLOTLY_LAYOUT, height=390)
@@ -630,7 +674,7 @@ with tab_eda:
             labels={"time_in_hospital": "Days in Hospital (Length of Stay)", "Readmission_Rate": "Readmission Rate (%)"},
             markers=True
         )
-        fig_los.update_traces(line_color="#06B6D4", line_width=2.5, marker_size=7, marker_color="#38BDF8")
+        fig_los.update_traces(line_color="#00F2FE", line_width=3, marker_size=8, marker_color="#FBBF24")
         fig_los.update_layout(PLOTLY_LAYOUT, height=370)
         st.plotly_chart(fig_los, use_container_width=True)
 
@@ -647,7 +691,7 @@ with tab_eda:
             title="Primary Diagnosis (ICD-9 Groups) vs Readmission Rate",
             labels={"Readmission_Rate": "Readmission Rate (%)", "primary_diagnosis": ""},
             color="Readmission_Rate",
-            color_continuous_scale=["#0D9488", "#3B82F6", "#F59E0B"]
+            color_continuous_scale=["#10B981", "#06B6D4", "#3B82F6", "#8B5CF6", "#D946EF", "#F59E0B"]
         )
         fig_diag.update_layout(PLOTLY_LAYOUT, height=370)
         st.plotly_chart(fig_diag, use_container_width=True)
@@ -669,7 +713,7 @@ with tab_eda:
             barmode="group",
             title="HbA1c Lab Testing & Medication Dosage Changes",
             labels={"A1Cresult": "Blood Sugar Test (HbA1c)", "Readmission_Rate": "Readmission Rate (%)"},
-            color_discrete_map={"Dosage Changed": "#EF4444", "No Change": "#3B82F6"}
+            color_discrete_map={"Dosage Changed": "#F43F5E", "No Change": "#06B6D4"}
         )
         fig_hba1c.update_layout(PLOTLY_LAYOUT, height=350)
         st.plotly_chart(fig_hba1c, use_container_width=True)
@@ -686,7 +730,7 @@ with tab_eda:
             title="Prior Inpatient Admissions in Previous 12 Months",
             labels={"number_inpatient": "Prior Hospital Admissions", "Readmission_Rate": "Readmission Rate (%)"},
             color="Readmission_Rate",
-            color_continuous_scale=["#475569", "#F59E0B", "#EF4444"],
+            color_continuous_scale=["#3B82F6", "#8B5CF6", "#F59E0B", "#EF4444"],
             text="Readmission_Rate"
         )
         fig_prior.update_layout(PLOTLY_LAYOUT, height=350)
@@ -779,53 +823,52 @@ with tab_model:
     mod_col1, mod_col2 = st.columns([1, 2])
 
     with mod_col1:
-        st.markdown('<div class="content-box">', unsafe_allow_html=True)
-        st.markdown("<div class='content-box-title'>⚙️ Model Controls</div>", unsafe_allow_html=True)
+        with st.container(border=True):
+            st.markdown("<div class='content-box-title'>⚙️ Model Controls</div>", unsafe_allow_html=True)
 
-        selected_model_name = st.selectbox(
-            "Select Classifier to Inspect",
-            options=available_models,
-            index=0,
-            help="Decision Tree is the core required model for INT315. Other models provide high-performance benchmarks."
-        )
+            selected_model_name = st.selectbox(
+                "Select Classifier to Inspect",
+                options=available_models,
+                index=0,
+                help="Decision Tree is the core required model for INT315. Other models provide high-performance benchmarks."
+            )
 
-        with st.expander("🛠️ Hyperparameters", expanded=True):
-            if selected_model_name == "Decision Tree":
-                param_max_depth = st.slider("Tree Depth (Max Depth)", 2, 16, 6)
-                param_min_split = st.slider("Min Samples Split", 5, 100, 20, 5)
-                param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
-                model_params = {"max_depth": param_max_depth, "min_samples_split": param_min_split, "class_weight": param_class_weight}
-            elif selected_model_name == "Random Forest":
-                param_n_est = st.slider("Number of Trees", 10, 100, 50, 10)
-                param_max_depth = st.slider("Tree Depth", 3, 16, 8)
-                param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
-                model_params = {"n_estimators": param_n_est, "max_depth": param_max_depth, "class_weight": param_class_weight}
-            elif selected_model_name == "Gradient Boosting":
-                param_max_iter = st.slider("Max Iterations", 20, 150, 80, 10)
-                param_max_depth = st.slider("Max Depth", 2, 10, 6)
-                param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
-                model_params = {"max_iter": param_max_iter, "max_depth": param_max_depth, "class_weight": param_class_weight}
-            elif selected_model_name == "Extra Trees":
-                param_n_est = st.slider("Number of Trees", 10, 100, 50, 10)
-                param_max_depth = st.slider("Max Depth", 3, 16, 8)
-                param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
-                model_params = {"n_estimators": param_n_est, "max_depth": param_max_depth, "class_weight": param_class_weight}
-            else:
-                param_c = st.slider("Regularization Inverse (C)", 0.01, 10.0, 1.0, 0.1)
-                param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
-                model_params = {"C": param_c, "class_weight": param_class_weight}
+            with st.expander("🛠️ Hyperparameters", expanded=True):
+                if selected_model_name == "Decision Tree":
+                    param_max_depth = st.slider("Tree Depth (Max Depth)", 2, 16, 6)
+                    param_min_split = st.slider("Min Samples Split", 5, 100, 20, 5)
+                    param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
+                    model_params = {"max_depth": param_max_depth, "min_samples_split": param_min_split, "class_weight": param_class_weight}
+                elif selected_model_name == "Random Forest":
+                    param_n_est = st.slider("Number of Trees", 10, 100, 50, 10)
+                    param_max_depth = st.slider("Tree Depth", 3, 16, 8)
+                    param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
+                    model_params = {"n_estimators": param_n_est, "max_depth": param_max_depth, "class_weight": param_class_weight}
+                elif selected_model_name == "Gradient Boosting":
+                    param_max_iter = st.slider("Max Iterations", 20, 150, 80, 10)
+                    param_max_depth = st.slider("Max Depth", 2, 10, 6)
+                    param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
+                    model_params = {"max_iter": param_max_iter, "max_depth": param_max_depth, "class_weight": param_class_weight}
+                elif selected_model_name == "Extra Trees":
+                    param_n_est = st.slider("Number of Trees", 10, 100, 50, 10)
+                    param_max_depth = st.slider("Max Depth", 3, 16, 8)
+                    param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
+                    model_params = {"n_estimators": param_n_est, "max_depth": param_max_depth, "class_weight": param_class_weight}
+                else:
+                    param_c = st.slider("Regularization Inverse (C)", 0.01, 10.0, 1.0, 0.1)
+                    param_class_weight = st.selectbox("Class Weighting", ["balanced", None], index=0)
+                    model_params = {"C": param_c, "class_weight": param_class_weight}
 
-        decision_threshold = st.slider(
-            "Decision Threshold Cutoff",
-            min_value=0.10,
-            max_value=0.90,
-            value=0.45,
-            step=0.05,
-            help="Threshold for labeling an encounter as High Risk (<30 days). Default 0.45 maximizes Sensitivity on imbalanced data."
-        )
+            decision_threshold = st.slider(
+                "Decision Threshold Cutoff",
+                min_value=0.10,
+                max_value=0.90,
+                value=0.45,
+                step=0.05,
+                help="Threshold for labeling an encounter as High Risk (<30 days). Default 0.45 maximizes Sensitivity on imbalanced data."
+            )
 
-        retrain_clicked = st.button("🚀 Retrain Model Live", use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+            retrain_clicked = st.button("🚀 Retrain Model Live", use_container_width=True)
 
     with mod_col2:
         if retrain_clicked:
@@ -903,7 +946,7 @@ with tab_model:
                 text=[[f"True Negatives<br>{cm_dict['tn']:,}", f"False Alarms<br>{cm_dict['fp']:,}"],
                       [f"Missed (FN)<br>{cm_dict['fn']:,}", f"Caught (TP)<br>{cm_dict['tp']:,}"]],
                 texttemplate="%{text}",
-                colorscale=[[0, "#1E293B"], [1, "#2563EB"]],
+                colorscale=[[0, "#1E1B4B"], [0.45, "#4338CA"], [1, "#EC4899"]],
                 showscale=False
             ))
             fig_cm.update_layout(
@@ -965,7 +1008,7 @@ with tab_model:
             y="Feature",
             orientation="h",
             color="Importance",
-            color_continuous_scale=["#1E3A8A", "#2563EB", "#38BDF8"]
+            color_continuous_scale=["#3B82F6", "#6366F1", "#8B5CF6", "#D946EF", "#F43F5E"]
         )
         fig_fi.update_layout(PLOTLY_LAYOUT, height=420, coloraxis_showscale=False)
         st.plotly_chart(fig_fi, use_container_width=True)
@@ -1106,11 +1149,6 @@ with tab_cds:
                 st.markdown('<div style="text-align: center;"><span class="risk-pill-low">✅ LOW READMISSION RISK (&lt;20%)</span></div>', unsafe_allow_html=True)
 
         with r_col2:
-            st.markdown("""
-            <div class="content-box">
-                <div class="content-box-title">📋 Recommended Transition-of-Care Action Plan</div>
-            """, unsafe_allow_html=True)
-
             recs = []
             if inp_inpatient > 0:
                 recs.append(f"<b>Frequent Admissions:</b> Patient has had {inp_inpatient} hospital stays in past year. Assign dedicated Nurse Case Manager for 30-day post-discharge monitoring.")
@@ -1126,10 +1164,13 @@ with tab_cds:
             if not recs:
                 recs.append("Patient demonstrates standard low-risk indicators. Standard discharge education, telephone follow-up at 7 days, primary care review at 14 days.")
 
-            for r in recs:
-                st.markdown(f"<div style='margin-bottom: 8px; color: #E2E8F0; font-size: 0.9rem;'>• {r}</div>", unsafe_allow_html=True)
-
-            st.markdown("</div>", unsafe_allow_html=True)
+            recs_items = "".join([f"<div style='margin-bottom: 9px; color: #CBD5E1; font-size: 0.91rem; line-height: 1.5;'>• {r}</div>" for r in recs])
+            st.markdown(f"""
+            <div class="content-box">
+                <div class="content-box-title">📋 Recommended Transition-of-Care Action Plan</div>
+                {recs_items}
+            </div>
+            """, unsafe_allow_html=True)
 
 # =========================================================
 # TAB 5: PATIENT LIST & EXPORT

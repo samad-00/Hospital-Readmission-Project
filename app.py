@@ -32,279 +32,278 @@ from src.model_trainer import (
 )
 
 # ---------------------------------------------------------
-# Page Configuration & Neo-Brutalism + Glassmorphism Theme
+# Page Configuration & Modern Clinical Studio Theme
 # ---------------------------------------------------------
 st.set_page_config(
-    page_title="PULSECARE // READMISSION CDS",
+    page_title="PulseCare AI | Clinical Readmission Analytics",
     page_icon="🏥",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Neo-Brutalism + Subtle Glassmorphism Design System
+# Modern Clinical Studio: Rich Colors, Balanced Spacing, Glassmorphic Depth, Solid Card Borders
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
 
     :root {
-        --bg-main: #0C0D0E;
-        --card-bg: rgba(22, 24, 28, 0.85);
-        --card-border: #2D3139;
-        --brutal-shadow: 4px 4px 0px #000000;
-        --brutal-hover-shadow: 6px 6px 0px #2563EB;
-        --primary: #2563EB;
-        --primary-accent: #3B82F6;
-        --success: #10B981;
-        --warning: #F59E0B;
-        --danger: #EF4444;
-        --text-primary: #F3F4F6;
-        --text-secondary: #9CA3AF;
-        --text-muted: #6B7280;
+        --bg-main: #0B0F19;
+        --card-bg: rgba(22, 32, 50, 0.75);
+        --card-border: rgba(255, 255, 255, 0.1);
+        --blue-accent: #3B82F6;
+        --teal-accent: #06B6D4;
+        --emerald-accent: #10B981;
+        --amber-accent: #F59E0B;
+        --rose-accent: #EF4444;
+        --text-primary: #F8FAFC;
+        --text-secondary: #94A3B8;
+        --text-muted: #64748B;
     }
 
     html, body, [class*="css"] {
-        font-family: 'Inter', -apple-system, sans-serif;
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
         color: var(--text-primary);
     }
 
     .stApp {
-        background-color: var(--bg-main);
+        background: radial-gradient(circle at 15% 15%, #131A2E 0%, #0B0F19 100%);
     }
 
-    /* Brutalist Header Bar */
-    .brutal-header {
-        background: #14161A;
-        border: 2px solid var(--card-border);
-        border-radius: 8px;
-        box-shadow: var(--brutal-shadow);
-        padding: 1.25rem 1.5rem;
-        margin-bottom: 2rem;
+    /* Top Studio Header */
+    .studio-header {
+        background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+        backdrop-filter: blur(16px);
+        border: 1px solid var(--card-border);
+        border-top: 3px solid #3B82F6;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+        padding: 1.35rem 1.75rem;
+        margin-bottom: 1.5rem;
     }
 
-    .brutal-tag {
+    .header-badge {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 0.75rem;
+        font-size: 0.74rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        color: #60A5FA;
+        color: #38BDF8;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 3px 10px;
+        border-radius: 6px;
         display: inline-block;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
 
     .hero-title {
-        font-family: 'Space Grotesk', sans-serif;
         color: #FFFFFF;
-        font-size: 2.1rem;
-        font-weight: 700;
-        letter-spacing: -0.03em;
-        line-height: 1.15;
-        margin-bottom: 0.4rem;
+        font-size: 2.15rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        line-height: 1.2;
+        margin-bottom: 0.35rem;
     }
 
     .hero-subtitle {
         color: var(--text-secondary);
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 0.96rem;
+        line-height: 1.55;
         max-width: 950px;
     }
 
-    /* Neo-Brutalist Metric Card */
-    .brutal-metric-card {
-        background: rgba(20, 22, 26, 0.9);
-        backdrop-filter: blur(8px);
-        border: 2px solid var(--card-border);
-        border-radius: 8px;
-        box-shadow: var(--brutal-shadow);
-        padding: 1.1rem 1.25rem;
-        margin-bottom: 1.5rem;
-        transition: transform 0.15s ease, border-color 0.15s ease;
+    /* Colorful Metric Cards with Colored Top Stripes */
+    .metric-card-box {
+        background: rgba(22, 32, 50, 0.7);
+        backdrop-filter: blur(14px);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 1.25rem 1.4rem;
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+        margin-bottom: 1.25rem;
     }
 
-    .brutal-metric-card:hover {
-        border-color: #4B5563;
-        transform: translate(-1px, -1px);
+    .metric-card-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.6);
     }
 
-    .metric-label {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.78rem;
+    .border-blue { border-top: 3px solid #3B82F6; }
+    .border-rose { border-top: 3px solid #EF4444; }
+    .border-amber { border-top: 3px solid #F59E0B; }
+    .border-emerald { border-top: 3px solid #10B981; }
+
+    .metric-title {
+        font-size: 0.82rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: var(--text-muted);
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.4rem;
     }
 
-    .metric-value {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
+    .metric-number {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 2.1rem;
+        font-weight: 800;
         color: #FFFFFF;
         line-height: 1.1;
     }
 
-    .metric-tag {
+    .metric-badge {
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.72rem;
         font-weight: 600;
-        display: inline-block;
-        padding: 2px 6px;
-        border-radius: 4px;
-        margin-top: 0.45rem;
-        border: 1px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 8px;
+        border-radius: 6px;
+        margin-top: 0.5rem;
     }
 
-    .tag-blue { background: rgba(37, 99, 235, 0.2); color: #93C5FD; border-color: #2563EB; }
-    .tag-red { background: rgba(239, 68, 68, 0.2); color: #FCA5A5; border-color: #DC2626; }
-    .tag-amber { background: rgba(245, 158, 11, 0.2); color: #FDE68A; border-color: #D97706; }
-    .tag-green { background: rgba(16, 185, 129, 0.2); color: #A7F3D0; border-color: #059669; }
+    .badge-blue { background: rgba(59, 130, 246, 0.18); color: #93C5FD; border: 1px solid rgba(59, 130, 246, 0.4); }
+    .badge-rose { background: rgba(239, 68, 68, 0.18); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .badge-amber { background: rgba(245, 158, 11, 0.18); color: #FDE68A; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .badge-emerald { background: rgba(16, 185, 129, 0.18); color: #A7F3D0; border: 1px solid rgba(16, 185, 129, 0.4); }
 
-    /* Panel Card */
-    .brutal-panel {
-        background: rgba(20, 22, 26, 0.85);
-        backdrop-filter: blur(10px);
-        border: 2px solid var(--card-border);
+    /* Content Box Containers */
+    .content-box {
+        background: rgba(22, 32, 50, 0.7);
+        backdrop-filter: blur(14px);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 1.35rem 1.5rem;
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+        margin-bottom: 1.5rem;
+    }
+
+    .content-box-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin-bottom: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Risk Badges */
+    .risk-pill-high {
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.3), rgba(185, 28, 28, 0.2));
+        border: 1px solid #EF4444;
+        color: #FECACA;
+        padding: 8px 18px;
         border-radius: 8px;
-        box-shadow: var(--brutal-shadow);
-        padding: 1.25rem 1.4rem;
-        margin-bottom: 1.75rem;
-    }
-
-    .panel-heading {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #FFFFFF;
-        margin-bottom: 0.75rem;
-        letter-spacing: -0.01em;
-    }
-
-    /* Brutalist Badges */
-    .badge-high {
-        background: #DC2626;
-        color: #FFFFFF;
-        border: 2px solid #FFFFFF;
-        box-shadow: 3px 3px 0px #000000;
-        padding: 6px 14px;
-        border-radius: 4px;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        font-size: 0.95rem;
+        font-weight: 800;
+        font-size: 1rem;
         display: inline-block;
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.25);
     }
 
-    .badge-med {
-        background: #D97706;
-        color: #FFFFFF;
-        border: 2px solid #FFFFFF;
-        box-shadow: 3px 3px 0px #000000;
-        padding: 6px 14px;
-        border-radius: 4px;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        font-size: 0.95rem;
+    .risk-pill-med {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(180, 83, 9, 0.2));
+        border: 1px solid #F59E0B;
+        color: #FEF08A;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 1rem;
         display: inline-block;
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
     }
 
-    .badge-low {
-        background: #059669;
-        color: #FFFFFF;
-        border: 2px solid #FFFFFF;
-        box-shadow: 3px 3px 0px #000000;
-        padding: 6px 14px;
-        border-radius: 4px;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        font-size: 0.95rem;
+    .risk-pill-low {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(4, 120, 87, 0.2));
+        border: 1px solid #10B981;
+        color: #A7F3D0;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 1rem;
         display: inline-block;
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
     }
 
-    /* Tabs Brutalism */
+    /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 6px;
-        background-color: #121417;
-        border: 2px solid var(--card-border);
-        border-radius: 8px;
-        padding: 5px;
+        gap: 8px;
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 6px;
         margin-bottom: 1.5rem;
     }
 
     .stTabs [data-baseweb="tab"] {
-        border-radius: 5px;
-        padding: 7px 14px;
+        border-radius: 8px;
+        padding: 8px 18px;
         color: var(--text-secondary);
-        font-family: 'Space Grotesk', sans-serif;
         font-weight: 600;
-        font-size: 0.88rem;
-        border: 1px solid transparent !important;
+        font-size: 0.92rem;
+        border: none !important;
+        transition: all 0.15s ease;
+    }
+
+    .stTabs [data-baseweb="tab"]:hover {
+        color: #FFFFFF;
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .stTabs [aria-selected="true"] {
-        background-color: #2563EB !important;
+        background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
         color: #FFFFFF !important;
-        border: 1px solid #93C5FD !important;
-        box-shadow: 2px 2px 0px #000000 !important;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
     }
 
-    /* Brutalist Buttons */
+    /* Buttons */
     .stButton>button {
-        background: #2563EB;
+        background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
         color: #FFFFFF;
-        border: 2px solid #93C5FD;
-        border-radius: 6px;
-        box-shadow: 3px 3px 0px #000000;
-        font-family: 'Space Grotesk', sans-serif;
+        border: 1px solid #60A5FA;
+        border-radius: 8px;
+        padding: 0.6rem 1.4rem;
         font-weight: 700;
-        padding: 0.55rem 1.3rem;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        font-size: 0.88rem;
-        transition: all 0.1s ease;
+        font-size: 0.92rem;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        transition: all 0.15s ease;
     }
 
     .stButton>button:hover {
-        background: #1D4ED8;
-        transform: translate(-1px, -1px);
-        box-shadow: 4px 4px 0px #000000;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
     }
 
-    .stButton>button:active {
-        transform: translate(1px, 1px);
-        box-shadow: 1px 1px 0px #000000;
-    }
-
-    /* Chart Containers */
-    .chart-wrapper {
-        background: #14161A;
-        border: 2px solid var(--card-border);
-        border-radius: 8px;
-        box-shadow: var(--brutal-shadow);
-        padding: 1rem 1.1rem;
-        margin-bottom: 1.75rem;
+    /* Form and Inputs */
+    div[data-testid="stForm"] {
+        border: 1px solid var(--card-border) !important;
+        border-radius: 12px !important;
+        background: rgba(22, 32, 50, 0.5) !important;
+        padding: 1.25rem !important;
     }
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
-# Plotly Brutalist Theme Preset
+# Plotly Unified Studio Theme
 # ---------------------------------------------------------
 PLOTLY_LAYOUT = dict(
-    paper_bgcolor="rgba(20, 22, 26, 0)",
-    plot_bgcolor="rgba(20, 22, 26, 0)",
-    font=dict(family="Space Grotesk, sans-serif", color="#9CA3AF", size=11),
-    margin=dict(l=40, r=20, t=40, b=40),
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(family="Plus Jakarta Sans, sans-serif", color="#94A3B8", size=11),
+    margin=dict(l=35, r=25, t=35, b=35),
     xaxis=dict(
-        gridcolor="#262A30",
-        zerolinecolor="#374151",
-        tickfont=dict(color="#9CA3AF", family="Space Grotesk, sans-serif")
+        gridcolor="rgba(255, 255, 255, 0.07)",
+        zerolinecolor="rgba(255, 255, 255, 0.12)",
+        tickfont=dict(color="#94A3B8")
     ),
     yaxis=dict(
-        gridcolor="#262A30",
-        zerolinecolor="#374151",
-        tickfont=dict(color="#9CA3AF", family="Space Grotesk, sans-serif")
+        gridcolor="rgba(255, 255, 255, 0.07)",
+        zerolinecolor="rgba(255, 255, 255, 0.12)",
+        tickfont=dict(color="#94A3B8")
     ),
-    legend=dict(font=dict(color="#E5E7EB", size=11))
+    legend=dict(font=dict(color="#E2E8F0", size=11))
 )
 
 # ---------------------------------------------------------
@@ -348,14 +347,14 @@ except Exception as e:
 # ---------------------------------------------------------
 with st.sidebar:
     st.markdown("""
-    <div style="background: #14161A; border: 2px solid #2D3139; border-radius: 6px; box-shadow: 3px 3px 0px #000000; padding: 12px; margin-bottom: 18px;">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #60A5FA; font-weight: 700;">SYSTEM // CLINICAL CDS</div>
-        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; font-weight: 700; color: #FFFFFF;">PulseCare Engine</div>
-        <div style="font-size: 0.78rem; color: #9CA3AF; margin-top: 3px;">Hospital 30-Day Readmission Suite</div>
+    <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.1); border-left: 3px solid #3B82F6; border-radius: 8px; padding: 12px; margin-bottom: 18px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 700;">SYSTEM // CLINICAL CDS</div>
+        <div style="font-weight: 800; font-size: 1.15rem; color: #FFFFFF;">PulseCare AI</div>
+        <div style="font-size: 0.78rem; color: #94A3B8; margin-top: 2px;">Hospital Readmission Risk Suite</div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("#### 🎛️ Cohort Filters")
+    st.markdown("#### 🎛️ Population Filters")
 
     selected_age = st.multiselect(
         "Patient Age Group",
@@ -387,29 +386,29 @@ with st.sidebar:
     st.markdown(f"**Filtered Cohort:** `{len(filtered_df):,}` / `{len(df):,}`")
 
     st.markdown("""
-    <div style="background: #14161A; border: 2px solid #2D3139; border-radius: 6px; padding: 10px; margin-top: 15px;">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #9CA3AF;">SPECIFICATION</div>
-        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">INT315 — Project 23</div>
-        <div style="font-size: 0.72rem; color: #6B7280;">UCI 130-US Hospitals (1999–2008)</div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px; margin-top: 15px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #94A3B8;">ASSIGNMENT INFO</div>
+        <div style="font-weight: 700; color: #F1F5F9; font-size: 0.85rem;">INT315 — Project 23</div>
+        <div style="font-size: 0.74rem; color: #64748B;">UCI 130-US Hospitals (1999–2008)</div>
     </div>
     """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
-# Brutalist Header
+# Studio Header
 # ---------------------------------------------------------
 st.markdown("""
-<div class="brutal-header">
-    <div class="brutal-tag">INT315 PROJECT 23 // PREDICTIVE CLINICAL INTELLIGENCE</div>
+<div class="studio-header">
+    <div class="header-badge">INT315 PROJECT 23 // CLINICAL INTELLIGENCE SUITE</div>
     <div class="hero-title">Hospital Readmission Prediction Platform</div>
     <div class="hero-subtitle">
         Predicting 30-day inpatient readmissions using Apache Spark (PySpark) and machine learning. 
-        Calibrated to identify high-risk diabetic patients and mitigate CMS HRRP hospital penalties.
+        Calibrated to identify high-risk diabetic patients and mitigate CMS HRRP hospital reimbursement penalties.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
-# 4 Neo-Brutalist Top Metric Cards
+# 4 Rich Metric Cards
 # ---------------------------------------------------------
 k1, k2, k3, k4 = st.columns(4)
 
@@ -420,41 +419,41 @@ dt_auc = metrics_cache.get("Decision Tree", {}).get("metrics", {}).get("roc_auc"
 
 with k1:
     st.markdown(f"""
-    <div class="brutal-metric-card">
-        <div class="metric-label">Total Patients Checked</div>
-        <div class="metric-value">{total_records:,}</div>
-        <div class="metric-tag tag-blue">UCI 130-US Hospitals</div>
+    <div class="metric-card-box border-blue">
+        <div class="metric-title">Total Patients Checked</div>
+        <div class="metric-number">{total_records:,}</div>
+        <div class="metric-badge badge-blue">UCI 130-US Hospitals</div>
     </div>
     """, unsafe_allow_html=True)
 
 with k2:
     st.markdown(f"""
-    <div class="brutal-metric-card">
-        <div class="metric-label">Readmitted &lt;30 Days</div>
-        <div class="metric-value" style="color: #F87171;">{readmit_rate:.2f}%</div>
-        <div class="metric-tag tag-red">Target Class (High Risk)</div>
+    <div class="metric-card-box border-rose">
+        <div class="metric-title">Readmitted &lt;30 Days</div>
+        <div class="metric-number" style="color: #F87171;">{readmit_rate:.2f}%</div>
+        <div class="metric-badge badge-rose">High-Risk Target Class</div>
     </div>
     """, unsafe_allow_html=True)
 
 with k3:
     st.markdown(f"""
-    <div class="brutal-metric-card">
-        <div class="metric-label">Average Hospital Stay</div>
-        <div class="metric-value">{avg_los:.1f} <span style="font-size: 1.1rem; color: #9CA3AF;">days</span></div>
-        <div class="metric-tag tag-amber">Length of Stay (LOS)</div>
+    <div class="metric-card-box border-amber">
+        <div class="metric-title">Average Hospital Stay</div>
+        <div class="metric-number">{avg_los:.1f} <span style="font-size: 1rem; color: #94A3B8;">days</span></div>
+        <div class="metric-badge badge-amber">Length of Stay (LOS)</div>
     </div>
     """, unsafe_allow_html=True)
 
 with k4:
     st.markdown(f"""
-    <div class="brutal-metric-card">
-        <div class="metric-label">Decision Tree AUC</div>
-        <div class="metric-value" style="color: #34D399;">{dt_auc:.3f}</div>
-        <div class="metric-tag tag-green">PySpark Validated</div>
+    <div class="metric-card-box border-emerald">
+        <div class="metric-title">Decision Tree AUC</div>
+        <div class="metric-number" style="color: #34D399;">{dt_auc:.3f}</div>
+        <div class="metric-badge badge-emerald">PySpark Validated</div>
     </div>
     """, unsafe_allow_html=True)
 
-st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
+st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
 
 # ---------------------------------------------------------
 # Navigation Tabs
@@ -472,52 +471,32 @@ tab_overview, tab_eda, tab_model, tab_cds, tab_batch, tab_spark = st.tabs([
 # TAB 1: QUICK SUMMARY
 # =========================================================
 with tab_overview:
-    col_e1, col_e2 = st.columns([3, 2])
+    # Row 1: Context & Distribution
+    col_t1_left, col_t1_right = st.columns([3, 2])
 
-    with col_e1:
+    with col_t1_left:
         st.markdown("""
-        <div class="brutal-panel">
-            <div class="panel-heading">Clinical Context &amp; Hospital Readmissions Reduction Program (HRRP)</div>
-            <p style="color: #D1D5DB; font-size: 0.92rem; line-height: 1.6; margin-bottom: 14px;">
+        <div class="content-box">
+            <div class="content-box-title">🏥 Clinical Context &amp; Hospital Readmissions Reduction Program (HRRP)</div>
+            <p style="color: #E2E8F0; font-size: 0.94rem; line-height: 1.6; margin-bottom: 15px;">
                 Unplanned 30-day readmissions cost the US healthcare system over $17B annually. Under the 
                 <b>CMS Hospital Readmissions Reduction Program (HRRP)</b>, acute care facilities face major financial penalties 
                 for excess readmissions. Diabetic patients present higher readmission rates due to multi-organ comorbidities and complex medication regimens.
             </p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-                <div style="background: #14161A; border: 2px solid #2D3139; padding: 12px; border-radius: 6px;">
-                    <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.88rem; color: #60A5FA;">Rare Outcome (Class Imbalance)</div>
-                    <div style="color: #9CA3AF; font-size: 0.8rem; margin-top: 3px;">Only 11.3% of patients return within 30 days. Standard models fail by guessing "No one returns". We apply positive class weighting to catch high-risk patients.</div>
+                <div style="background: rgba(15, 23, 42, 0.7); border-left: 3px solid #3B82F6; padding: 12px 14px; border-radius: 6px;">
+                    <div style="font-weight: 700; font-size: 0.88rem; color: #60A5FA;">Rare Outcome (Class Imbalance)</div>
+                    <div style="color: #94A3B8; font-size: 0.8rem; margin-top: 4px;">Only 11.3% of patients return within 30 days. Standard models fail by guessing "No one returns". We apply positive class weighting to catch high-risk patients.</div>
                 </div>
-                <div style="background: #14161A; border: 2px solid #2D3139; padding: 12px; border-radius: 6px;">
-                    <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.88rem; color: #34D399;">Doctor Action (Intervention)</div>
-                    <div style="color: #9CA3AF; font-size: 0.8rem; margin-top: 3px;">Stratifying patients before discharge allows care coordinators to trigger pharmacist medication reconciliation and 48-hour follow-up telephone check-ins.</div>
+                <div style="background: rgba(15, 23, 42, 0.7); border-left: 3px solid #10B981; padding: 12px 14px; border-radius: 6px;">
+                    <div style="font-weight: 700; font-size: 0.88rem; color: #34D399;">Doctor Action (Intervention)</div>
+                    <div style="color: #94A3B8; font-size: 0.8rem; margin-top: 4px;">Stratifying patients before discharge allows care coordinators to trigger pharmacist medication reconciliation and 48-hour follow-up telephone check-ins.</div>
                 </div>
             </div>
         </div>
         """, unsafe_allow_html=True)
 
-        top_depts = df.groupby("department")["readmitted_30d"].agg(["count", "mean"]).reset_index()
-        top_depts = top_depts[top_depts["count"] >= 500].sort_values(by="mean", ascending=True)
-        top_depts["Rate"] = (top_depts["mean"] * 100).round(2)
-
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
-        fig_dept_quick = px.bar(
-            top_depts,
-            x="Rate",
-            y="department",
-            orientation="h",
-            title="Readmission Rate by Medical Department (Minimum 500 Encounters)",
-            labels={"Rate": "30-Day Readmission Rate (%)", "department": ""},
-            text="Rate",
-            color="Rate",
-            color_continuous_scale=["#1D4ED8", "#2563EB", "#DC2626"]
-        )
-        fig_dept_quick.update_layout(PLOTLY_LAYOUT, height=310, coloraxis_showscale=False)
-        fig_dept_quick.update_traces(textposition="outside", texttemplate="%{text}%")
-        st.plotly_chart(fig_dept_quick, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-
-    with col_e2:
+    with col_t1_right:
         counts = df["readmitted_multiclass"].value_counts().reset_index()
         counts.columns = ["Status", "Count"]
         status_map = {
@@ -527,52 +506,72 @@ with tab_overview:
         }
         counts["Status"] = counts["Status"].map(status_map)
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_donut = px.pie(
             counts,
             values="Count",
             names="Status",
-            hole=0.6,
+            hole=0.58,
             title="Encounter Readmission Distribution",
             color="Status",
             color_discrete_map={
-                "No Readmission": "#374151",
-                "Readmitted >30 Days": "#2563EB",
-                "Readmitted <30 Days (High Risk)": "#DC2626"
+                "No Readmission": "#475569",
+                "Readmitted >30 Days": "#3B82F6",
+                "Readmitted <30 Days (High Risk)": "#EF4444"
             }
         )
-        fig_donut.update_layout(PLOTLY_LAYOUT, height=290, legend=dict(orientation="h", y=-0.15))
+        fig_donut.update_layout(PLOTLY_LAYOUT, height=270, legend=dict(orientation="h", y=-0.15))
         st.plotly_chart(fig_donut, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
+    # Row 2: Department and Prior Visits side-by-side
+    col_t2_left, col_t2_right = st.columns(2)
+
+    with col_t2_left:
+        top_depts = df.groupby("department")["readmitted_30d"].agg(["count", "mean"]).reset_index()
+        top_depts = top_depts[top_depts["count"] >= 500].sort_values(by="mean", ascending=True)
+        top_depts["Rate"] = (top_depts["mean"] * 100).round(2)
+
+        fig_dept_quick = px.bar(
+            top_depts,
+            x="Rate",
+            y="department",
+            orientation="h",
+            title="Readmission Rate by Medical Department (Minimum 500 Encounters)",
+            labels={"Rate": "30-Day Readmission Rate (%)", "department": ""},
+            text="Rate",
+            color="Rate",
+            color_continuous_scale=["#1D4ED8", "#3B82F6", "#EF4444"]
+        )
+        fig_dept_quick.update_layout(PLOTLY_LAYOUT, height=360, coloraxis_showscale=False)
+        fig_dept_quick.update_traces(textposition="outside", texttemplate="%{text}%")
+        st.plotly_chart(fig_dept_quick, use_container_width=True)
+
+    with col_t2_right:
         inpatient_stat = df.groupby("has_prior_inpatient")["readmitted_30d"].mean().reset_index()
         inpatient_stat["Label"] = inpatient_stat["has_prior_inpatient"].map({0: "0 Prior Inpatient Visits", 1: "1+ Prior Inpatient Visits"})
         inpatient_stat["Rate"] = (inpatient_stat["readmitted_30d"] * 100).round(2)
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_inp = px.bar(
             inpatient_stat,
             x="Label",
             y="Rate",
-            title="Prior Inpatient History vs Readmission Rate",
+            title="Impact of Prior Inpatient History on 30-Day Readmission",
             color="Label",
-            color_discrete_map={"0 Prior Inpatient Visits": "#4B5563", "1+ Prior Inpatient Visits": "#D97706"},
+            color_discrete_map={"0 Prior Inpatient Visits": "#64748B", "1+ Prior Inpatient Visits": "#F59E0B"},
             text="Rate",
             labels={"Rate": "Readmission Rate (%)", "Label": ""}
         )
-        fig_inp.update_layout(PLOTLY_LAYOUT, height=260, showlegend=False)
+        fig_inp.update_layout(PLOTLY_LAYOUT, height=360, showlegend=False)
         fig_inp.update_traces(textposition="outside", texttemplate="%{text}%")
         st.plotly_chart(fig_inp, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
 # =========================================================
 # TAB 2: EXPLORATORY DATA ANALYSIS (EDA)
 # =========================================================
 with tab_eda:
     st.markdown("### 🔍 Population Trends & Illness Insights (EDA)")
-    st.caption("Addressing Project 23 Tasks: 'Visualize readmission trends by department and patient age' with structured, spaced charts.")
+    st.caption("Fulfilling Project 23 Tasks: 'Visualize readmission trends by department and patient age' with balanced, spaced charts.")
 
-    st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
     eda_r1c1, eda_r1c2 = st.columns(2)
 
@@ -581,7 +580,6 @@ with tab_eda:
         dept_data = dept_data[dept_data["count"] >= 30].sort_values(by="mean", ascending=True)
         dept_data["Readmission_Rate"] = (dept_data["mean"] * 100).round(2)
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_dept = px.bar(
             dept_data,
             x="Readmission_Rate",
@@ -590,11 +588,10 @@ with tab_eda:
             title="Readmission Trends by Department / Specialty",
             labels={"Readmission_Rate": "30-Day Readmission Rate (%)", "department": ""},
             color="Readmission_Rate",
-            color_continuous_scale=["#0D9488", "#2563EB", "#DC2626"]
+            color_continuous_scale=["#0D9488", "#2563EB", "#EF4444"]
         )
-        fig_dept.update_layout(PLOTLY_LAYOUT, height=380)
+        fig_dept.update_layout(PLOTLY_LAYOUT, height=390)
         st.plotly_chart(fig_dept, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
     with eda_r1c2:
         age_data = filtered_df.groupby("age")["readmitted_30d"].agg(["count", "mean"]).reset_index()
@@ -603,7 +600,6 @@ with tab_eda:
         age_data = age_data.sort_values("age")
         age_data["Readmission_Rate"] = (age_data["mean"] * 100).round(2)
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_age = px.bar(
             age_data,
             x="age",
@@ -611,15 +607,14 @@ with tab_eda:
             title="Readmission Rate by Patient Age Bracket",
             labels={"Readmission_Rate": "30-Day Readmission Rate (%)", "age": "Age Decile"},
             color="Readmission_Rate",
-            color_continuous_scale=["#1E3A8A", "#2563EB", "#60A5FA"],
+            color_continuous_scale=["#1E3A8A", "#3B82F6", "#93C5FD"],
             text="Readmission_Rate"
         )
-        fig_age.update_layout(PLOTLY_LAYOUT, height=380)
+        fig_age.update_layout(PLOTLY_LAYOUT, height=390)
         fig_age.update_traces(textposition="outside", texttemplate="%{text}%")
         st.plotly_chart(fig_age, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='height: 15px;'></div>", unsafe_allow_html=True)
 
     eda_r2c1, eda_r2c2 = st.columns(2)
 
@@ -627,7 +622,6 @@ with tab_eda:
         los_data = filtered_df.groupby("time_in_hospital")["readmitted_30d"].agg(["count", "mean"]).reset_index()
         los_data["Readmission_Rate"] = (los_data["mean"] * 100).round(2)
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_los = px.line(
             los_data,
             x="time_in_hospital",
@@ -636,17 +630,15 @@ with tab_eda:
             labels={"time_in_hospital": "Days in Hospital (Length of Stay)", "Readmission_Rate": "Readmission Rate (%)"},
             markers=True
         )
-        fig_los.update_traces(line_color="#38BDF8", line_width=2.5, marker_size=7, marker_color="#0284C7")
-        fig_los.update_layout(PLOTLY_LAYOUT, height=360)
+        fig_los.update_traces(line_color="#06B6D4", line_width=2.5, marker_size=7, marker_color="#38BDF8")
+        fig_los.update_layout(PLOTLY_LAYOUT, height=370)
         st.plotly_chart(fig_los, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
     with eda_r2c2:
         diag_data = filtered_df.groupby("primary_diagnosis")["readmitted_30d"].agg(["count", "mean"]).reset_index()
         diag_data = diag_data.sort_values(by="mean", ascending=True)
         diag_data["Readmission_Rate"] = (diag_data["mean"] * 100).round(2)
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_diag = px.bar(
             diag_data,
             x="Readmission_Rate",
@@ -655,13 +647,12 @@ with tab_eda:
             title="Primary Diagnosis (ICD-9 Groups) vs Readmission Rate",
             labels={"Readmission_Rate": "Readmission Rate (%)", "primary_diagnosis": ""},
             color="Readmission_Rate",
-            color_continuous_scale=["#0D9488", "#2563EB", "#D97706"]
+            color_continuous_scale=["#0D9488", "#3B82F6", "#F59E0B"]
         )
-        fig_diag.update_layout(PLOTLY_LAYOUT, height=360)
+        fig_diag.update_layout(PLOTLY_LAYOUT, height=370)
         st.plotly_chart(fig_diag, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='height: 15px;'></div>", unsafe_allow_html=True)
 
     eda_r3c1, eda_r3c2 = st.columns(2)
 
@@ -670,7 +661,6 @@ with tab_eda:
         hba1c_data["Readmission_Rate"] = (hba1c_data["readmitted_30d"] * 100).round(2)
         hba1c_data["Medication Change"] = hba1c_data["change"].map({"Ch": "Dosage Changed", "No": "No Change"})
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_hba1c = px.bar(
             hba1c_data,
             x="A1Cresult",
@@ -679,18 +669,16 @@ with tab_eda:
             barmode="group",
             title="HbA1c Lab Testing & Medication Dosage Changes",
             labels={"A1Cresult": "Blood Sugar Test (HbA1c)", "Readmission_Rate": "Readmission Rate (%)"},
-            color_discrete_map={"Dosage Changed": "#DC2626", "No Change": "#2563EB"}
+            color_discrete_map={"Dosage Changed": "#EF4444", "No Change": "#3B82F6"}
         )
-        fig_hba1c.update_layout(PLOTLY_LAYOUT, height=340)
+        fig_hba1c.update_layout(PLOTLY_LAYOUT, height=350)
         st.plotly_chart(fig_hba1c, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
     with eda_r3c2:
         inp_data = filtered_df.groupby("number_inpatient")["readmitted_30d"].agg(["count", "mean"]).reset_index()
         inp_data = inp_data[inp_data["number_inpatient"] <= 6]
         inp_data["Readmission_Rate"] = (inp_data["mean"] * 100).round(2)
 
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_prior = px.bar(
             inp_data,
             x="number_inpatient",
@@ -698,13 +686,12 @@ with tab_eda:
             title="Prior Inpatient Admissions in Previous 12 Months",
             labels={"number_inpatient": "Prior Hospital Admissions", "Readmission_Rate": "Readmission Rate (%)"},
             color="Readmission_Rate",
-            color_continuous_scale=["#374151", "#D97706", "#DC2626"],
+            color_continuous_scale=["#475569", "#F59E0B", "#EF4444"],
             text="Readmission_Rate"
         )
-        fig_prior.update_layout(PLOTLY_LAYOUT, height=340)
+        fig_prior.update_layout(PLOTLY_LAYOUT, height=350)
         fig_prior.update_traces(textposition="outside", texttemplate="%{text}%")
         st.plotly_chart(fig_prior, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
 # =========================================================
 # TAB 3: MODEL TESTING LAB
@@ -741,10 +728,9 @@ with tab_model:
         bench_df = pd.DataFrame(benchmark_data)
         st.dataframe(bench_df, hide_index=True, use_container_width=True)
 
-    st.markdown("<div style='height: 14px;'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='height: 15px;'></div>", unsafe_allow_html=True)
 
     # Multi-Model ROC Overlay
-    st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
     fig_comp_roc = go.Figure()
     model_colors = {
         "Decision Tree": "#38BDF8",
@@ -773,18 +759,17 @@ with tab_model:
         x=[0, 1], y=[0, 1],
         mode="lines",
         name="Random Chance (AUC = 0.500)",
-        line=dict(color="#4B5563", dash="dash")
+        line=dict(color="#64748B", dash="dash")
     ))
     fig_comp_roc.update_layout(
         PLOTLY_LAYOUT,
         title="Multi-Model ROC Overlay Comparison",
         xaxis_title="False Alarm Rate (False Positive Rate)",
         yaxis_title="True Positive Rate (Recall / Sensitivity)",
-        height=350,
+        height=360,
         legend=dict(x=0.55, y=0.1)
     )
     st.plotly_chart(fig_comp_roc, use_container_width=True)
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown("---")
 
@@ -794,8 +779,8 @@ with tab_model:
     mod_col1, mod_col2 = st.columns([1, 2])
 
     with mod_col1:
-        st.markdown('<div class="brutal-panel">', unsafe_allow_html=True)
-        st.markdown("<div class='panel-heading'>Model Controls</div>", unsafe_allow_html=True)
+        st.markdown('<div class="content-box">', unsafe_allow_html=True)
+        st.markdown("<div class='content-box-title'>⚙️ Model Controls</div>", unsafe_allow_html=True)
 
         selected_model_name = st.selectbox(
             "Select Classifier to Inspect",
@@ -911,7 +896,6 @@ with tab_model:
             cm_dict = active_metrics.get("confusion_matrix", {"tn": 10916, "fp": 7217, "fn": 817, "tp": 1425})
             cm_array = [[cm_dict["tn"], cm_dict["fp"]], [cm_dict["fn"], cm_dict["tp"]]]
 
-            st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
             fig_cm = go.Figure(data=go.Heatmap(
                 z=cm_array,
                 x=["Predicted: No", "Predicted: Readmit"],
@@ -919,7 +903,7 @@ with tab_model:
                 text=[[f"True Negatives<br>{cm_dict['tn']:,}", f"False Alarms<br>{cm_dict['fp']:,}"],
                       [f"Missed (FN)<br>{cm_dict['fn']:,}", f"Caught (TP)<br>{cm_dict['tp']:,}"]],
                 texttemplate="%{text}",
-                colorscale=[[0, "#1F2937"], [1, "#2563EB"]],
+                colorscale=[[0, "#1E293B"], [1, "#2563EB"]],
                 showscale=False
             ))
             fig_cm.update_layout(
@@ -928,13 +912,11 @@ with tab_model:
                 height=300
             )
             st.plotly_chart(fig_cm, use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
 
         with vm2:
             fpr_vals = active_curves.get("fpr", [0, 0.2, 0.4, 0.6, 0.8, 1.0])
             tpr_vals = active_curves.get("tpr", [0, 0.4, 0.6, 0.75, 0.9, 1.0])
 
-            st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
             fig_roc = go.Figure()
             fig_roc.add_trace(go.Scatter(
                 x=fpr_vals,
@@ -947,7 +929,7 @@ with tab_model:
                 x=[0, 1], y=[0, 1],
                 mode="lines",
                 name="Random Chance",
-                line=dict(color="#4B5563", dash="dash")
+                line=dict(color="#64748B", dash="dash")
             ))
             fig_roc.update_layout(
                 PLOTLY_LAYOUT,
@@ -958,7 +940,6 @@ with tab_model:
                 legend=dict(x=0.45, y=0.1)
             )
             st.plotly_chart(fig_roc, use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
 
     fi_list = active_metrics.get("feature_importances", [])
     if fi_list:
@@ -978,7 +959,6 @@ with tab_model:
             .str.replace("num_lab_procedures", "Lab Procedures Count")
             .str.replace("number_diagnoses", "Diagnoses Count")
         )
-        st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
         fig_fi = px.bar(
             fi_df,
             x="Importance",
@@ -989,7 +969,6 @@ with tab_model:
         )
         fig_fi.update_layout(PLOTLY_LAYOUT, height=420, coloraxis_showscale=False)
         st.plotly_chart(fig_fi, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
 # =========================================================
 # TAB 4: PATIENT RISK CHECKER (CDS)
@@ -1096,42 +1075,40 @@ with tab_cds:
         with r_col1:
             risk_pct = round(pred_prob * 100, 1)
 
-            st.markdown('<div class="chart-wrapper">', unsafe_allow_html=True)
             fig_gauge = go.Figure(go.Indicator(
                 mode="gauge+number",
                 value=risk_pct,
                 domain={'x': [0, 1], 'y': [0, 1]},
-                title={'text': "30-Day Readmission Probability", 'font': {'size': 16, 'color': '#FFFFFF', 'family': 'Space Grotesk'}},
-                number={'suffix': "%", 'font': {'size': 36, 'color': '#FFFFFF', 'family': 'Space Grotesk'}},
+                title={'text': "30-Day Readmission Probability", 'font': {'size': 17, 'color': '#FFFFFF'}},
+                number={'suffix': "%", 'font': {'size': 38, 'color': '#FFFFFF'}},
                 gauge={
-                    'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#9CA3AF"},
+                    'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#94A3B8"},
                     'bar': {'color': "#EF4444" if risk_pct >= 40 else ("#F59E0B" if risk_pct >= 20 else "#10B981")},
-                    'bgcolor': "rgba(255,255,255,0.04)",
+                    'bgcolor': "rgba(255,255,255,0.05)",
                     'borderwidth': 1,
-                    'bordercolor': "#374151",
+                    'bordercolor': "rgba(255,255,255,0.15)",
                     'steps': [
-                        {'range': [0, 20], 'color': 'rgba(16, 185, 129, 0.15)'},
-                        {'range': [20, 40], 'color': 'rgba(245, 158, 11, 0.15)'},
-                        {'range': [40, 100], 'color': 'rgba(239, 68, 68, 0.15)'}
+                        {'range': [0, 20], 'color': 'rgba(16, 185, 129, 0.18)'},
+                        {'range': [20, 40], 'color': 'rgba(245, 158, 11, 0.18)'},
+                        {'range': [40, 100], 'color': 'rgba(239, 68, 68, 0.18)'}
                     ],
                     'threshold': {'line': {'color': "#FFFFFF", 'width': 3}, 'thickness': 0.75, 'value': risk_pct}
                 }
             ))
-            fig_gauge.update_layout(PLOTLY_LAYOUT, height=240)
+            fig_gauge.update_layout(PLOTLY_LAYOUT, height=250)
             st.plotly_chart(fig_gauge, use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
 
             if risk_pct >= 40:
-                st.markdown('<div style="text-align: center;"><span class="badge-high">⚠️ HIGH READMISSION RISK (>40%)</span></div>', unsafe_allow_html=True)
+                st.markdown('<div style="text-align: center;"><span class="risk-pill-high">⚠️ HIGH READMISSION RISK (>40%)</span></div>', unsafe_allow_html=True)
             elif risk_pct >= 20:
-                st.markdown('<div style="text-align: center;"><span class="badge-med">⚡ MODERATE READMISSION RISK (20% – 40%)</span></div>', unsafe_allow_html=True)
+                st.markdown('<div style="text-align: center;"><span class="risk-pill-med">⚡ MODERATE READMISSION RISK (20% – 40%)</span></div>', unsafe_allow_html=True)
             else:
-                st.markdown('<div style="text-align: center;"><span class="badge-low">✅ LOW READMISSION RISK (&lt;20%)</span></div>', unsafe_allow_html=True)
+                st.markdown('<div style="text-align: center;"><span class="risk-pill-low">✅ LOW READMISSION RISK (&lt;20%)</span></div>', unsafe_allow_html=True)
 
         with r_col2:
             st.markdown("""
-            <div class="brutal-panel">
-                <div class="panel-heading">📋 Recommended Transition-of-Care Action Plan</div>
+            <div class="content-box">
+                <div class="content-box-title">📋 Recommended Transition-of-Care Action Plan</div>
             """, unsafe_allow_html=True)
 
             recs = []
@@ -1150,7 +1127,7 @@ with tab_cds:
                 recs.append("Patient demonstrates standard low-risk indicators. Standard discharge education, telephone follow-up at 7 days, primary care review at 14 days.")
 
             for r in recs:
-                st.markdown(f"<div style='margin-bottom: 7px; color: #E5E7EB; font-size: 0.88rem;'>• {r}</div>", unsafe_allow_html=True)
+                st.markdown(f"<div style='margin-bottom: 8px; color: #E2E8F0; font-size: 0.9rem;'>• {r}</div>", unsafe_allow_html=True)
 
             st.markdown("</div>", unsafe_allow_html=True)
 
@@ -1224,35 +1201,35 @@ with tab_spark:
 
     with sp_col1:
         st.markdown("""
-        <div class="brutal-panel">
-            <div class="panel-heading">Academic Rubric Compliance Matrix</div>
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: #E5E7EB;">
-                <tr style="border-bottom: 2px solid #374151;">
-                    <th style="text-align: left; padding: 7px 4px; font-family: 'Space Grotesk', sans-serif;">Task Requirement</th>
-                    <th style="text-align: right; padding: 7px 4px; font-family: 'Space Grotesk', sans-serif;">Status</th>
+        <div class="content-box">
+            <div class="content-box-title">📋 Academic Rubric Compliance Matrix</div>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; color: #E2E8F0;">
+                <tr style="border-bottom: 2px solid rgba(255,255,255,0.15);">
+                    <th style="text-align: left; padding: 8px 4px;">Task Requirement</th>
+                    <th style="text-align: right; padding: 8px 4px;">Status</th>
                 </tr>
-                <tr style="border-bottom: 1px solid #262A30;">
-                    <td style="padding: 7px 4px;">Load discharge records into Spark DataFrame</td>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                    <td style="padding: 8px 4px;">Load discharge records into Spark DataFrame</td>
                     <td style="text-align: right; color: #34D399; font-weight: 700;">Completed (100k+ rows)</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #262A30;">
-                    <td style="padding: 7px 4px;">Handle null values in admission &amp; discharge fields</td>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                    <td style="padding: 8px 4px;">Handle null values in admission &amp; discharge fields</td>
                     <td style="text-align: right; color: #34D399; font-weight: 700;">Completed</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #262A30;">
-                    <td style="padding: 7px 4px;">Encode categorical data (ICD-9 diagnosis, department)</td>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                    <td style="padding: 8px 4px;">Encode categorical data (ICD-9 diagnosis, department)</td>
                     <td style="text-align: right; color: #34D399; font-weight: 700;">Completed</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #262A30;">
-                    <td style="padding: 7px 4px;">Build Decision Tree classifier for readmission</td>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                    <td style="padding: 8px 4px;">Build Decision Tree classifier for readmission</td>
                     <td style="text-align: right; color: #34D399; font-weight: 700;">Completed (Weighted PySpark DT)</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #262A30;">
-                    <td style="padding: 7px 4px;">Evaluate model using Accuracy and ROC-AUC</td>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                    <td style="padding: 8px 4px;">Evaluate model using Accuracy and ROC-AUC</td>
                     <td style="text-align: right; color: #34D399; font-weight: 700;">Completed (ROC-AUC ~0.65)</td>
                 </tr>
                 <tr>
-                    <td style="padding: 7px 4px;">Visualize readmission trends by dept and age</td>
+                    <td style="padding: 8px 4px;">Visualize readmission trends by dept and age</td>
                     <td style="text-align: right; color: #34D399; font-weight: 700;">Completed (Interactive Plotly EDA)</td>
                 </tr>
             </table>
@@ -1260,9 +1237,9 @@ with tab_spark:
         """, unsafe_allow_html=True)
 
         st.markdown("""
-        <div class="brutal-panel">
-            <div class="panel-heading">Distributed Spark ML vs Scikit-Learn In-Memory</div>
-            <p style="color: #9CA3AF; font-size: 0.85rem; line-height: 1.5;">
+        <div class="content-box">
+            <div class="content-box-title">⚡ Distributed Spark ML vs Scikit-Learn In-Memory</div>
+            <p style="color: #94A3B8; font-size: 0.88rem; line-height: 1.55;">
                 In hospital enterprise environments with multi-terabyte Electronic Health Record (EHR) logs, Spark distributed DataFrames and ML pipelines enable horizontal scaling across hospital cloud clusters. For rapid clinical decision support and interactive dashboarding, the trained weights are compiled into high-efficiency inference pipelines.
             </p>
         </div>
@@ -1305,8 +1282,8 @@ spark_auc = evaluator.evaluate(test_predictions)
 # ---------------------------------------------------------
 st.markdown("---")
 st.markdown("""
-<div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: #6B7280; padding: 10px 0;">
-    <div>PulseCare // Neo-Brutalist Clinical Analytics | Developed for <b>INT315 Hospital Readmission Project 23</b></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; padding: 10px 0;">
+    <div>PulseCare AI Clinical Suite | Developed for <b>INT315 Hospital Readmission Project 23</b></div>
     <div>Dataset: UCI Machine Learning Repository (Diabetes 130-US Hospitals)</div>
 </div>
 """, unsafe_allow_html=True)

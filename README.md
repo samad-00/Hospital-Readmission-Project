@@ -1,4 +1,4 @@
-# 🏥 PulseCare AI — Hospital 30-Day Readmission Prediction Platform
+# 🏥 Hospital 30-Day Readmission Prediction Platform (PySpark ML)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" />
@@ -11,15 +11,11 @@
 
 ---
 
-> 💡 **Teacher Presentation Guide Ready**: Check out [PRESENTATION_GUIDE.md](PRESENTATION_GUIDE.md) for a complete 30-second elevator pitch, click-by-click talking points, and top viva questions & answers!
-
----
-
 ## 📌 Executive Overview
 
-**PulseCare AI** is an interactive, enterprise-grade Clinical Decision Support (CDS) and machine learning dashboard designed to predict **30-day unplanned hospital readmissions** for diabetic inpatients. Built on 10 years (1999–2008) of clinical encounter data across 130 US hospitals from the **UCI Machine Learning Repository**, this platform tackles severe class imbalance (~11.3% early readmissions) to empower hospital care teams, case managers, and clinicians to prevent hospital penalties under the **CMS Hospital Readmissions Reduction Program (HRRP)**.
+**PulseCare ML** is an interactive, enterprise-grade Clinical Decision Support (CDS) and machine learning dashboard designed to predict **30-day unplanned hospital readmissions** for diabetic inpatients using Apache Spark and Scikit-Learn. Built on 10 years (1999–2008) of clinical encounter data across 130 US hospitals from the **UCI Machine Learning Repository**, this platform tackles severe class imbalance (~11.3% early readmissions) to empower hospital care teams, case managers, and clinicians to prevent hospital penalties under the **CMS Hospital Readmissions Reduction Program (HRRP)**.
 
-Inspired by modern **21st.dev** design aesthetics, the interface features obsidian glassmorphic card layouts, real-time hyperparameter tuning, interactive Plotly visualizations, live patient risk calculators, and automated transition-of-care recommendations.
+The interface features brutalist glassmorphic card layouts, real-time hyperparameter tuning, interactive Plotly visualizations, live patient risk calculators, and automated transition-of-care recommendations.
 
 ---
 

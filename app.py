@@ -35,7 +35,7 @@ from src.model_trainer import (
 # Page Configuration & Modern Clinical Studio Theme
 # ---------------------------------------------------------
 st.set_page_config(
-    page_title="PulseCare AI | Clinical Readmission Analytics",
+    page_title="Hospital Readmission ML Platform | INT315 Project 23",
     page_icon="🏥",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -396,8 +396,8 @@ with st.sidebar:
     st.markdown("""
     <div style="background: rgba(18, 25, 40, 0.9); border: 2px solid #38BDF8; border-radius: 8px; padding: 14px; margin-bottom: 18px; box-shadow: 4px 4px 0px #000000;">
         <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 800;">SYSTEM // CLINICAL CDS</div>
-        <div style="font-weight: 900; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare AI 🏥</div>
-        <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 3px;">Hospital Readmission Risk Suite</div>
+        <div style="font-weight: 900; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare ML 🏥</div>
+        <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 3px;">Hospital Readmission Prediction Suite</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -1332,7 +1332,7 @@ spark_auc = evaluator.evaluate(test_predictions)
 st.markdown("---")
 st.markdown("""
 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; padding: 10px 0;">
-    <div>PulseCare AI Clinical Suite | Developed for <b>INT315 Hospital Readmission Project 23</b></div>
+    <div>Hospital Readmission ML Platform | Developed for <b>INT315 Project 23</b></div>
     <div>Dataset: UCI Machine Learning Repository (Diabetes 130-US Hospitals)</div>
 </div>
 """, unsafe_allow_html=True)

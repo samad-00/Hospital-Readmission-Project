@@ -1,0 +1,1001 @@
+time_in_hospital,num_lab_procedures,num_procedures,num_medications,number_outpatient,number_emergency,number_inpatient,number_diagnoses,total_prior_visits,age,gender,race,admission_type,discharge_disposition,admission_source,department,primary_diagnosis,A1Cresult,max_glu_serum,insulin,change,diabetesMed,readmitted_30d,y_prob_dt
+3,43,2,17,0,0,1,9,1,[80-90),Male,Caucasian,Emergency,Home with Home Health,SNF Transfer,InternalMedicine,Other,None,None,No,No,Yes,0,0.480386539213002
+7,35,2,37,0,2,0,4,2,[80-90),Female,AfricanAmerican,Elective,Home with Home Health,Clinic Referral,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,1,0.507611368387829
+11,18,0,30,0,0,0,5,0,[30-40),Female,Caucasian,Urgent,Home with Home Health,Unknown,Family/GeneralPractice,Respiratory,None,Norm,No,No,Yes,1,0.41813744994994756
+7,49,3,21,3,0,0,7,3,[60-70),Female,Caucasian,Unknown,Discharged to Home,Unknown,InternalMedicine,Digestive,None,None,Down,Ch,Yes,0,0.42215045529680195
+1,66,0,6,0,0,0,8,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Physician Referral,Family/GeneralPractice,Diabetes,None,None,Steady,No,Yes,0,0.45828662091908995
+5,38,0,15,0,0,0,7,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,Ch,Yes,0,0.3814536048961673
+5,58,1,15,1,1,2,9,4,[30-40),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,>8,None,Up,Ch,Yes,0,0.6029188635028577
+2,41,0,9,0,0,0,7,0,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Nephrology,Diabetes,None,None,Up,Ch,Yes,0,0.49249342194377826
+3,61,0,11,0,0,0,9,0,[80-90),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,No,0,0.4226272904966425
+3,54,0,20,0,0,1,9,1,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,0,0.49442659988196397
+1,57,3,24,0,0,0,5,0,[30-40),Male,Caucasian,Not Mapped,Discharged to Home,Physician Referral,Other Specialty,Circulatory,None,None,Up,Ch,Yes,0,0.3851231780132954
+3,9,0,13,0,0,1,9,1,[90-100),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Respiratory,None,None,Down,Ch,Yes,0,0.5092409062474923
+1,60,5,15,5,0,1,9,6,[80-90),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,No,No,No,0,0.41242852078069325
+1,64,0,12,11,0,0,9,11,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,>8,None,No,No,Yes,0,0.38727575760662325
+1,44,1,17,0,0,0,6,0,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.4160511730906892
+1,22,6,17,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Injury,None,None,No,No,Yes,0,0.391814703217776
+1,18,0,11,0,0,1,5,1,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Neoplasms,None,None,Down,Ch,Yes,1,0.45338928120677163
+7,51,3,25,0,0,0,9,0,[50-60),Male,Caucasian,Unknown,Discharged to Home,Unknown,Unknown/Missing,Other,None,None,No,Ch,Yes,0,0.37783018025472787
+1,24,2,11,0,0,2,6,2,[60-70),Female,Hispanic,Emergency,Transferred to SNF,Physician Referral,Unknown/Missing,Other,None,None,Down,Ch,Yes,0,0.6505070315299866
+7,57,6,15,0,0,0,6,0,[40-50),Male,Caucasian,Urgent,Unknown,Hospital Transfer,Unknown/Missing,Circulatory,>7,None,No,No,No,0,0.4264035566394198
+6,51,6,54,0,0,0,9,0,[50-60),Female,Caucasian,Urgent,Discharged to Home,Hospital Transfer,Other Specialty,Circulatory,None,None,Steady,Ch,Yes,0,0.4051617857928836
+5,48,2,21,0,0,0,8,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Digestive,None,None,No,No,No,0,0.3899724776224033
+1,1,3,8,0,0,0,5,0,[80-90),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Diabetes,None,None,No,No,No,0,0.34950292008311906
+8,46,0,20,0,0,2,9,2,[60-70),Male,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Injury,None,None,No,No,Yes,0,0.6627345648018462
+1,18,0,3,0,0,1,4,1,[90-100),Female,AfricanAmerican,Not Available,Home with Home Health,Unknown,Unknown/Missing,Circulatory,None,Norm,No,No,No,0,0.4148282557078856
+9,50,0,10,0,0,0,8,0,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.48696033525220084
+6,45,1,37,5,2,0,9,7,[70-80),Female,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.6170837021518267
+2,2,1,12,0,0,0,8,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Orthopedics,Musculoskeletal,None,None,Steady,Ch,Yes,0,0.3348755986416807
+1,49,0,11,0,2,0,7,2,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.39947784631721633
+9,67,1,22,0,0,0,7,0,[80-90),Male,Hispanic,Unknown,Home with Home Health,Unknown,Family/GeneralPractice,Diabetes,>8,None,No,Ch,Yes,0,0.4315593999682149
+2,59,0,21,0,0,0,9,0,[70-80),Female,Caucasian,Not Available,Home with Home Health,Physician Referral,Unknown/Missing,Respiratory,None,None,Up,Ch,Yes,0,0.450171437322071
+2,49,0,8,0,0,0,4,0,[50-60),Male,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,No,Ch,Yes,0,0.2947293416330404
+9,40,6,29,0,0,1,9,1,[50-60),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Injury,None,None,Steady,Ch,Yes,1,0.48783231819498285
+3,39,2,28,0,4,3,4,7,[80-90),Female,AfricanAmerican,Emergency,Other/Unknown,Emergency Room,InternalMedicine,Circulatory,None,None,Up,Ch,Yes,0,0.7903567158553209
+5,55,0,12,0,0,0,9,0,[80-90),Male,Caucasian,Emergency,Unknown,Emergency Room,Other Specialty,Other,None,None,No,No,No,0,0.5068289737840896
+1,31,0,2,0,0,0,3,0,[30-40),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Other Specialty,Diabetes,None,None,No,No,No,0,0.3204100392963795
+3,30,3,30,0,0,0,5,0,[50-60),Female,Caucasian,Elective,Unknown,Physician Referral,Orthopedics,Musculoskeletal,None,None,No,No,No,0,0.33074142624052494
+4,22,2,11,0,0,1,4,1,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Family/GeneralPractice,Neoplasms,None,None,Steady,No,Yes,0,0.4645258547780059
+1,1,1,4,0,1,0,8,1,[70-80),Female,Caucasian,Not Available,Home with Home Health,Unknown,Family/GeneralPractice,Other,None,None,No,No,Yes,0,0.3953159021737268
+7,69,0,21,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Cardiology,Other,None,None,Down,Ch,Yes,0,0.48440538424548774
+12,52,3,26,11,1,4,9,16,[50-60),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Diabetes,>8,None,Up,Ch,Yes,0,0.7819255327808431
+2,51,1,16,0,0,1,9,1,[70-80),Male,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.5600491591524395
+2,2,1,24,0,0,0,4,0,[60-70),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Neoplasms,None,None,Steady,Ch,Yes,0,0.36625334692818623
+2,30,1,10,0,0,0,5,0,[70-80),Male,AfricanAmerican,Emergency,Discharged to Home,Other Healthcare Transfer,InternalMedicine,Digestive,None,None,No,No,Yes,0,0.3722636787741651
+4,33,1,12,0,0,0,5,0,[60-70),Male,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Other,None,None,No,No,Yes,0,0.3922376214568913
+1,55,5,17,0,0,0,6,0,[50-60),Male,Caucasian,Unknown,Discharged to Home,Unknown,Cardiology,Respiratory,None,None,No,No,Yes,0,0.2555310632670481
+3,37,1,15,0,0,0,9,0,[50-60),Male,Caucasian,Emergency,Discharged to Home,Unknown,Other Specialty,Other,>7,None,Steady,Ch,Yes,0,0.34822413440475325
+5,40,0,6,0,0,1,9,1,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Respiratory,None,None,No,No,No,0,0.4233879531325599
+4,22,6,27,0,0,0,9,0,[70-80),Female,Unknown,Urgent,Discharged to Home,Hospital Transfer,Radiologist,Circulatory,None,None,No,No,Yes,1,0.3215192734162826
+2,50,0,15,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.4570873269589253
+10,1,6,13,0,0,0,9,0,[70-80),Male,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Other,None,None,Steady,Ch,Yes,0,0.4642662175443461
+3,62,0,8,0,0,0,5,0,[90-100),Female,Caucasian,Emergency,Transferred to ICF,Other Healthcare Transfer,Family/GeneralPractice,Genitourinary,None,None,No,No,No,0,0.3929146182061235
+10,70,2,15,0,0,0,9,0,[70-80),Female,Caucasian,Elective,Transferred to Rehab,Emergency Room,Emergency/Trauma,Neoplasms,>8,None,Up,Ch,Yes,0,0.7182544591636593
+6,69,0,15,1,0,1,9,2,[60-70),Male,Other,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Respiratory,>8,None,Up,Ch,Yes,0,0.3894389047826782
+1,8,4,28,0,0,0,7,0,[50-60),Male,Caucasian,Elective,Unknown,Physician Referral,Other Specialty,Musculoskeletal,None,None,No,Ch,Yes,0,0.4001477646121859
+2,45,1,9,0,0,0,7,0,[60-70),Female,Caucasian,Elective,Transferred to Short-term Hospital,Physician Referral,Family/GeneralPractice,Neoplasms,None,None,Down,Ch,Yes,0,0.5991824211771204
+4,56,1,20,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Cardiology,Circulatory,None,None,Steady,Ch,Yes,0,0.451720330026163
+2,1,1,12,0,0,0,2,0,[80-90),Female,Caucasian,Elective,Transferred to Rehab,Physician Referral,Surgery-General,Circulatory,None,None,Steady,Ch,Yes,1,0.6474366593032044
+1,40,0,8,0,0,0,4,0,[40-50),Male,Hispanic,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Down,Ch,Yes,0,0.34051010016537875
+2,34,0,17,1,0,0,9,1,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Steady,Ch,Yes,0,0.42616214436892497
+1,42,6,9,2,0,3,5,5,[50-60),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Radiologist,Circulatory,None,None,No,No,No,0,0.4507179920108425
+5,73,1,33,0,0,0,9,0,[20-30),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,>8,None,Up,Ch,Yes,0,0.45027139226192264
+4,43,0,12,0,0,0,4,0,[90-100),Male,Caucasian,Emergency,Discharged to Home,Other Healthcare Transfer,InternalMedicine,Respiratory,>7,None,No,Ch,Yes,0,0.2795936908863431
+1,23,3,19,0,0,0,9,0,[70-80),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.4067511477147701
+1,18,0,14,0,1,2,8,3,[60-70),Male,Caucasian,Emergency,Home with Home Health,Unknown,Unknown/Missing,Circulatory,None,Norm,Steady,Ch,Yes,0,0.6434557211118445
+3,21,2,8,0,0,0,7,0,[60-70),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,None,None,No,No,Yes,0,0.36764692939919075
+2,42,0,17,0,0,1,9,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.4961900612981566
+2,43,1,12,0,0,0,4,0,[90-100),Female,Caucasian,Elective,Unknown,Physician Referral,Unknown/Missing,Injury,None,None,No,No,No,0,0.3745406214604835
+4,42,3,9,0,0,0,5,0,[80-90),Female,Caucasian,Unknown,Transferred to Short-term Hospital,Emergency Room,InternalMedicine,Circulatory,None,>200,Steady,No,Yes,0,0.6364128007785239
+5,79,2,26,1,0,2,7,3,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,Norm,None,Steady,Ch,Yes,0,0.5496287418017632
+1,34,0,6,7,0,0,9,7,[20-30),Male,AfricanAmerican,Urgent,Transferred to Inpatient Care,Emergency Room,Emergency/Trauma,Other,Norm,None,No,No,Yes,0,0.6004481031151648
+3,38,0,11,0,0,0,6,0,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Pulmonology,Circulatory,None,None,Steady,No,Yes,0,0.5458799051261037
+2,2,0,5,0,0,0,6,0,[10-20),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Family/GeneralPractice,Diabetes,None,None,No,No,Yes,0,0.2532656191505303
+5,42,1,21,0,0,0,8,0,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Diabetes,None,None,Down,Ch,Yes,0,0.533144121440709
+6,58,2,20,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.508756739622716
+3,54,1,12,0,0,0,4,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,None,None,No,Ch,Yes,0,0.3030290127904612
+7,87,0,26,0,1,1,9,2,[80-90),Male,Caucasian,Urgent,Transferred to Rehab,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Down,Ch,Yes,1,0.8653594388452314
+8,86,5,57,0,0,0,9,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,Up,Ch,Yes,0,0.42103691937916093
+3,23,1,21,4,1,1,3,6,[60-70),Male,Caucasian,Not Available,Transferred to SNF,Unknown,Orthopedics-Reconstructive,Musculoskeletal,None,>200,No,Ch,Yes,0,0.3766765484627753
+7,51,3,24,0,0,0,5,0,[40-50),Female,AfricanAmerican,Emergency,Discharged to Home,Other Healthcare Transfer,InternalMedicine,Genitourinary,None,None,Steady,No,Yes,0,0.3722446229651918
+2,24,0,7,0,0,0,9,0,[70-80),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.43438361601055603
+1,35,0,4,0,1,1,8,2,[60-70),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Diabetes,None,None,No,Ch,Yes,0,0.47848460272856713
+1,46,0,12,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.4088480930259995
+2,8,0,5,0,0,0,5,0,[30-40),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,>8,None,No,No,Yes,0,0.3461579865921162
+7,51,6,43,0,0,0,9,0,[50-60),Female,Caucasian,Unknown,Discharged to Home,Unknown,Unknown/Missing,Musculoskeletal,None,None,Steady,Ch,Yes,0,0.3636936522892808
+1,22,0,5,0,0,0,3,0,[50-60),Female,Other,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Diabetes,None,None,No,No,No,0,0.26312264901606186
+8,57,3,10,0,0,1,9,1,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Other,>8,None,Steady,Ch,Yes,0,0.5731521379418066
+5,56,0,13,0,0,1,9,1,[60-70),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Respiratory,None,None,Down,Ch,Yes,0,0.4543039343308617
+2,18,0,16,0,0,2,8,2,[50-60),Male,Caucasian,Not Available,Transferred to SNF,Unknown,Family/GeneralPractice,Other,None,Norm,No,No,Yes,0,0.616218458248754
+7,47,1,19,0,0,2,9,2,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Circulatory,None,None,No,Ch,Yes,0,0.5901904018079972
+4,35,3,8,1,0,0,4,1,[50-60),Female,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Other Specialty,Circulatory,None,None,Steady,Ch,Yes,0,0.47117180024912514
+8,55,3,10,0,1,1,9,2,[80-90),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Family/GeneralPractice,Digestive,Norm,None,No,No,Yes,0,0.4939616388684395
+4,63,3,25,4,0,10,9,14,[70-80),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Surgery-General,Injury,None,None,Down,Ch,Yes,0,0.9462295970488906
+5,79,2,12,10,1,0,9,11,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.5120884399751375
+2,17,0,15,0,1,2,8,3,[50-60),Female,Caucasian,Unknown,Not Mapped,Unknown,Family/GeneralPractice,Genitourinary,None,Norm,No,No,Yes,0,0.5491109744024695
+7,72,4,20,1,0,0,9,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Digestive,None,None,No,No,No,0,0.34808768047760913
+3,37,0,15,0,0,0,9,0,[90-100),Female,Caucasian,Urgent,Transferred to SNF,Other Healthcare Transfer,Emergency/Trauma,Respiratory,>7,None,Steady,Ch,Yes,0,0.3898925943673931
+6,62,1,19,0,0,5,9,5,[80-90),Female,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Other,>7,None,No,No,Yes,0,0.8028498641000166
+2,15,0,15,0,2,0,4,2,[40-50),Male,Caucasian,Not Available,Discharged to Home,Unknown,Family/GeneralPractice,Other,None,Norm,Steady,Ch,Yes,0,0.3721313406876711
+11,30,2,18,0,0,1,9,1,[60-70),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.5259427130143806
+6,53,0,17,0,0,0,6,0,[50-60),Female,Hispanic,Unknown,Discharged to Home,Emergency Room,Cardiology,Circulatory,>8,None,Steady,Ch,Yes,0,0.3080772591187115
+2,58,0,15,0,0,0,7,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,>8,None,Down,Ch,Yes,1,0.44044402943008465
+3,62,0,14,0,0,0,6,0,[40-50),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Other,Norm,None,Down,Ch,Yes,0,0.442452256010113
+5,45,0,10,2,0,0,8,2,[70-80),Female,Caucasian,Not Available,Other/Unknown,Physician Referral,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.5290200888531453
+2,1,1,14,0,0,0,6,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Other,None,None,Steady,Ch,Yes,1,0.3483401107040255
+2,11,3,7,0,0,0,6,0,[60-70),Male,AfricanAmerican,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Circulatory,None,None,Up,Ch,Yes,0,0.36857663429361087
+2,20,0,8,1,0,0,7,1,[50-60),Female,Caucasian,Not Available,Left AMA,Unknown,Unknown/Missing,Digestive,None,Norm,No,No,No,0,0.37839036883983207
+1,1,0,2,0,0,2,7,2,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.5124937806364566
+5,64,0,10,0,0,0,9,0,[80-90),Female,Caucasian,Urgent,Transferred to Short-term Hospital,Emergency Room,Cardiology,Other,None,None,No,Ch,Yes,0,0.5036942358217421
+1,19,3,15,0,0,0,9,0,[70-80),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.42435017741388914
+3,1,3,17,0,0,0,9,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Up,Ch,Yes,0,0.3858922808980292
+4,37,0,12,0,0,1,9,1,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.5163326767833188
+3,23,0,8,0,1,3,4,4,[80-90),Female,Caucasian,Unknown,Not Mapped,Unknown,Surgery-General,Digestive,None,Norm,No,No,No,0,0.564360499231361
+4,58,3,11,1,0,0,9,1,[30-40),Male,Caucasian,Urgent,Home with Home Health,Physician Referral,Surgery-General,Musculoskeletal,>7,None,Steady,No,Yes,0,0.44192689660975565
+3,37,0,17,0,1,2,9,3,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.5435423018927561
+5,47,4,22,1,3,0,9,4,[50-60),Female,AfricanAmerican,Urgent,Home with Home Health,Physician Referral,Unknown/Missing,Other,Norm,None,Up,Ch,Yes,0,0.4907836283892423
+3,35,1,16,0,0,0,4,0,[60-70),Male,Caucasian,Unknown,Discharged to Home,Unknown,Orthopedics-Reconstructive,Musculoskeletal,None,None,No,No,Yes,0,0.23461289771311228
+9,62,3,24,0,0,2,9,2,[40-50),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Nephrology,Other,None,None,No,No,No,1,0.702038923545595
+6,97,4,19,0,0,0,7,0,[30-40),Male,Caucasian,Unknown,Discharged to Home,Unknown,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.4232382345729692
+2,47,0,14,0,0,0,6,0,[50-60),Female,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Diabetes,>8,None,No,No,Yes,1,0.3347671237102658
+8,50,3,28,0,0,1,9,1,[60-70),Male,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Injury,None,None,No,Ch,Yes,0,0.5735639255224843
+4,60,0,8,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,Norm,No,No,Yes,0,0.4696315579032621
+5,26,1,23,0,0,0,6,0,[70-80),Female,Caucasian,Elective,Transferred to Rehab,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,No,No,No,0,0.6671860002780071
+10,61,2,23,1,0,0,9,1,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Circulatory,None,None,No,No,Yes,0,0.5354983007674933
+3,37,0,13,0,0,1,9,1,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.6342450037818227
+9,51,2,25,1,0,2,9,3,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Neoplasms,None,None,Steady,No,Yes,0,0.6127697596825031
+5,37,0,12,0,0,1,5,1,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.4381670267816596
+1,50,0,2,0,0,0,5,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,No,No,0,0.3299986054734343
+1,43,0,14,0,0,0,9,0,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,None,None,Steady,Ch,Yes,0,0.3742528521910051
+4,45,0,20,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Circulatory,None,None,Steady,No,Yes,0,0.4188019387518036
+6,38,1,15,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Neoplasms,Norm,None,No,No,No,0,0.37630547829949335
+3,21,3,19,0,0,0,9,0,[30-40),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,ObstetricsandGynecology,Other,None,None,No,No,No,0,0.2506529112923495
+4,23,0,7,0,0,0,9,0,[70-80),Male,Caucasian,Not Available,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.36624074879132856
+2,26,2,27,0,0,1,3,1,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Orthopedics-Reconstructive,Injury,None,None,No,Ch,Yes,0,0.24811678283383953
+4,76,0,11,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,Norm,None,No,No,No,0,0.3535376729085819
+5,54,1,38,0,0,0,8,0,[60-70),Female,Caucasian,Elective,Transferred to SNF,Emergency Room,Unknown/Missing,Injury,None,None,Steady,Ch,Yes,0,0.5106219475024719
+4,9,0,13,0,0,0,9,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.3712231114281618
+2,37,0,15,0,0,1,9,1,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.4995309181945649
+2,50,1,10,0,0,0,7,0,[90-100),Female,Caucasian,Unknown,Discharged to Home,Unknown,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,1,0.362467796126951
+3,41,3,24,0,0,0,6,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,None,None,Steady,Ch,Yes,0,0.4113155616360939
+5,74,1,28,4,3,0,9,7,[80-90),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Genitourinary,None,None,Up,Ch,Yes,1,0.5660351183242951
+2,30,1,12,0,0,0,3,0,[30-40),Female,Caucasian,Unknown,Not Mapped,Emergency Room,Other Specialty,Digestive,None,None,Steady,No,Yes,1,0.36569773675207606
+6,48,1,25,0,0,0,7,0,[50-60),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Orthopedics-Reconstructive,Musculoskeletal,None,None,No,No,Yes,0,0.2870841558842532
+7,27,1,29,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Transferred to Rehab,Emergency Room,Other Specialty,Circulatory,None,None,No,No,Yes,0,0.7663590247604323
+13,70,1,24,0,0,0,9,0,[60-70),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Injury,Norm,None,Steady,Ch,Yes,0,0.5164470577814733
+3,44,2,22,1,0,0,6,1,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,No,No,0,0.3160565898641065
+2,53,0,13,0,0,0,6,0,[70-80),Female,Other,Unknown,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,>8,>200,No,Ch,Yes,0,0.4252528429326023
+7,43,0,19,0,0,1,7,1,[90-100),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Respiratory,None,None,Down,Ch,Yes,0,0.5579178857628486
+14,68,5,18,0,0,0,5,0,[80-90),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Surgery-General,Diabetes,>7,None,Steady,No,Yes,0,0.4012177202560542
+4,25,2,13,0,0,1,9,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.5020335499720777
+4,3,1,18,4,0,0,9,4,[70-80),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Surgery-General,Injury,None,None,Up,Ch,Yes,0,0.4491048415722809
+5,48,0,22,0,1,5,9,6,[50-60),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,Up,Ch,Yes,1,0.8385412355273806
+6,35,2,12,0,0,0,7,0,[50-60),Male,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Urology,Genitourinary,None,None,Steady,Ch,Yes,0,0.36293508954266596
+2,12,0,10,1,0,10,2,11,[20-30),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Down,Ch,Yes,1,0.9163167243267452
+3,1,3,29,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Neoplasms,None,None,Down,Ch,Yes,0,0.48663823163738734
+14,51,0,13,0,1,0,8,1,[80-90),Female,Caucasian,Elective,Transferred to SNF,Physician Referral,Psychiatry,Other,None,None,No,No,No,0,0.5498890871051226
+4,6,2,15,4,0,2,9,6,[60-70),Female,Caucasian,Emergency,Transferred to SNF,Unknown,Unknown/Missing,Injury,None,None,Down,Ch,Yes,0,0.6350483641034351
+4,38,0,16,1,0,2,9,3,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.6230751537113686
+11,40,3,20,0,0,0,9,0,[80-90),Female,AfricanAmerican,Emergency,Transferred to SNF,SNF Transfer,InternalMedicine,Neoplasms,None,None,Steady,Ch,Yes,0,0.4875472788491614
+2,63,0,6,2,0,3,6,5,[60-70),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,Steady,No,Yes,0,0.5898011200686918
+4,31,3,8,0,0,0,9,0,[80-90),Male,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Diabetes,None,None,No,Ch,Yes,0,0.46611089036333986
+6,29,0,6,0,0,0,5,0,[70-80),Male,Caucasian,Elective,Transferred to Short-term Hospital,Physician Referral,Cardiology,Circulatory,None,None,No,No,No,0,0.46026231682102525
+1,2,0,7,4,0,0,7,4,[50-60),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Neoplasms,None,None,No,No,No,0,0.33594700248972764
+2,42,0,10,0,1,0,5,1,[30-40),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,>8,None,Up,Ch,Yes,0,0.41253700767822704
+6,9,2,8,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Unknown,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,No,Yes,1,0.47149173502648434
+10,47,3,30,0,1,0,9,1,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Circulatory,None,None,Up,Ch,Yes,0,0.6117520426731248
+12,86,5,31,0,0,2,7,2,[40-50),Male,AfricanAmerican,Emergency,Unknown,Emergency Room,Family/GeneralPractice,Respiratory,None,None,Steady,No,Yes,0,0.6414316338141256
+3,29,0,17,0,0,3,8,3,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,1,0.6163411845644873
+1,42,0,9,3,0,0,9,3,[70-80),Male,AfricanAmerican,Not Available,Transferred to Short-term Hospital,Physician Referral,Unknown/Missing,Circulatory,>8,None,No,No,Yes,0,0.5525180389938711
+7,62,6,44,0,0,1,9,1,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.5766393698552776
+1,41,1,1,0,0,0,8,0,[40-50),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,None,None,No,No,No,0,0.3547138499875803
+8,24,1,19,0,0,0,9,0,[70-80),Male,Caucasian,Unknown,Not Mapped,Unknown,Unknown/Missing,Genitourinary,None,>300,Steady,No,Yes,0,0.4622924587628865
+4,43,0,16,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,Norm,None,No,No,Yes,1,0.35879982624826784
+3,58,3,23,0,0,2,9,2,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Steady,No,Yes,0,0.5928648116660149
+1,38,0,7,0,0,0,4,0,[50-60),Male,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.35526306636037097
+7,45,3,20,0,0,0,5,0,[60-70),Female,Other,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,Ch,Yes,1,0.3607305782301448
+5,7,1,21,0,0,0,5,0,[70-80),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Radiologist,Musculoskeletal,None,None,No,No,Yes,0,0.331798464195569
+5,67,6,52,0,0,0,9,0,[50-60),Female,Caucasian,Urgent,Home with Home Health,Hospital Transfer,Unknown/Missing,Circulatory,>8,None,Up,Ch,Yes,0,0.4533704907565612
+3,42,1,11,0,0,2,4,2,[60-70),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,None,None,Steady,Ch,Yes,0,0.5106883788739878
+2,52,1,15,0,0,0,9,0,[40-50),Female,Caucasian,Urgent,Home with Home Health,Physician Referral,Orthopedics,Injury,None,None,No,No,Yes,0,0.4070250347919372
+3,59,0,15,0,0,1,9,1,[70-80),Female,Caucasian,Unknown,Not Mapped,Physician Referral,InternalMedicine,Circulatory,None,None,Down,Ch,Yes,0,0.5872263984892537
+1,53,5,17,0,0,0,9,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.3438085001346022
+4,62,0,6,0,0,0,3,0,[20-30),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Other Specialty,Diabetes,>8,None,Steady,No,Yes,0,0.35456913479623975
+4,44,4,31,0,0,0,9,0,[60-70),Male,Caucasian,Elective,Unknown,Physician Referral,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.5262568773341683
+1,34,6,11,0,0,0,6,0,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.35360759934720526
+6,34,5,31,0,0,1,9,1,[70-80),Female,AfricanAmerican,Urgent,Transferred to SNF,Physician Referral,Nephrology,Circulatory,None,None,Up,Ch,Yes,0,0.7093005542521591
+9,40,2,17,0,0,0,4,0,[30-40),Male,Hispanic,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Diabetes,>8,None,Down,Ch,Yes,0,0.33826327778297666
+2,41,0,8,0,0,0,9,0,[70-80),Male,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Genitourinary,Norm,None,Steady,No,Yes,0,0.4592243385483869
+2,41,0,8,0,0,0,5,0,[80-90),Male,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Cardiology,Circulatory,None,None,No,No,Yes,0,0.4920856447021984
+3,12,0,14,0,0,0,9,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Emergency/Trauma,Diabetes,None,None,Up,Ch,Yes,0,0.3694382491815216
+7,69,0,15,0,0,1,9,1,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Family/GeneralPractice,Respiratory,None,None,No,No,Yes,1,0.5347390097174606
+2,17,0,13,0,1,0,5,1,[40-50),Male,Caucasian,Not Available,Discharged to Home,Unknown,Family/GeneralPractice,Diabetes,None,Norm,Down,Ch,Yes,0,0.4208504819179022
+5,51,1,15,0,0,0,3,0,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Surgery-General,Musculoskeletal,>8,None,Up,Ch,Yes,0,0.28970480033153256
+3,69,0,16,0,0,1,9,1,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Cardiology,Circulatory,None,None,No,No,Yes,0,0.5332883481146241
+4,62,5,11,0,0,0,7,0,[50-60),Male,Other,Urgent,Unknown,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.41786394218815964
+13,53,0,20,1,0,0,9,1,[80-90),Female,Caucasian,Elective,Home with Home Health,Hospital Transfer,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.4515632700100247
+3,34,0,14,0,0,0,7,0,[90-100),Male,Caucasian,Emergency,Transferred to Rehab,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.7244670102692871
+11,43,2,23,0,0,3,9,3,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,1,0.7611994912430635
+2,52,0,12,0,0,0,7,0,[40-50),Male,AfricanAmerican,Unknown,Not Mapped,Emergency Room,InternalMedicine,Respiratory,None,None,No,No,Yes,0,0.37312235250670434
+7,44,0,20,1,0,0,9,1,[70-80),Male,Caucasian,Emergency,Home with Home Health,Physician Referral,Emergency/Trauma,Injury,None,None,Down,Ch,Yes,0,0.4777647856222522
+4,70,0,17,0,0,1,9,1,[90-100),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Cardiology,Circulatory,>8,None,No,No,Yes,1,0.46226075311780096
+3,19,0,13,1,0,0,8,1,[80-90),Female,Caucasian,Not Available,Transferred to SNF,Unknown,Unknown/Missing,Other,None,>200,Steady,No,Yes,0,0.5278922401849766
+7,63,0,18,9,0,0,9,9,[80-90),Male,Caucasian,Not Available,Transferred to SNF,Physician Referral,Unknown/Missing,Digestive,None,None,Up,Ch,Yes,0,0.5476694725015301
+1,69,1,23,1,2,2,9,5,[40-50),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Other,None,None,Down,Ch,Yes,0,0.5976464893555693
+2,12,4,14,0,0,0,6,0,[30-40),Female,Caucasian,Elective,Discharged to Home,Physician Referral,ObstetricsandGynecology,Genitourinary,None,None,Steady,No,Yes,0,0.23529737952462054
+4,35,1,11,1,0,0,7,1,[40-50),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,None,None,No,No,Yes,0,0.3734752231508662
+5,51,0,11,0,0,0,6,0,[70-80),Female,Caucasian,Unknown,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,Norm,No,No,Yes,0,0.49019870482055394
+2,37,0,21,0,0,4,5,4,[40-50),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.6296197544091409
+3,11,0,6,0,0,0,9,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.4036587716621287
+2,61,1,16,1,0,3,6,4,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,Ch,Yes,0,0.5725310027692505
+3,20,0,4,0,0,0,3,0,[10-20),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Diabetes,>8,None,Steady,No,Yes,0,0.209895394605013
+8,40,3,10,0,0,0,5,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Diabetes,>8,None,Steady,No,Yes,0,0.34509039282718124
+2,43,0,7,0,0,0,8,0,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,>8,None,Steady,No,Yes,0,0.3586589404781978
+4,45,0,22,1,0,3,7,4,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,1,0.5360039725971782
+2,25,1,11,0,0,1,9,1,[80-90),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,No,Yes,1,0.5158630023825871
+1,19,1,15,0,0,0,7,0,[40-50),Female,Caucasian,Elective,Discharged to Home,Physician Referral,ObstetricsandGynecology,Genitourinary,None,None,No,No,Yes,0,0.23692497050710118
+3,40,0,15,0,0,0,7,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,None,None,Down,Ch,Yes,0,0.36112545650739974
+12,70,2,24,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,>8,None,Steady,Ch,Yes,0,0.4314777081535181
+6,57,0,16,0,0,0,7,0,[60-70),Female,Caucasian,Urgent,Hospice / Medical Facility,Emergency Room,Emergency/Trauma,Respiratory,None,None,Up,Ch,Yes,0,0.17381396368587954
+5,55,0,27,1,0,4,9,5,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.801662606893042
+7,44,1,16,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Steady,No,Yes,0,0.593917374864918
+7,68,3,14,1,0,1,9,2,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.6005726252577356
+3,40,0,5,0,0,0,2,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Diabetes,None,None,Up,Ch,Yes,0,0.33667938299550654
+3,52,0,6,0,0,0,5,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.4117649843233002
+4,50,1,13,0,0,0,6,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Orthopedics,Injury,None,None,No,No,Yes,0,0.43584550721292326
+5,19,0,12,0,0,0,7,0,[60-70),Female,Caucasian,Urgent,Discharged to Home,Unknown,Family/GeneralPractice,Other,None,Norm,No,No,No,0,0.38277939264286803
+2,36,0,4,0,0,0,4,0,[30-40),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,None,None,No,No,No,0,0.31649785537488745
+7,57,0,14,0,0,1,9,1,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,None,None,Steady,Ch,Yes,0,0.4251804638283486
+3,49,0,21,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.4512516612951254
+4,42,0,4,0,0,1,3,1,[60-70),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Circulatory,None,None,Down,Ch,Yes,0,0.4917143223667849
+2,38,2,14,0,0,2,5,2,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Surgery-General,Diabetes,>8,None,No,No,Yes,0,0.4793111124164729
+8,29,4,31,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Transferred to Rehab,Physician Referral,Other Specialty,Diabetes,None,None,Up,Ch,Yes,0,0.7672079766972851
+2,79,0,17,0,0,0,9,0,[80-90),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Genitourinary,>7,None,Down,Ch,Yes,0,0.4669354663371961
+8,75,1,28,0,1,1,9,2,[70-80),Female,Caucasian,Urgent,Home with Home Health,Emergency Room,Emergency/Trauma,Neoplasms,Norm,None,Down,Ch,Yes,0,0.5756610803891922
+8,51,1,25,0,0,0,9,0,[50-60),Male,Caucasian,Elective,Transferred to Rehab,Physician Referral,Nephrology,Circulatory,None,None,Steady,No,Yes,0,0.790379538747461
+5,25,0,20,1,2,2,9,5,[80-90),Male,Caucasian,Not Available,Transferred to SNF,Unknown,Family/GeneralPractice,Respiratory,None,>200,Up,Ch,Yes,0,0.7033879988121834
+9,64,1,27,0,0,1,9,1,[80-90),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.5485677487462445
+5,74,1,9,1,0,1,7,2,[20-30),Female,AfricanAmerican,Emergency,Unknown,Emergency Room,Unknown/Missing,Circulatory,>8,None,No,Ch,Yes,0,0.5438261929329199
+2,9,1,13,0,2,2,9,4,[80-90),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Urology,Genitourinary,None,None,No,No,Yes,0,0.5960346555897617
+2,61,0,8,0,0,0,5,0,[70-80),Male,Caucasian,Emergency,Hospice / Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.16844558920300418
+3,38,3,12,0,0,1,9,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.4552540028518769
+2,36,0,9,0,0,0,7,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,>7,None,No,No,No,0,0.38081755327323447
+2,27,0,11,0,0,0,7,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,No,No,0,0.3223469679520827
+4,52,0,11,0,0,3,8,3,[90-100),Female,Caucasian,Urgent,Transferred to SNF,Emergency Room,Surgery-General,Respiratory,None,None,No,No,Yes,0,0.6499743449206726
+2,19,3,12,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.441474976086781
+11,33,0,14,0,0,1,6,1,[70-80),Female,Caucasian,Urgent,Unknown,SNF Transfer,Unknown/Missing,Neoplasms,None,None,No,No,No,0,0.48970698695659737
+2,63,0,6,0,0,0,2,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Digestive,None,None,No,No,No,0,0.2807251960127669
+5,77,0,10,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,>8,None,Up,Ch,Yes,1,0.4660741779911713
+1,23,3,7,0,0,1,8,1,[50-60),Male,Unknown,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,None,None,No,No,No,0,0.3929981340922524
+3,23,0,10,0,0,3,9,3,[70-80),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Diabetes,None,None,Down,Ch,Yes,0,0.7201158921927505
+3,53,0,22,2,0,0,9,2,[60-70),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,>7,None,Steady,No,Yes,0,0.5463109659839539
+3,74,1,14,0,3,2,9,5,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Down,Ch,Yes,0,0.6665028578232466
+3,36,0,7,0,0,0,4,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Other Healthcare Transfer,Surgery-General,Injury,None,None,Steady,No,Yes,0,0.2984613083815807
+2,73,3,15,0,0,0,5,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.4189359495765244
+1,42,3,11,0,0,1,9,1,[80-90),Male,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Other,None,None,No,No,No,1,0.45918068140298857
+6,71,2,17,0,0,0,9,0,[60-70),Male,Other,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Genitourinary,>7,None,Steady,Ch,Yes,0,0.44450053465952305
+5,30,2,15,0,1,2,9,3,[60-70),Female,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.6882693822503861
+3,1,1,21,0,0,0,6,0,[80-90),Male,Caucasian,Emergency,Transferred to Inpatient Care,Emergency Room,Unknown/Missing,Injury,None,None,No,No,No,0,0.6075438192951219
+9,75,5,21,0,0,0,8,0,[70-80),Female,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Musculoskeletal,>8,None,No,No,Yes,0,0.3695510804200758
+6,33,3,31,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Neoplasms,None,None,Steady,No,Yes,0,0.420834796579187
+4,46,5,21,0,0,0,3,0,[40-50),Male,Caucasian,Unknown,Discharged to Home,Unknown,Cardiology,Circulatory,None,None,No,Ch,Yes,0,0.28657707724699505
+7,22,1,13,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.34596198318395466
+6,61,0,21,0,0,0,9,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,>8,None,Up,Ch,Yes,0,0.3598106293950589
+3,63,2,14,0,0,0,9,0,[60-70),Male,Caucasian,Unknown,Discharged to Home,Unknown,Nephrology,Other,None,None,No,No,Yes,0,0.47377993898683374
+9,51,1,19,0,1,1,9,2,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Respiratory,None,None,Up,Ch,Yes,1,0.6268475717281647
+2,25,3,12,0,1,0,2,1,[30-40),Male,Hispanic,Elective,Home with Home Health,Physician Referral,Surgery-General,Other,>7,None,Steady,No,Yes,0,0.36935680361722306
+4,46,0,23,0,0,1,9,1,[60-70),Male,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,None,None,Steady,Ch,Yes,0,0.5429830763947261
+4,30,3,12,0,0,0,9,0,[70-80),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.4446318336282969
+3,39,0,15,0,0,4,9,4,[80-90),Female,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Other,None,None,Up,Ch,Yes,0,0.7680795481779862
+3,11,1,22,4,0,0,7,4,[50-60),Female,AfricanAmerican,Urgent,Transferred to SNF,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,No,No,No,0,0.4141086795767173
+4,16,1,18,4,0,0,9,4,[90-100),Female,Caucasian,Unknown,Not Mapped,Unknown,Orthopedics-Reconstructive,Injury,None,Norm,Steady,Ch,Yes,0,0.27805732756756113
+7,60,3,19,0,0,0,6,0,[50-60),Male,Other,Unknown,Transferred to Short-term Hospital,Emergency Room,Unknown/Missing,Circulatory,None,Norm,No,No,Yes,0,0.5819482933232263
+5,52,5,24,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Unknown,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.46041857350155835
+3,3,2,1,0,0,0,7,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.33797645123376996
+2,1,0,15,0,0,4,9,4,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.6952132337466455
+6,48,4,21,3,0,0,9,3,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,No,No,1,0.529182682942248
+1,2,1,8,1,0,0,4,1,[80-90),Male,Hispanic,Urgent,Discharged to Home,Physician Referral,Urology,Genitourinary,None,None,No,No,Yes,0,0.35424016841185646
+13,32,0,15,0,0,3,7,3,[10-20),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Other,None,None,Steady,No,Yes,0,0.507154431713895
+3,54,1,8,0,0,0,7,0,[20-30),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Psychiatry,Other,None,None,Up,Ch,Yes,0,0.45934060241703734
+7,46,6,47,0,0,0,6,0,[60-70),Male,Caucasian,Elective,Unknown,Physician Referral,Unknown/Missing,Circulatory,>8,None,Up,Ch,Yes,0,0.520270592340251
+1,52,0,4,0,0,0,4,0,[80-90),Male,Caucasian,Emergency,Discharged to Home,Other Healthcare Transfer,Family/GeneralPractice,Circulatory,None,None,No,No,No,0,0.35634837117836243
+6,73,0,17,0,0,0,9,0,[80-90),Female,Unknown,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,>8,None,Up,Ch,Yes,0,0.5044895878722796
+5,52,2,24,0,0,0,7,0,[50-60),Female,Other,Elective,Unknown,Physician Referral,ObstetricsandGynecology,Genitourinary,>7,None,No,Ch,Yes,0,0.26033807727240693
+7,32,4,18,0,0,0,6,0,[70-80),Male,AfricanAmerican,Elective,Home with Home Health,Hospital Transfer,Radiologist,Circulatory,None,None,No,No,Yes,0,0.3673143633365986
+5,35,5,23,0,0,0,9,0,[70-80),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.47269154378019984
+6,76,0,12,0,0,0,9,0,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.5924152764969679
+2,46,0,8,0,0,0,8,0,[50-60),Female,Caucasian,Emergency,Unknown,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,Ch,Yes,0,0.4647275424311533
+1,11,1,18,0,0,0,3,0,[60-70),Female,Caucasian,Elective,Unknown,Physician Referral,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.42515925387381737
+1,4,0,4,1,0,0,7,1,[40-50),Female,Other,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.29752301293287264
+9,51,0,16,4,0,0,9,4,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,1,0.5086338019151657
+5,30,1,9,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.4847305720798769
+3,54,3,10,0,0,0,5,0,[60-70),Male,Caucasian,Emergency,Transferred to Short-term Hospital,Other Healthcare Transfer,Family/GeneralPractice,Circulatory,None,None,Steady,Ch,Yes,0,0.5350531409898155
+6,1,0,1,0,0,0,4,0,[30-40),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Psychiatry,Other,None,None,No,No,No,0,0.33456755706948366
+6,5,3,11,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Transferred to Rehab,Physician Referral,Orthopedics,Musculoskeletal,None,None,No,Ch,Yes,1,0.6536941928060283
+4,45,0,8,0,0,0,7,0,[80-90),Female,Caucasian,Emergency,Transferred to Rehab,Emergency Room,Unknown/Missing,Other,None,None,Steady,No,Yes,1,0.7322087253105056
+4,1,1,18,2,0,0,6,2,[80-90),Female,Caucasian,Not Available,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.39946321133330065
+3,42,3,9,0,0,0,7,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,InternalMedicine,Other,None,None,No,No,No,0,0.3236360802834594
+2,58,0,16,0,0,0,9,0,[70-80),Female,AfricanAmerican,Emergency,Transferred to Short-term Hospital,Emergency Room,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.5926863102540847
+4,67,0,15,0,0,0,5,0,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Other Healthcare Transfer,InternalMedicine,Other,None,None,Steady,No,Yes,0,0.5052448485335459
+3,59,0,16,0,0,0,9,0,[80-90),Female,Caucasian,Urgent,Home with Home Health,Physician Referral,InternalMedicine,Circulatory,>8,None,Up,Ch,Yes,0,0.5038575165259298
+1,29,1,18,0,0,1,7,1,[60-70),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,Ch,Yes,0,0.49049466651438445
+1,36,1,19,0,0,0,6,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Neoplasms,None,None,No,No,Yes,0,0.3744706064063048
+1,58,0,13,5,0,0,9,5,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,No,No,0,0.3869312758539102
+8,63,1,17,0,0,1,9,1,[60-70),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,>8,None,No,No,Yes,0,0.5505037640218288
+3,61,0,10,0,0,2,6,2,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Genitourinary,None,None,Steady,Ch,Yes,0,0.5772260885215792
+7,55,2,13,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.5014245765729054
+2,36,1,9,2,1,1,4,4,[70-80),Female,Caucasian,Elective,Discharged to Home,Physician Referral,InternalMedicine,Genitourinary,None,None,No,No,Yes,1,0.4270422522526851
+5,30,5,6,0,0,0,8,0,[40-50),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,No,No,No,0,0.3223058269155881
+2,48,1,12,1,0,0,6,1,[30-40),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.38926518246036934
+3,44,4,19,0,0,1,8,1,[70-80),Male,Caucasian,Unknown,Home with Home Health,Unknown,Cardiology,Circulatory,None,None,No,Ch,Yes,1,0.472191437688607
+2,57,0,25,0,0,0,9,0,[40-50),Female,Caucasian,Emergency,Transferred to Inpatient Care,Emergency Room,InternalMedicine,Other,None,None,Steady,Ch,Yes,0,0.6772564427539755
+4,46,5,15,0,0,0,5,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.34835949461652077
+5,28,1,30,1,2,0,5,3,[50-60),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Surgery-General,Other,None,None,No,Ch,Yes,0,0.3491498858184489
+2,51,0,6,0,0,0,5,0,[10-20),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Diabetes,>8,None,Down,Ch,Yes,0,0.2518602874025438
+2,18,0,9,0,0,0,9,0,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.4831095509019835
+10,67,0,24,3,0,6,9,9,[60-70),Female,Caucasian,Elective,Other/Unknown,Physician Referral,Family/GeneralPractice,Digestive,Norm,None,No,No,No,1,0.8529333231836042
+2,11,0,4,0,0,0,6,0,[30-40),Female,Hispanic,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,Steady,Ch,Yes,0,0.3392335074517165
+2,1,0,13,0,0,0,9,0,[40-50),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,0,0.5139477441399173
+7,38,0,20,0,0,0,7,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Injury,None,None,Up,Ch,Yes,0,0.529481483905544
+6,57,0,7,0,0,1,3,1,[80-90),Female,Caucasian,Unknown,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,None,Norm,No,No,No,0,0.4259881943848737
+7,59,0,15,6,0,1,9,7,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,>7,None,No,No,No,0,0.5610162640768941
+4,26,1,20,2,1,0,7,3,[60-70),Female,Hispanic,Not Available,Discharged to Home,Unknown,Family/GeneralPractice,Genitourinary,None,>200,Steady,Ch,Yes,0,0.3922921287149334
+4,49,1,16,0,0,0,9,0,[80-90),Male,Caucasian,Not Available,Transferred to SNF,Physician Referral,Unknown/Missing,Neoplasms,None,None,No,No,No,0,0.5156881725143094
+1,3,0,11,0,2,1,4,3,[30-40),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Up,Ch,Yes,0,0.4397359940008782
+1,64,0,10,0,3,0,9,3,[30-40),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Other,None,None,Down,Ch,Yes,0,0.47065996322863257
+1,39,0,6,0,0,0,6,0,[50-60),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Respiratory,Norm,None,No,No,Yes,0,0.35831030394654606
+5,20,0,13,0,0,4,5,4,[60-70),Female,Caucasian,Unknown,Discharged to Home,Clinic Referral,InternalMedicine,Other,None,None,No,No,Yes,0,0.6630708324202941
+5,47,5,20,0,0,0,7,0,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Diabetes,>8,None,Steady,Ch,Yes,0,0.29817619321864464
+1,2,0,13,1,0,7,3,8,[40-50),Female,Caucasian,Emergency,Other/Unknown,Emergency Room,Unknown/Missing,Musculoskeletal,None,None,Down,Ch,Yes,0,0.8629263237784435
+7,89,1,17,0,1,1,9,2,[40-50),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Digestive,None,None,No,No,No,0,0.5072346256033022
+2,9,1,17,0,0,0,4,0,[70-80),Female,Caucasian,Not Available,Home with Home Health,Unknown,Unknown/Missing,Digestive,None,Norm,No,No,No,0,0.35809319488989805
+2,36,1,23,0,0,0,4,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Musculoskeletal,None,None,No,No,Yes,0,0.3566912085887107
+3,33,0,18,9,0,0,9,9,[70-80),Female,Caucasian,Not Available,Transferred to SNF,Physician Referral,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.5250500421365776
+1,67,6,15,0,0,0,8,0,[50-60),Male,Caucasian,Not Mapped,Discharged to Home,Emergency Room,InternalMedicine,Digestive,>8,None,Steady,Ch,Yes,0,0.2812093220755623
+3,52,1,22,0,0,0,9,0,[70-80),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Down,Ch,Yes,0,0.5109205256813889
+4,4,1,19,0,0,0,6,0,[80-90),Female,Caucasian,Urgent,Unknown,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.4697883663088677
+2,23,0,15,1,0,0,7,1,[70-80),Female,Caucasian,Not Available,Home with Home Health,Unknown,Other Specialty,Other,None,Norm,No,No,Yes,0,0.43250230715297583
+2,26,6,18,0,0,0,5,0,[40-50),Female,AfricanAmerican,Emergency,Discharged to Home,Hospital Transfer,Cardiology,Circulatory,None,None,Up,Ch,Yes,1,0.3129494430328411
+5,33,1,17,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Transferred to SNF,Physician Referral,Orthopedics,Musculoskeletal,None,None,Up,Ch,Yes,1,0.47275747571180077
+3,32,6,15,0,0,0,9,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.36890375605180853
+3,2,1,21,3,0,5,9,8,[60-70),Female,Caucasian,Elective,Transferred to SNF,Physician Referral,Unknown/Missing,Other,None,None,Down,Ch,Yes,0,0.8383072109884262
+4,45,0,9,5,2,0,6,7,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.49195205085768096
+5,22,0,11,0,0,0,9,0,[60-70),Male,Caucasian,Elective,Unknown,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.4795292575082212
+4,38,2,18,0,0,0,5,0,[80-90),Female,AfricanAmerican,Elective,Transferred to SNF,Physician Referral,Other Specialty,Diabetes,None,None,Steady,Ch,Yes,0,0.49179111900136596
+2,48,1,9,0,0,0,2,0,[30-40),Male,Hispanic,Urgent,Discharged to Home,Emergency Room,Urology,Genitourinary,Norm,None,Steady,Ch,Yes,0,0.3044072285031851
+1,48,0,17,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,>8,None,Up,Ch,Yes,0,0.4360011385395064
+1,38,1,6,0,0,0,9,0,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,Ch,Yes,0,0.40091188243550613
+2,7,3,17,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.3958846454086596
+2,36,0,14,0,0,0,4,0,[50-60),Female,Hispanic,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Respiratory,None,None,No,No,Yes,0,0.2865096477294184
+3,63,0,8,0,0,0,5,0,[80-90),Male,Caucasian,Urgent,Home with Home Health,Emergency Room,Family/GeneralPractice,Respiratory,Norm,None,No,No,No,0,0.3431531586525834
+3,30,0,13,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Unknown,Physician Referral,Unknown/Missing,Circulatory,>7,None,Steady,Ch,Yes,0,0.5305068086624671
+9,72,6,25,1,0,0,9,1,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.4490055430085511
+2,65,0,16,0,0,1,9,1,[70-80),Female,Caucasian,Elective,Discharged to Home,Emergency Room,Emergency/Trauma,Respiratory,None,None,Down,Ch,Yes,0,0.441002496353222
+7,46,0,22,0,0,5,9,5,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Down,Ch,Yes,0,0.7685582893519086
+7,40,0,11,0,0,0,8,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,1,0.5444588333785828
+4,32,0,12,0,0,0,6,0,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Radiologist,Circulatory,None,None,Up,Ch,Yes,0,0.3681734912586107
+5,26,0,27,3,0,0,9,3,[50-60),Male,Caucasian,Not Available,Discharged to Home,Unknown,Unknown/Missing,Circulatory,None,>200,Down,Ch,Yes,0,0.4614993313711298
+6,36,1,32,0,0,0,9,0,[80-90),Female,Caucasian,Elective,Transferred to Rehab,Physician Referral,Urology,Genitourinary,None,None,No,No,Yes,0,0.7555472422754133
+3,51,0,21,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.37937958506184566
+3,19,0,3,0,0,0,6,0,[30-40),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Family/GeneralPractice,Other,None,None,No,No,No,0,0.35458378803291857
+9,49,2,15,0,0,0,3,0,[70-80),Female,Caucasian,Emergency,Transferred to Inpatient Care,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,Yes,0,0.6228843888659169
+1,18,4,32,0,0,0,2,0,[60-70),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Musculoskeletal,None,None,Steady,Ch,Yes,0,0.3042893515383246
+4,53,6,56,0,0,1,7,1,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Circulatory,None,None,Steady,Ch,Yes,0,0.5197864221531028
+10,39,2,9,0,0,2,9,2,[70-80),Female,Caucasian,Urgent,Unknown,Hospital Transfer,Unknown/Missing,Neoplasms,None,None,No,No,No,0,0.6285298775412907
+6,66,2,42,1,0,0,8,1,[60-70),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.5108828855752489
+3,2,2,4,0,0,0,6,0,[60-70),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,Ch,Yes,0,0.3618687100623747
+3,53,0,17,1,0,1,9,2,[70-80),Male,Caucasian,Urgent,Transferred to Rehab,Emergency Room,Surgery-General,Diabetes,None,None,Down,Ch,Yes,0,0.828956814250195
+7,46,3,20,0,0,1,7,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,Steady,No,Yes,0,0.45724740513776424
+4,46,2,17,0,0,0,7,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Up,Ch,Yes,0,0.42852820470517755
+13,34,0,14,0,0,2,5,2,[70-80),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Family/GeneralPractice,Other,>8,None,Steady,Ch,Yes,0,0.5253055757743263
+2,45,1,13,0,0,1,9,1,[70-80),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.5801597992492693
+1,1,0,17,0,0,0,9,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,Norm,None,Steady,No,Yes,0,0.3426034063152882
+6,66,0,22,0,0,1,9,1,[80-90),Male,Caucasian,Elective,Transferred to SNF,Emergency Room,Emergency/Trauma,Other,None,None,Up,Ch,Yes,0,0.5981270610744387
+2,1,0,8,1,0,5,3,6,[20-30),Female,Caucasian,Elective,Discharged to Home,Emergency Room,Surgery-General,Diabetes,None,None,Up,Ch,Yes,1,0.6906731048480811
+3,25,1,13,0,0,2,9,2,[60-70),Male,Caucasian,Urgent,Discharged to Home,Clinic Referral,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.5680563621765646
+2,30,2,9,1,0,0,3,1,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Nephrology,Circulatory,None,None,No,Ch,Yes,0,0.3547958590135224
+1,28,1,17,0,0,0,9,0,[80-90),Female,AfricanAmerican,Elective,Transferred to SNF,Physician Referral,Surgery-General,Circulatory,None,None,No,No,No,0,0.5008951145201942
+2,72,2,15,0,0,0,9,0,[60-70),Male,AfricanAmerican,Unknown,Discharged to Home,Unknown,Unknown/Missing,Respiratory,>8,None,Steady,Ch,Yes,0,0.35462328982807584
+2,47,0,15,1,0,1,7,2,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.4980621247306284
+14,81,3,35,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Other Specialty,Respiratory,>7,None,Down,Ch,Yes,0,0.49832895823447704
+3,46,2,16,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,No,Yes,0,0.38996702714361675
+3,83,4,12,0,0,0,9,0,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Digestive,Norm,None,Down,Ch,Yes,0,0.425192277947059
+3,35,0,13,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.3768234919355433
+4,32,2,21,0,0,1,7,1,[70-80),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,Steady,No,Yes,0,0.44671397230353826
+8,70,1,18,0,0,0,5,0,[50-60),Female,Caucasian,Urgent,Transferred to SNF,Physician Referral,Family/GeneralPractice,Diabetes,>7,None,Steady,No,Yes,0,0.49605809806261186
+4,35,0,17,3,0,1,9,4,[50-60),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.5560609465625066
+2,38,0,10,0,0,0,3,0,[30-40),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.33923484593074
+1,41,1,6,0,0,0,8,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Digestive,None,None,No,No,No,0,0.34444450450226277
+3,51,0,11,0,0,0,6,0,[30-40),Male,AfricanAmerican,Emergency,Unknown,Emergency Room,Unknown/Missing,Digestive,>8,None,No,No,No,0,0.4280286300739549
+2,39,0,6,0,0,0,5,0,[80-90),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Family/GeneralPractice,Circulatory,>7,None,Down,Ch,Yes,1,0.4373047488235976
+9,63,6,40,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,Down,Ch,Yes,0,0.4557773288017243
+1,44,0,9,0,0,0,6,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Hospital Transfer,InternalMedicine,Respiratory,None,None,No,Ch,Yes,0,0.3060009720911251
+3,66,0,21,1,0,0,9,1,[80-90),Female,Caucasian,Elective,Transferred to SNF,Physician Referral,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.5891153867072317
+3,52,1,15,0,0,0,4,0,[80-90),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Orthopedics-Reconstructive,Musculoskeletal,None,None,No,No,No,0,0.2482385846683462
+3,1,2,19,0,0,0,5,0,[40-50),Female,Unknown,Elective,Discharged to Home,Clinic Referral,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.2950354163471385
+2,35,0,7,0,0,0,9,0,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Up,Ch,Yes,1,0.4353309064496515
+6,60,2,21,1,0,0,9,1,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,>7,None,Steady,No,Yes,0,0.5204472619027283
+3,58,0,18,1,0,0,9,1,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Physician Referral,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.4964275761700122
+4,66,0,18,0,0,0,9,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,Norm,None,No,No,Yes,0,0.3545275242175002
+13,61,6,20,0,0,0,7,0,[60-70),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Unknown/Missing,Diabetes,None,None,No,No,No,0,0.42802944092387657
+4,62,0,22,0,0,2,9,2,[50-60),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,None,None,Down,Ch,Yes,1,0.683666676573919
+5,41,0,14,0,0,0,6,0,[80-90),Male,Caucasian,Unknown,Discharged to Home,Emergency Room,Cardiology,Diabetes,None,None,No,Ch,Yes,0,0.36421609111420894
+3,1,4,15,0,0,0,5,0,[80-90),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Surgery-General,Circulatory,None,None,No,Ch,Yes,0,0.33962626058951106
+1,44,4,16,1,0,1,7,2,[60-70),Female,Caucasian,Urgent,Discharged to Home,Clinic Referral,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.4557396644373444
+7,45,3,16,0,1,1,9,2,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,>300,No,No,No,0,0.48008053287340496
+6,33,1,8,0,0,0,6,0,[60-70),Male,AfricanAmerican,Emergency,Unknown,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.4553480949331787
+1,22,6,14,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.37224109559732893
+6,46,0,23,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.5964852110435515
+2,58,0,14,0,0,0,5,0,[70-80),Male,Unknown,Emergency,Discharged to Home,Other Healthcare Transfer,Pulmonology,Digestive,None,None,No,No,Yes,0,0.358416015200976
+2,49,0,15,1,0,2,9,3,[80-90),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Surgery-General,Neoplasms,None,None,Up,Ch,Yes,0,0.6020498340899715
+1,11,0,4,1,0,2,9,3,[70-80),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Other Specialty,Digestive,None,None,Steady,No,Yes,1,0.5760379428667394
+11,79,4,16,0,0,1,8,1,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Up,Ch,Yes,0,0.6620945204836233
+3,54,0,20,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Up,Ch,Yes,0,0.47720980939033647
+3,56,0,18,6,0,1,9,7,[70-80),Female,Caucasian,Not Available,Other/Unknown,Physician Referral,Unknown/Missing,Circulatory,>7,None,Up,Ch,Yes,0,0.6381330516351489
+3,42,3,20,0,0,0,9,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Circulatory,None,None,Steady,Ch,Yes,0,0.3465508711823361
+4,59,1,4,0,0,0,5,0,[70-80),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,No,Yes,0,0.4582206376430844
+5,62,5,28,0,0,0,9,0,[60-70),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.5399318811523011
+4,64,1,15,0,0,0,5,0,[20-30),Female,AfricanAmerican,Urgent,Discharged to Home,Not Available,InternalMedicine,Genitourinary,>8,None,Steady,No,Yes,0,0.3986834520564791
+7,66,2,24,0,0,0,9,0,[60-70),Female,AfricanAmerican,Urgent,Transferred to SNF,Physician Referral,Unknown/Missing,Diabetes,>8,None,Down,Ch,Yes,0,0.5812409367747808
+3,37,3,12,0,0,0,6,0,[80-90),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,No,No,No,0,0.32236772360775245
+10,62,2,28,0,1,1,9,2,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Other Healthcare Transfer,Cardiology,Circulatory,None,None,Steady,Ch,Yes,0,0.6026038322501488
+2,60,0,10,1,1,0,8,2,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.3664114584253501
+4,4,0,10,4,2,2,9,8,[70-80),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Respiratory,>7,None,No,No,No,0,0.5537524803432919
+9,49,3,17,0,0,0,5,0,[60-70),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Digestive,None,None,Steady,No,Yes,0,0.40128665555707954
+2,30,1,9,0,1,0,9,1,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.4000513953052884
+1,20,2,17,0,0,1,9,1,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,No,Ch,Yes,0,0.43337660611732953
+3,44,0,7,2,0,1,4,3,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,Ch,Yes,0,0.5197495169649033
+2,36,1,11,4,0,4,7,8,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,InternalMedicine,Other,None,None,No,No,No,1,0.6394670263575271
+8,78,5,48,0,0,0,9,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.48027330308699473
+3,9,0,18,2,1,2,9,5,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Physician Referral,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.7152050545374499
+2,10,0,8,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.39370211422098356
+11,49,3,21,0,0,1,8,1,[60-70),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Up,Ch,Yes,1,0.524879121417328
+3,39,1,31,1,0,2,4,3,[70-80),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Orthopedics-Reconstructive,Musculoskeletal,None,None,No,Ch,Yes,0,0.40523173276887636
+5,41,1,21,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Clinic Referral,Family/GeneralPractice,Neoplasms,>7,None,Down,Ch,Yes,0,0.45495627568967384
+3,23,0,17,1,2,1,8,4,[40-50),Male,Caucasian,Not Available,Discharged to Home,Unknown,Family/GeneralPractice,Digestive,None,>300,Down,Ch,Yes,1,0.5225103973877306
+3,29,1,21,0,0,0,6,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Genitourinary,None,None,No,No,Yes,0,0.395462426170368
+1,1,2,13,0,0,1,5,1,[60-70),Male,Caucasian,Unknown,Discharged to Home,Physician Referral,Surgery-General,Circulatory,None,None,No,Ch,Yes,0,0.44905304361402315
+2,51,0,8,0,0,0,3,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,>8,None,Down,Ch,Yes,0,0.38998720126879355
+2,34,0,8,0,0,1,9,1,[70-80),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Circulatory,None,None,No,No,No,0,0.4316731427026095
+6,48,1,23,0,0,3,9,3,[40-50),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Other,None,None,No,No,No,1,0.6288346596995914
+14,60,1,25,0,0,0,8,0,[60-70),Male,AfricanAmerican,Emergency,Transferred to Inpatient Care,Emergency Room,Unknown/Missing,Circulatory,>8,None,Up,Ch,Yes,0,0.7207783157989869
+3,34,1,23,0,0,0,8,0,[60-70),Female,Caucasian,Elective,Discharged to Home,Not Mapped,Unknown/Missing,Musculoskeletal,>8,None,No,No,Yes,0,0.3974869437568264
+2,32,1,12,0,0,0,8,0,[80-90),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Surgery-General,Musculoskeletal,None,None,No,No,No,1,0.3401023706527439
+8,48,0,14,0,0,0,9,0,[90-100),Male,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Digestive,None,None,No,No,Yes,1,0.41292617562792683
+10,83,1,27,0,0,0,9,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Genitourinary,None,None,No,No,Yes,0,0.4331792914452919
+2,71,0,15,4,0,0,8,4,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,Norm,None,Steady,Ch,Yes,0,0.3447699245986828
+1,58,0,4,0,0,2,7,2,[50-60),Female,AfricanAmerican,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Respiratory,None,None,Down,Ch,Yes,0,0.44528153045134344
+5,62,1,29,1,0,3,7,4,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Injury,None,None,Up,Ch,Yes,0,0.7364799116221693
+7,49,0,11,0,0,0,5,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Musculoskeletal,Norm,None,No,No,No,0,0.2696782659687362
+11,40,0,9,0,0,1,9,1,[80-90),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Unknown/Missing,Other,None,None,No,Ch,Yes,0,0.5253647587050397
+5,44,4,18,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Circulatory,None,None,Steady,No,Yes,0,0.5152816542240657
+9,33,3,32,0,1,1,9,2,[80-90),Male,Caucasian,Elective,Transferred to SNF,Physician Referral,Unknown/Missing,Injury,None,None,Up,Ch,Yes,0,0.6476713404601019
+1,51,1,9,0,0,0,7,0,[40-50),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Digestive,Norm,None,No,No,No,0,0.3234745328737396
+5,12,1,21,2,0,0,6,2,[50-60),Female,Caucasian,Not Available,Discharged to Home,Unknown,Unknown/Missing,Other,None,Norm,No,No,Yes,0,0.33180656251281593
+2,34,1,13,0,0,2,5,2,[60-70),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Injury,None,None,Steady,Ch,Yes,0,0.5523812766581447
+10,61,2,20,0,0,1,9,1,[70-80),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Neoplasms,None,None,No,No,Yes,1,0.6308088609344854
+3,26,1,26,0,0,1,9,1,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.61714569916441
+3,53,0,10,0,0,1,9,1,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.5656896118324726
+3,41,0,8,0,0,0,6,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,No,0,0.3772516228913126
+2,42,0,11,0,0,0,6,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.39680424572748607
+2,46,0,9,0,0,0,3,0,[50-60),Female,AfricanAmerican,Emergency,Unknown,Emergency Room,Unknown/Missing,Respiratory,>7,None,Steady,Ch,Yes,0,0.35117806048386885
+1,21,3,18,1,0,0,7,1,[60-70),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Surgery-General,Neoplasms,None,None,Steady,No,Yes,0,0.44268155328350745
+3,48,2,10,0,0,1,7,1,[60-70),Female,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Digestive,None,None,No,No,No,0,0.42430830456872193
+2,10,2,10,0,0,0,6,0,[50-60),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Neoplasms,None,None,Steady,Ch,Yes,0,0.3440227804848016
+8,10,0,18,0,0,2,9,2,[80-90),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Radiologist,Other,None,None,No,No,No,0,0.4680536368858633
+2,41,0,8,0,0,0,5,0,[40-50),Male,Caucasian,Unknown,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,Norm,No,No,Yes,0,0.44037955776450527
+2,42,0,6,0,0,0,3,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Neoplasms,None,None,No,No,Yes,0,0.3735146139728636
+11,89,2,40,7,1,3,9,11,[40-50),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Surgery-General,Respiratory,>8,None,Down,Ch,Yes,0,0.6284298832372521
+1,43,0,9,0,1,0,5,1,[50-60),Male,AfricanAmerican,Emergency,Left AMA,Emergency Room,InternalMedicine,Respiratory,None,None,No,No,No,0,0.3709624455568053
+1,42,6,26,0,0,0,9,0,[70-80),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.4485191675024493
+3,68,3,21,1,0,4,9,5,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,No,No,No,0,0.6155741706988335
+2,40,5,10,0,0,0,6,0,[40-50),Male,Caucasian,Unknown,Discharged to Home,Unknown,Cardiology,Circulatory,None,None,No,No,No,0,0.2947947778639946
+2,40,1,13,0,1,5,9,6,[70-80),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Respiratory,>7,None,Steady,No,Yes,0,0.7113466684537737
+4,54,3,17,0,0,1,9,1,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,Yes,0,0.4878450105518562
+4,59,1,25,0,0,1,9,1,[70-80),Female,Asian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Other,Norm,None,Steady,Ch,Yes,1,0.5142755959658907
+8,52,6,31,0,0,2,9,2,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Emergency/Trauma,Genitourinary,>7,None,Down,Ch,Yes,1,0.5229294460636627
+1,36,0,7,0,0,0,9,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,>7,None,No,No,No,0,0.336987196587132
+1,30,0,20,1,0,1,6,2,[70-80),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Respiratory,Norm,None,No,No,Yes,0,0.43836861625284856
+3,44,0,11,0,0,0,6,0,[60-70),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.40955627887106066
+1,28,2,12,3,0,0,6,3,[40-50),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,No,No,No,0,0.30133861932161304
+4,37,0,11,0,0,2,5,2,[40-50),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.5085725262500772
+3,34,0,7,0,0,4,9,4,[70-80),Male,AfricanAmerican,Urgent,Home with Home Health,Physician Referral,Family/GeneralPractice,Digestive,None,None,No,No,No,0,0.7344411948551344
+4,39,0,12,0,0,0,6,0,[80-90),Female,Caucasian,Unknown,Home with Home Health,Physician Referral,InternalMedicine,Circulatory,None,Norm,Steady,No,Yes,0,0.5518110241700043
+2,33,0,4,0,0,0,2,0,[0-10),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Other Specialty,Diabetes,>8,None,Steady,No,Yes,0,0.200221021247678
+7,38,1,18,0,0,0,9,0,[80-90),Female,Caucasian,Urgent,Home with Home Health,Physician Referral,Other Specialty,Other,None,None,No,No,No,1,0.45956693362125983
+1,29,6,13,0,0,0,8,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,Up,Ch,Yes,0,0.3811324580670123
+5,48,3,13,0,0,0,9,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Surgery-General,Digestive,None,None,No,No,No,0,0.3429587333851859
+1,57,2,19,1,0,0,2,1,[50-60),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Circulatory,None,None,Down,Ch,Yes,0,0.35760338148527043
+8,49,1,32,0,0,0,8,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,Norm,None,Up,Ch,Yes,0,0.4172287352888236
+6,32,0,11,0,0,0,9,0,[90-100),Female,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.49946456613503026
+7,37,0,15,0,0,0,9,0,[80-90),Male,Caucasian,Urgent,Home with Home Health,Physician Referral,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.4244706435923927
+1,55,0,5,0,0,0,2,0,[30-40),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.3687380607568805
+4,42,1,12,0,0,1,8,1,[50-60),Male,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Musculoskeletal,None,None,No,No,No,0,0.4054847139096585
+8,50,1,11,0,0,0,7,0,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Up,Ch,Yes,0,0.4580977915751429
+1,55,0,21,0,0,0,6,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,0,0.4148222355869712
+13,19,0,19,0,0,3,9,3,[40-50),Female,Caucasian,Elective,Home with Home Health,Hospital Transfer,Unknown/Missing,Other,None,None,Steady,No,Yes,0,0.6584282085421143
+4,59,0,11,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,No,Yes,0,0.5792727452252431
+5,30,5,15,0,0,0,5,0,[70-80),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,No,Ch,Yes,0,0.32879062489275573
+1,62,0,15,0,0,1,9,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Genitourinary,None,None,Down,Ch,Yes,0,0.4854934470437525
+4,21,1,13,6,0,0,4,6,[60-70),Female,Caucasian,Elective,Transferred to Rehab,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,No,Ch,Yes,0,0.6245021214734854
+5,48,3,26,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Transferred to Rehab,Emergency Room,Unknown/Missing,Injury,None,None,Steady,No,Yes,0,0.7495663583554332
+5,44,0,17,0,1,1,9,2,[60-70),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,None,None,Steady,No,Yes,0,0.4919407669518485
+9,9,0,18,0,1,0,9,1,[80-90),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.40067562220898356
+2,1,0,11,0,0,1,9,1,[60-70),Male,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Circulatory,None,None,No,No,Yes,1,0.5640248017052122
+4,31,0,8,0,0,0,8,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,None,None,No,Ch,Yes,0,0.37963530201920354
+7,40,0,19,3,0,1,8,4,[60-70),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.47089370851126366
+4,43,0,13,0,0,0,8,0,[40-50),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Family/GeneralPractice,Musculoskeletal,None,None,No,No,No,0,0.4021634606633271
+5,47,0,25,0,0,0,7,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,Ch,Yes,0,0.35560068662267946
+7,57,2,16,0,0,0,7,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Genitourinary,None,None,Down,Ch,Yes,0,0.3973307557616613
+3,57,3,12,0,0,0,8,0,[40-50),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Digestive,Norm,None,No,No,No,0,0.29717376540449464
+6,26,1,23,0,0,0,4,0,[50-60),Female,Caucasian,Not Available,Discharged to Home,Unknown,Unknown/Missing,Musculoskeletal,None,Norm,Steady,No,Yes,0,0.30904024651928574
+1,4,4,14,0,0,1,5,1,[60-70),Female,Caucasian,Elective,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.43500093249753635
+9,79,1,15,0,0,0,9,0,[20-30),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Diabetes,>8,None,Down,Ch,Yes,0,0.5220261110411619
+10,57,0,10,0,0,1,9,1,[60-70),Male,Unknown,Elective,Discharged to Home,Hospital Transfer,Unknown/Missing,Other,None,None,No,No,No,0,0.4144861112889794
+2,31,0,18,0,0,1,6,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Surgery-General,Genitourinary,None,None,No,Ch,Yes,0,0.4205050262551396
+1,11,0,13,3,0,0,4,3,[40-50),Female,Caucasian,Not Available,Home with Home Health,Unknown,Family/GeneralPractice,Respiratory,None,Norm,No,Ch,Yes,0,0.3136093338891721
+3,37,1,10,0,0,0,5,0,[80-90),Female,AfricanAmerican,Emergency,Transferred to Rehab,Emergency Room,Other Specialty,Injury,None,None,No,No,Yes,1,0.68777632384098
+1,34,0,17,0,0,0,9,0,[50-60),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Down,Ch,Yes,0,0.3933173804517209
+1,48,0,5,1,0,0,1,1,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Diabetes,>8,None,No,No,No,0,0.23786424198710504
+3,9,3,16,2,0,0,7,2,[30-40),Female,Unknown,Not Available,Discharged to Home,Physician Referral,Unknown/Missing,Other,None,None,Up,Ch,Yes,0,0.34850812990593644
+5,76,0,25,1,2,1,9,4,[50-60),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.5680307959842283
+1,43,0,15,0,1,0,8,1,[80-90),Male,AfricanAmerican,Not Available,Transferred to SNF,Physician Referral,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.5524102564224553
+1,46,0,12,1,0,1,9,2,[70-80),Female,Caucasian,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Other,>8,None,Steady,Ch,Yes,0,0.4680553907445508
+3,28,0,11,0,0,0,5,0,[80-90),Female,Caucasian,Urgent,Home with Home Health,Physician Referral,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.4264787696871802
+3,60,0,17,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Diabetes,>8,None,Steady,No,Yes,0,0.38657163714999015
+1,22,0,8,0,0,2,6,2,[80-90),Female,Caucasian,Unknown,Not Mapped,Unknown,Unknown/Missing,Circulatory,None,Norm,No,No,Yes,1,0.5665468562391032
+4,40,2,17,0,0,0,6,0,[90-100),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Neoplasms,None,None,No,No,No,0,0.4714477969843796
+2,43,0,13,0,0,0,8,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Respiratory,None,None,Steady,No,Yes,0,0.35081303303297595
+2,60,2,15,0,0,0,9,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Diabetes,None,None,Down,Ch,Yes,0,0.4302968503764681
+3,28,0,9,0,0,0,6,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,>7,None,No,No,Yes,0,0.32091591308509104
+5,10,2,22,1,0,0,9,1,[80-90),Female,Caucasian,Urgent,Transferred to Rehab,Physician Referral,Radiologist,Injury,None,None,No,Ch,Yes,0,0.6550820142833067
+4,37,0,17,0,0,0,5,0,[50-60),Female,Other,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.3268868605180093
+4,61,4,14,0,0,0,9,0,[70-80),Male,Unknown,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Digestive,None,None,No,Ch,Yes,0,0.3856926642026387
+10,51,1,15,2,0,1,9,3,[70-80),Female,Caucasian,Urgent,Transferred to SNF,Physician Referral,Unknown/Missing,Circulatory,>7,None,Up,Ch,Yes,1,0.6601264154701695
+3,36,0,8,3,0,6,8,9,[50-60),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Digestive,None,None,No,No,No,1,0.7465986114019464
+12,67,3,17,0,1,6,6,7,[50-60),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Neoplasms,None,None,No,No,Yes,1,0.7967436146436895
+1,35,3,13,0,0,0,5,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Circulatory,None,None,No,No,Yes,0,0.30858328306088734
+1,31,1,13,0,0,0,5,0,[40-50),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Other Specialty,Circulatory,None,None,No,No,Yes,0,0.3768633147250188
+2,41,0,16,1,0,2,6,3,[60-70),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.5578070501203817
+3,13,0,13,0,0,2,7,2,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Other,None,None,Steady,No,Yes,0,0.5140677315091655
+1,42,0,10,0,0,0,5,0,[90-100),Female,AfricanAmerican,Urgent,Home with Home Health,Physician Referral,Family/GeneralPractice,Circulatory,None,None,No,No,Yes,0,0.43204658690929776
+7,52,2,27,0,0,3,9,3,[40-50),Male,Caucasian,Emergency,Discharged to Home,Physician Referral,Cardiology,Circulatory,>8,None,Down,Ch,Yes,1,0.6269603138679293
+4,62,1,22,1,0,0,7,1,[60-70),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Up,Ch,Yes,1,0.4468089928173005
+1,6,1,15,3,0,0,7,3,[50-60),Female,AfricanAmerican,Not Available,Discharged to Home,Physician Referral,Unknown/Missing,Respiratory,None,None,Up,Ch,Yes,0,0.31185075804359724
+4,49,0,15,0,0,0,7,0,[60-70),Female,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,None,None,Steady,Ch,Yes,0,0.49908455338750296
+14,32,2,20,0,0,1,9,1,[80-90),Male,Caucasian,Urgent,Transferred to ICF,Physician Referral,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.6294692276292216
+2,16,1,18,0,1,0,8,1,[50-60),Male,Caucasian,Not Available,Transferred to SNF,Unknown,Family/GeneralPractice,Other,None,>200,Down,Ch,Yes,1,0.5442289665260185
+4,73,1,20,0,0,1,7,1,[60-70),Male,Caucasian,Unknown,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,Steady,Ch,Yes,0,0.4751836178641005
+4,25,0,23,2,0,0,9,2,[80-90),Female,Caucasian,Unknown,Not Mapped,Unknown,Unknown/Missing,Circulatory,None,>200,Steady,Ch,Yes,0,0.48788887248592994
+6,61,0,8,0,0,1,4,1,[30-40),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Digestive,None,None,No,No,No,0,0.4134208237647013
+11,35,3,24,0,0,0,9,0,[80-90),Female,AfricanAmerican,Emergency,Transferred to SNF,SNF Transfer,InternalMedicine,Digestive,None,None,Steady,Ch,Yes,0,0.4648723003085179
+3,38,0,18,0,0,0,4,0,[40-50),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.31400569358008285
+12,55,4,34,0,1,1,9,2,[60-70),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Diabetes,None,None,Down,Ch,Yes,1,0.6993766355301996
+4,20,1,16,0,0,0,5,0,[80-90),Female,Caucasian,Urgent,Home with Home Health,Clinic Referral,Unknown/Missing,Digestive,None,None,No,No,Yes,0,0.40384725075500516
+2,53,1,20,0,0,0,9,0,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Respiratory,None,None,No,Ch,Yes,0,0.2956127620775596
+7,50,0,9,0,0,1,9,1,[60-70),Female,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.6265196941681479
+2,25,0,4,0,0,0,9,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Diabetes,None,None,Down,Ch,Yes,0,0.4347276996598765
+5,46,4,13,0,1,0,7,1,[50-60),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Diabetes,>7,None,Up,Ch,Yes,0,0.35970344073008886
+6,47,0,24,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.5921975747385312
+4,34,0,22,0,0,1,5,1,[70-80),Female,AfricanAmerican,Emergency,Unknown,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Down,Ch,Yes,0,0.6230077195715581
+11,39,0,12,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Unknown,SNF Transfer,Unknown/Missing,Other,Norm,None,No,No,Yes,0,0.4312875311592191
+5,51,0,6,0,0,0,8,0,[70-80),Female,AfricanAmerican,Emergency,Transferred to ICF,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.4318975892044818
+2,47,0,5,0,0,1,4,1,[20-30),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Musculoskeletal,>8,None,Steady,No,Yes,0,0.38308914377522857
+2,61,2,10,0,0,0,7,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,Norm,None,No,No,Yes,0,0.3456085661597067
+2,68,0,12,0,0,0,9,0,[50-60),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,>8,None,Steady,Ch,Yes,0,0.3171874198108158
+1,33,1,17,0,0,0,5,0,[60-70),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Orthopedics-Reconstructive,Injury,None,None,No,No,No,0,0.22165753839700514
+2,49,0,15,0,0,1,9,1,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Down,Ch,Yes,0,0.5197743178000814
+2,36,6,16,0,0,0,9,0,[60-70),Female,Unknown,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.4217068989941625
+4,62,4,20,0,2,1,9,3,[70-80),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.625031247846817
+9,30,1,9,0,0,0,9,0,[70-80),Female,AfricanAmerican,Emergency,Transferred to ICF,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.48163228696595184
+4,57,2,13,0,0,0,9,0,[60-70),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,0,0.5441200976752724
+1,60,0,10,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Respiratory,>7,None,No,No,Yes,0,0.397682150586006
+3,41,0,9,0,0,0,9,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,Norm,None,No,No,No,0,0.384871474803425
+5,47,1,24,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,SNF Transfer,InternalMedicine,Other,None,None,Steady,No,Yes,0,0.48791197219833465
+4,48,0,22,0,0,0,9,0,[50-60),Female,Other,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Diabetes,None,None,Down,Ch,Yes,1,0.5266400900784778
+1,62,0,19,0,0,0,8,0,[90-100),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Respiratory,None,None,Down,Ch,Yes,1,0.49827672035085424
+1,48,0,6,0,0,1,3,1,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Musculoskeletal,None,None,Down,Ch,Yes,0,0.42280549319009275
+2,28,0,8,0,0,0,7,0,[70-80),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Cardiology,Diabetes,None,None,Steady,Ch,Yes,0,0.3451934020129562
+1,38,1,21,0,0,0,9,0,[40-50),Male,Caucasian,Elective,Discharged to Home,Clinic Referral,Other Specialty,Injury,None,None,Steady,No,Yes,0,0.3966734212465804
+11,44,0,19,0,1,6,8,7,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Other,None,None,Up,Ch,Yes,0,0.8889207364486494
+1,42,2,11,0,0,0,9,0,[70-80),Female,Caucasian,Elective,Discharged to Home,Physician Referral,InternalMedicine,Other,None,None,No,No,No,0,0.38140910188741045
+3,39,0,13,0,0,0,6,0,[50-60),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.4580857194698897
+9,50,0,20,0,0,0,9,0,[80-90),Male,Caucasian,Emergency,Transferred to Rehab,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,No,0,0.7547570545140752
+3,28,1,32,0,0,0,9,0,[70-80),Male,Caucasian,Elective,Transferred to SNF,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,Steady,Ch,Yes,0,0.5215328122801027
+11,63,2,26,0,0,1,9,1,[70-80),Male,Caucasian,Emergency,Other/Unknown,Physician Referral,Unknown/Missing,Respiratory,None,None,Down,Ch,Yes,1,0.6570179004510525
+2,54,0,12,1,0,0,7,1,[40-50),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Family/GeneralPractice,Respiratory,None,None,Down,Ch,Yes,1,0.39636655182668123
+1,5,0,5,1,1,0,9,2,[50-60),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Radiologist,Circulatory,None,None,No,No,No,0,0.3033212881492227
+4,29,0,14,0,0,0,4,0,[90-100),Female,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Unknown/Missing,Injury,None,None,No,No,Yes,0,0.4697131131370769
+1,36,1,23,0,0,0,3,0,[50-60),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Other Specialty,Musculoskeletal,None,None,No,Ch,Yes,0,0.2820437500266726
+1,36,1,9,0,0,2,8,2,[30-40),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,1,0.47986065114622267
+9,47,1,24,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Injury,None,None,Steady,No,Yes,0,0.5467801569625634
+3,60,0,23,0,0,0,9,0,[50-60),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Respiratory,>7,None,Steady,Ch,Yes,0,0.3548257582889944
+2,34,2,4,0,0,0,4,0,[60-70),Male,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Emergency/Trauma,Circulatory,None,None,No,No,No,0,0.4395211238128385
+3,49,6,27,0,0,2,9,2,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,None,None,Up,Ch,Yes,0,0.5789070391392688
+11,53,2,37,0,0,0,3,0,[50-60),Female,Caucasian,Urgent,Unknown,Physician Referral,Unknown/Missing,Genitourinary,None,None,Steady,No,Yes,0,0.4512469340373985
+8,45,0,14,0,0,1,6,1,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.40583092510534224
+4,47,0,13,0,0,0,5,0,[50-60),Male,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Pulmonology,Circulatory,None,None,No,No,Yes,0,0.3875513675913716
+2,29,3,24,0,0,0,9,0,[80-90),Male,AfricanAmerican,Elective,Transferred to SNF,SNF Transfer,Nephrology,Diabetes,None,None,No,No,No,0,0.4923646082524258
+7,47,0,9,1,0,1,6,2,[60-70),Female,AfricanAmerican,Emergency,Home with Home Health,Physician Referral,Emergency/Trauma,Circulatory,None,None,Steady,Ch,Yes,0,0.4817304678285592
+3,57,1,8,0,0,0,5,0,[50-60),Male,Caucasian,Not Mapped,Discharged to Home,Emergency Room,Orthopedics-Reconstructive,Injury,None,None,No,No,No,0,0.17228920721089522
+4,45,0,12,0,0,0,9,0,[40-50),Female,AfricanAmerican,Emergency,Discharged to Home,SNF Transfer,InternalMedicine,Other,None,None,Up,Ch,Yes,0,0.3723516550520229
+3,22,1,13,0,0,0,6,0,[60-70),Male,Caucasian,Elective,Transferred to Inpatient Care,HMO Referral,Orthopedics,Musculoskeletal,None,None,No,No,Yes,0,0.6784918768663359
+2,5,0,11,0,0,0,6,0,[70-80),Female,Caucasian,Emergency,Transferred to Inpatient Care,Emergency Room,Cardiology,Circulatory,None,None,No,No,Yes,0,0.6028623673415454
+5,61,1,20,0,0,1,5,1,[30-40),Female,Caucasian,Emergency,Discharged to Home,Other Healthcare Transfer,Nephrology,Diabetes,>8,None,Steady,No,Yes,0,0.4930884399518256
+9,44,1,30,0,4,0,9,4,[60-70),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.6064038069859087
+6,51,0,23,0,0,1,9,1,[80-90),Male,Caucasian,Urgent,Transferred to SNF,Hospital Transfer,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.6410360760374192
+13,59,1,34,0,1,0,9,1,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Diabetes,Norm,None,Down,Ch,Yes,0,0.564203488713568
+1,23,1,19,0,0,0,7,0,[70-80),Female,Caucasian,Not Available,Home with Home Health,Unknown,Family/GeneralPractice,Circulatory,None,>300,Down,Ch,Yes,0,0.4816148677316364
+2,56,2,24,0,0,1,9,1,[50-60),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Down,Ch,Yes,0,0.5258657182963208
+1,64,0,10,0,0,0,6,0,[70-80),Female,AfricanAmerican,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Digestive,>7,None,No,No,Yes,0,0.3882880614028069
+2,57,0,5,0,2,0,9,2,[50-60),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,>8,None,No,No,No,0,0.38798115861374144
+2,48,0,15,0,0,0,9,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.3436418701117704
+4,1,1,4,0,0,0,9,0,[30-40),Female,Hispanic,Elective,Discharged to Home,Physician Referral,ObstetricsandGynecology,Other,None,None,Steady,Ch,Yes,0,0.246174278546724
+4,28,3,19,0,0,1,9,1,[60-70),Male,Caucasian,Elective,Transferred to Short-term Hospital,Physician Referral,Other Specialty,Circulatory,None,None,Steady,Ch,Yes,0,0.6533515733153274
+2,12,0,7,0,0,0,9,0,[50-60),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Genitourinary,None,None,Steady,No,Yes,0,0.42791520977799996
+5,65,1,14,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,Ch,Yes,0,0.44441571402610175
+12,63,6,29,0,0,0,9,0,[20-30),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,Down,Ch,Yes,1,0.4663716190930812
+1,34,3,10,0,0,1,4,1,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Radiologist,Circulatory,None,None,No,No,Yes,0,0.3818832816063186
+4,56,1,10,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,1,0.537309838992179
+8,61,2,19,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Cardiology,Circulatory,None,None,No,No,Yes,0,0.46094085447953126
+3,63,2,28,0,1,1,9,2,[50-60),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Other,None,None,Steady,Ch,Yes,0,0.4320641071467775
+8,24,1,22,0,0,0,8,0,[60-70),Male,AfricanAmerican,Not Available,Transferred to Inpatient Care,Unknown,Unknown/Missing,Digestive,None,>200,Down,Ch,Yes,0,0.7182120562315165
+4,40,1,26,0,0,1,6,1,[60-70),Female,Other,Elective,Transferred to SNF,Physician Referral,Orthopedics,Musculoskeletal,None,None,Up,Ch,Yes,0,0.4952081036387025
+10,84,6,28,0,0,0,8,0,[60-70),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Cardiology,Circulatory,>8,None,No,Ch,Yes,0,0.3945658609050895
+7,64,0,22,2,0,2,9,4,[80-90),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Unknown/Missing,Respiratory,None,None,Down,Ch,Yes,0,0.62417768482379
+4,62,1,17,4,0,2,7,6,[80-90),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Digestive,None,None,Steady,Ch,Yes,0,0.5325276605023583
+5,30,2,11,0,0,1,5,1,[60-70),Male,Unknown,Urgent,Discharged to Home,Physician Referral,Surgery-General,Circulatory,None,None,Steady,Ch,Yes,0,0.4193904983907809
+3,41,0,11,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.4331771359418083
+3,22,0,6,0,1,0,4,1,[80-90),Female,Caucasian,Not Available,Hospice / Home,Unknown,Family/GeneralPractice,Digestive,None,Norm,No,No,No,0,0.12412335957871162
+6,52,2,32,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.5091098463095967
+5,66,0,12,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,1,0.472686561569887
+8,55,4,15,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,Ch,Yes,0,0.42815609096506535
+3,36,0,10,0,0,3,9,3,[80-90),Female,Caucasian,Elective,Transferred to SNF,Other Healthcare Transfer,Family/GeneralPractice,Circulatory,None,None,Up,Ch,Yes,0,0.7506682592757151
+3,16,2,5,0,0,0,9,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,None,None,Steady,Ch,Yes,0,0.36439403474328963
+8,48,0,12,1,0,1,9,2,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.5820365013663203
+4,88,1,13,0,0,0,9,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,Norm,None,Steady,No,Yes,0,0.40468436262432744
+5,56,0,13,0,0,2,9,2,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.613879766735114
+1,40,0,11,0,0,0,7,0,[60-70),Male,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,>7,None,No,No,No,0,0.39667851491191625
+13,28,1,29,1,0,0,8,1,[50-60),Male,Caucasian,Not Available,Transferred to SNF,Unknown,Family/GeneralPractice,Respiratory,None,>200,Up,Ch,Yes,0,0.5002741108133892
+8,76,1,28,0,0,1,9,1,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Injury,None,None,No,No,No,0,0.4585264394461816
+3,31,0,15,0,0,0,7,0,[30-40),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,None,None,No,Ch,Yes,1,0.3726620400322848
+5,28,0,9,0,0,0,7,0,[80-90),Male,Caucasian,Emergency,Home with Home Health,Physician Referral,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.4746154850179766
+10,73,4,20,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,Steady,No,Yes,0,0.4177528469398264
+2,29,4,25,0,0,0,9,0,[50-60),Male,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.5725058039954755
+3,24,0,12,0,0,0,6,0,[40-50),Male,Caucasian,Emergency,Discharged to Home,Unknown,Unknown/Missing,Other,None,Norm,Down,Ch,Yes,0,0.4296059421850885
+10,40,5,34,0,1,1,9,2,[50-60),Female,AfricanAmerican,Emergency,Other/Unknown,Emergency Room,Nephrology,Other,None,None,No,No,No,0,0.6304881391956156
+3,44,0,8,0,0,0,5,0,[70-80),Male,Hispanic,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Other,Norm,None,No,No,No,0,0.3288380194841263
+4,32,2,24,0,0,0,9,0,[70-80),Female,AfricanAmerican,Elective,Transferred to Rehab,Physician Referral,Orthopedics-Reconstructive,Musculoskeletal,None,None,Steady,No,Yes,0,0.6278641964010873
+2,48,4,7,2,0,0,9,2,[30-40),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Genitourinary,None,None,No,No,No,0,0.32171592245885106
+3,45,2,5,0,0,0,7,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.32582724625879544
+4,56,3,20,0,0,1,6,1,[30-40),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Digestive,None,None,Up,Ch,Yes,0,0.5009578344662805
+4,55,0,7,0,0,0,6,0,[70-80),Female,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.5449006723399187
+1,21,1,35,0,0,1,9,1,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Injury,None,None,No,Ch,Yes,0,0.47066077257676053
+14,63,6,49,0,0,1,9,1,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.5778287095928507
+1,4,0,5,0,0,0,7,0,[70-80),Female,Unknown,Elective,Unknown,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.395379921181047
+1,36,0,8,0,0,0,6,0,[80-90),Female,Caucasian,Emergency,Unknown,Other Healthcare Transfer,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.3905520117125115
+2,3,1,13,0,0,0,9,0,[60-70),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Orthopedics,Musculoskeletal,None,None,No,No,No,0,0.356742963103159
+7,51,1,36,0,0,1,9,1,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.5409295078323783
+7,43,0,18,0,0,4,8,4,[60-70),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.7632988031951642
+2,42,0,14,28,3,4,6,35,[40-50),Female,Hispanic,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Down,Ch,Yes,0,0.6877434348112896
+4,54,0,22,0,0,1,8,1,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.5027722231467538
+3,37,1,9,0,0,3,7,3,[90-100),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Digestive,None,None,Steady,No,Yes,1,0.5955033585273246
+3,60,0,19,1,3,3,9,7,[50-60),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.7511477002557709
+3,32,0,4,0,1,0,5,1,[0-10),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,No,Yes,0,0.22525917492005215
+6,43,1,12,0,1,0,8,1,[60-70),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Family/GeneralPractice,Respiratory,None,None,Up,Ch,Yes,0,0.46668136273762495
+5,57,1,20,0,0,0,2,0,[10-20),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,>8,None,Up,Ch,Yes,1,0.22664850456107122
+2,55,0,14,0,0,1,4,1,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Diabetes,None,None,Up,Ch,Yes,0,0.472999666112569
+1,1,1,2,0,2,1,5,3,[40-50),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Other,None,None,No,No,No,0,0.4072411474567079
+1,44,0,16,0,0,0,9,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Steady,No,Yes,1,0.44948072430851005
+5,34,0,14,0,0,1,9,1,[70-80),Female,Hispanic,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.44232534698778725
+5,37,0,10,0,0,1,9,1,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Cardiology,Other,None,None,Steady,Ch,Yes,0,0.5412396641531356
+3,58,0,21,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.5927228010312329
+2,62,3,20,0,0,4,8,4,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.7417931740345961
+4,82,3,22,0,0,2,8,2,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.6083630700456086
+2,23,0,14,0,0,0,7,0,[50-60),Male,Caucasian,Emergency,Discharged to Home,Unknown,Unknown/Missing,Respiratory,None,Norm,No,No,Yes,1,0.3387630693103791
+7,43,0,13,0,0,1,9,1,[80-90),Female,Caucasian,Elective,Transferred to SNF,Hospital Transfer,Other Specialty,Other,None,None,No,No,Yes,0,0.5748750300656406
+7,48,0,7,0,0,0,5,0,[60-70),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.36182431038582513
+7,70,1,22,0,1,1,9,2,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,InternalMedicine,Circulatory,None,None,Up,Ch,Yes,0,0.6350320435211679
+2,20,0,7,0,0,0,7,0,[70-80),Female,Caucasian,Urgent,Home with Home Health,Emergency Room,Emergency/Trauma,Other,None,None,No,No,Yes,0,0.38913204935812695
+1,36,0,4,11,2,9,6,22,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,Ch,Yes,1,0.8884663163961571
+2,22,1,16,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.40176023153628443
+3,56,0,12,0,0,0,5,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.4302780402152196
+5,52,1,23,0,0,0,9,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,>7,None,Steady,Ch,Yes,0,0.4223193764486618
+1,38,0,9,0,0,0,5,0,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Other Healthcare Transfer,InternalMedicine,Circulatory,Norm,None,No,No,No,0,0.33225489145409903
+3,55,0,8,0,0,0,5,0,[70-80),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Digestive,>8,None,Steady,No,Yes,0,0.3762328211558657
+5,67,2,20,0,0,0,9,0,[80-90),Female,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Injury,None,None,Up,Ch,Yes,0,0.5027086194838449
+2,25,0,6,0,0,0,9,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.4511190099211974
+3,9,0,12,1,1,1,9,3,[80-90),Female,Caucasian,Not Available,Transferred to SNF,Unknown,Unknown/Missing,Other,None,Norm,No,Ch,Yes,0,0.5717094894263809
+3,28,1,27,0,0,0,6,0,[50-60),Male,Caucasian,Unknown,Discharged to Home,Unknown,Unknown/Missing,Musculoskeletal,>7,None,No,Ch,Yes,0,0.30973194759184947
+1,35,0,5,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,None,None,No,No,Yes,0,0.4097491366174318
+3,6,6,11,0,0,0,4,0,[50-60),Male,Hispanic,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Other,None,None,No,No,Yes,0,0.2573947642149653
+2,29,0,14,0,0,0,8,0,[40-50),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Steady,No,Yes,0,0.40960039196411785
+2,35,0,9,0,0,0,6,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,0,0.3869197043410489
+4,39,0,34,0,0,1,9,1,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Up,Ch,Yes,0,0.48749737565295204
+4,54,0,11,0,0,1,9,1,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,Norm,None,Steady,No,Yes,0,0.514346774111673
+3,41,0,18,9,0,0,9,9,[80-90),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,None,None,Down,Ch,Yes,1,0.5679094298368306
+6,53,3,44,0,0,0,7,0,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,>8,None,Steady,Ch,Yes,1,0.4156829651871725
+4,40,5,23,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Down,Ch,Yes,0,0.47853625614563583
+1,13,6,12,1,0,0,8,1,[70-80),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Radiologist,Circulatory,None,None,No,No,Yes,0,0.34672359359879174
+3,57,3,19,0,0,0,6,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,No,No,0,0.39327319868998406
+7,49,3,23,0,0,2,9,2,[40-50),Female,Hispanic,Emergency,Unknown,Emergency Room,Family/GeneralPractice,Other,None,None,No,No,Yes,0,0.6480952567521358
+7,76,0,23,0,0,0,9,0,[80-90),Female,Caucasian,Urgent,Unknown,Hospital Transfer,Unknown/Missing,Other,None,None,No,Ch,Yes,0,0.5014029295984743
+5,79,6,30,0,0,0,9,0,[60-70),Female,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Circulatory,None,None,No,No,Yes,0,0.45115842994646027
+4,43,0,2,0,0,0,7,0,[90-100),Male,AfricanAmerican,Elective,Transferred to SNF,Physician Referral,Family/GeneralPractice,Circulatory,None,None,No,No,No,0,0.4776512406481874
+8,19,2,21,0,0,0,4,0,[60-70),Male,Caucasian,Elective,Unknown,HMO Referral,Orthopedics,Musculoskeletal,None,None,No,No,Yes,0,0.5001887017878034
+5,47,0,14,0,0,0,6,0,[30-40),Male,AfricanAmerican,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.36473301788210427
+9,57,1,25,0,0,1,6,1,[80-90),Female,Caucasian,Unknown,Transferred to SNF,Emergency Room,InternalMedicine,Injury,None,Norm,No,No,Yes,0,0.6441838502465032
+2,46,0,10,0,0,1,6,1,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Respiratory,None,None,Down,Ch,Yes,0,0.4997111871846024
+7,51,5,37,0,0,1,9,1,[50-60),Male,Caucasian,Urgent,Transferred to Short-term Hospital,Emergency Room,Emergency/Trauma,Digestive,None,None,Down,Ch,Yes,0,0.6156573304355666
+2,21,2,11,0,0,1,9,1,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,Ch,Yes,0,0.46397526037418585
+6,27,0,16,0,0,0,9,0,[70-80),Female,Unknown,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.42086431439883193
+2,77,0,12,0,0,0,9,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,InternalMedicine,Respiratory,None,None,No,No,No,0,0.3283308611844979
+3,42,1,14,0,0,0,9,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Other,>8,None,Steady,Ch,Yes,0,0.4007798167087063
+5,46,2,21,0,1,0,7,1,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Neoplasms,None,None,No,No,Yes,0,0.4498320873941899
+1,31,0,8,0,0,4,9,4,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Other,None,None,No,No,No,0,0.7638444930672024
+9,64,3,24,0,0,1,8,1,[80-90),Male,AfricanAmerican,Emergency,Unknown,Emergency Room,Family/GeneralPractice,Digestive,None,None,Steady,No,Yes,0,0.6253281951815832
+3,14,0,19,0,0,3,9,3,[50-60),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Diabetes,Norm,None,Steady,No,Yes,1,0.6384614971937775
+5,28,1,23,0,0,0,8,0,[70-80),Female,Caucasian,Emergency,Transferred to SNF,Unknown,Cardiology,Circulatory,None,>200,Steady,No,Yes,1,0.5378306351783194
+3,62,0,19,0,0,2,9,2,[60-70),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,InternalMedicine,Genitourinary,None,None,Steady,Ch,Yes,0,0.6159046849459093
+4,25,1,14,0,0,0,7,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Unknown,Nephrology,Circulatory,None,>200,Up,Ch,Yes,0,0.5255176831827052
+7,57,5,26,4,1,4,9,9,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,Up,Ch,Yes,1,0.7380233455478419
+5,43,2,11,0,0,0,6,0,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Digestive,None,None,Steady,No,Yes,0,0.4014037776742172
+9,34,2,21,0,0,0,9,0,[70-80),Female,Caucasian,Urgent,Transferred to Rehab,Clinic Referral,Other Specialty,Other,None,None,No,Ch,Yes,0,0.7273403333929795
+3,64,0,24,3,1,2,9,6,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,Norm,None,Down,Ch,Yes,0,0.6247519987906337
+3,93,0,13,0,0,0,6,0,[70-80),Female,Caucasian,Unknown,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,>200,Down,Ch,Yes,0,0.5412731021473861
+14,44,2,26,0,0,8,9,8,[50-60),Male,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,1,0.9034965279902875
+9,42,3,14,0,0,2,9,2,[70-80),Male,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.6693031837414116
+1,3,1,12,4,0,0,9,4,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,No,No,No,0,0.30240304959335607
+4,1,0,8,0,0,1,9,1,[40-50),Female,AfricanAmerican,Elective,Discharged to Home,Emergency Room,Family/GeneralPractice,Diabetes,None,None,No,No,No,1,0.44511519977555475
+5,44,3,22,0,1,0,4,1,[60-70),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Neoplasms,None,None,Steady,No,Yes,0,0.4114305476432056
+1,72,0,14,0,0,1,6,1,[40-50),Male,Caucasian,Emergency,Left AMA,Emergency Room,Unknown/Missing,Other,None,None,Down,Ch,Yes,0,0.5861466542176041
+7,49,1,23,0,0,2,9,2,[60-70),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.5351031592897069
+1,44,0,11,2,0,0,6,2,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,0,0.3793991437849516
+2,35,0,14,1,0,0,9,1,[60-70),Female,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.5581929819742987
+4,45,3,10,0,0,0,3,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Respiratory,None,None,No,No,No,0,0.2908611118923183
+4,43,0,13,1,0,0,9,1,[60-70),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.46263613081121185
+7,52,1,7,0,0,0,7,0,[80-90),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,Steady,No,Yes,0,0.5380439297521779
+3,45,0,17,0,0,0,7,0,[50-60),Male,Caucasian,Unknown,Discharged to Home,Unknown,Unknown/Missing,Other,None,None,Steady,No,Yes,0,0.3836612402745688
+2,50,0,6,0,1,0,5,1,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Steady,No,Yes,0,0.4015433957441908
+2,46,1,16,0,1,0,9,1,[70-80),Female,Other,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Genitourinary,None,None,No,No,No,0,0.4823061907637082
+3,73,4,14,0,0,0,9,0,[80-90),Female,Hispanic,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Steady,No,Yes,0,0.4523122723140364
+4,63,0,19,3,1,0,9,4,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Injury,>7,None,No,Ch,Yes,1,0.46995752579907385
+8,65,0,20,0,0,1,9,1,[40-50),Female,AfricanAmerican,Emergency,Unknown,Emergency Room,Unknown/Missing,Respiratory,>8,None,No,No,No,0,0.49852834293058584
+8,69,6,45,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.5970777712438198
+3,11,1,13,2,0,0,8,2,[80-90),Male,Caucasian,Not Available,Transferred to SNF,Physician Referral,Unknown/Missing,Genitourinary,None,None,No,No,Yes,0,0.48164463403171226
+2,26,6,17,0,0,0,9,0,[70-80),Female,Caucasian,Unknown,Discharged to Home,Unknown,Cardiology,Circulatory,None,None,Steady,Ch,Yes,0,0.3546064502328895
+11,65,3,18,0,0,1,8,1,[60-70),Female,Caucasian,Emergency,Unknown,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,Ch,Yes,0,0.592251841662765
+8,45,2,24,0,0,0,9,0,[50-60),Female,AfricanAmerican,Emergency,Transferred to Inpatient Care,Emergency Room,Unknown/Missing,Diabetes,None,None,No,Ch,Yes,1,0.6549148606869429
+3,35,0,10,0,2,0,7,2,[30-40),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Diabetes,None,None,Up,Ch,Yes,0,0.46592791000352074
+6,48,0,16,0,5,11,9,16,[50-60),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Other,>8,None,Steady,No,Yes,0,0.955587549857157
+4,77,4,17,1,0,0,9,1,[70-80),Male,Caucasian,Unknown,Discharged to Home,Unknown,Unknown/Missing,Circulatory,>8,None,Steady,Ch,Yes,0,0.41666690671352646
+10,57,0,20,0,0,0,6,0,[50-60),Female,Caucasian,Unknown,Not Mapped,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.41646862344870106
+2,46,0,4,0,0,0,4,0,[70-80),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Respiratory,>8,None,No,No,No,0,0.28866448976073494
+1,42,0,8,0,0,2,6,2,[50-60),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,1,0.59669153594285
+4,1,1,13,0,1,3,9,4,[50-60),Male,AfricanAmerican,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Musculoskeletal,None,None,Up,Ch,Yes,0,0.5642127157725191
+7,24,1,13,1,0,2,9,3,[80-90),Female,Caucasian,Elective,Transferred to SNF,Physician Referral,Other Specialty,Circulatory,None,None,No,No,No,0,0.6542234350134555
+3,38,0,9,0,0,2,5,2,[20-30),Female,Caucasian,Elective,Discharged to Home,Physician Referral,ObstetricsandGynecology,Other,None,None,Down,Ch,Yes,0,0.3985409740459796
+4,35,1,7,0,0,0,9,0,[90-100),Male,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.46036993731267384
+3,32,1,19,0,0,1,4,1,[30-40),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Digestive,None,None,No,Ch,Yes,0,0.40146821197731514
+5,60,3,29,0,0,0,7,0,[70-80),Female,Caucasian,Elective,Other/Unknown,Physician Referral,Unknown/Missing,Injury,None,None,No,No,Yes,0,0.5214277945584779
+5,63,1,19,0,6,1,9,7,[50-60),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Diabetes,None,None,No,Ch,Yes,0,0.6116515045655171
+4,50,0,9,0,0,0,8,0,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Respiratory,None,None,Down,Ch,Yes,1,0.525451172203638
+3,45,0,20,3,0,2,9,5,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.6234681100415057
+1,47,0,15,3,1,6,9,10,[80-90),Male,Caucasian,Emergency,Transferred to Short-term Hospital,Emergency Room,Unknown/Missing,Respiratory,>7,None,Steady,Ch,Yes,0,0.87105653590935
+7,38,0,25,0,0,0,9,0,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Respiratory,>7,None,Steady,Ch,Yes,0,0.4422746410463378
+7,9,0,11,0,0,0,9,0,[70-80),Female,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Respiratory,None,None,Up,Ch,Yes,1,0.46108101317896466
+7,64,1,26,3,0,3,9,6,[80-90),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.6499298246482897
+3,2,0,12,0,0,0,6,0,[70-80),Female,Caucasian,Emergency,Transferred to Rehab,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,1,0.7331430483626008
+10,72,6,18,0,0,0,5,0,[80-90),Female,Other,Elective,Unknown,Hospital Transfer,Unknown/Missing,Digestive,None,None,No,No,No,0,0.37343560823613436
+3,29,1,9,0,0,0,9,0,[50-60),Male,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Other Specialty,Diabetes,>7,None,Steady,Ch,Yes,0,0.3838585249074521
+4,20,2,13,0,0,0,9,0,[80-90),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Diabetes,Norm,None,Steady,No,Yes,0,0.42772254531734133
+5,26,1,22,0,0,2,7,2,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,No,Ch,Yes,0,0.5101838465568671
+3,34,4,13,0,0,0,8,0,[40-50),Female,Hispanic,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Neoplasms,None,None,No,No,No,0,0.35987331446198983
+3,54,2,37,0,0,0,5,0,[60-70),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,Down,Ch,Yes,0,0.39003538106824204
+4,5,1,24,0,0,0,6,0,[60-70),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,Up,Ch,Yes,0,0.42313750229047825
+1,33,0,9,0,0,0,5,0,[70-80),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Family/GeneralPractice,Respiratory,None,None,Steady,Ch,Yes,0,0.3405429138452754
+8,35,0,14,0,0,0,8,0,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Injury,None,None,No,No,No,0,0.48736184425648144
+10,53,1,13,0,0,1,8,1,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.595561027556848
+2,69,0,12,0,0,0,8,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.459282441417469
+1,40,1,9,0,0,0,1,0,[10-20),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Other Specialty,Diabetes,>8,None,Up,Ch,Yes,0,0.2083433528562412
+3,44,3,14,0,0,0,6,0,[60-70),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Cardiology,Circulatory,Norm,None,No,No,Yes,0,0.32136262679716737
+3,9,2,6,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.3899019429895153
+3,80,6,30,0,0,3,9,3,[60-70),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,Down,Ch,Yes,1,0.7060569736534182
+4,63,0,5,0,0,0,6,0,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Physician Referral,InternalMedicine,Other,>8,None,Steady,No,Yes,0,0.38078173817200983
+8,63,3,16,0,0,0,9,0,[60-70),Male,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,Norm,None,Up,Ch,Yes,0,0.5352522668936178
+9,56,1,22,0,0,0,6,0,[60-70),Female,Caucasian,Unknown,Transferred to SNF,Emergency Room,Unknown/Missing,Other,>7,>200,No,No,Yes,0,0.5960528482392904
+2,45,0,12,0,0,0,8,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.42605131965315063
+6,67,1,9,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,None,None,No,Ch,Yes,0,0.40709788466605373
+7,57,0,14,3,0,0,9,3,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Neoplasms,None,None,Steady,Ch,Yes,0,0.555232606062314
+3,49,0,14,0,0,0,6,0,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.46073930557500875
+2,46,3,18,1,0,1,5,2,[70-80),Female,AfricanAmerican,Not Mapped,Discharged to Home,Physician Referral,Surgery-General,Digestive,None,None,No,No,Yes,0,0.3847024750753832
+4,60,0,13,0,0,0,8,0,[30-40),Female,Unknown,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,Ch,Yes,0,0.3646622263864511
+5,47,1,20,1,0,3,5,4,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Other,None,None,No,Ch,Yes,0,0.5291820053293027
+5,40,0,15,0,0,7,9,7,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,>8,None,Steady,Ch,Yes,0,0.8399111358574879
+1,34,0,10,0,0,0,7,0,[80-90),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Nephrology,Respiratory,None,None,Steady,Ch,Yes,0,0.3972745353821965
+11,50,6,56,1,0,0,9,1,[60-70),Male,AfricanAmerican,Elective,Transferred to Rehab,Physician Referral,Other Specialty,Circulatory,None,None,Up,Ch,Yes,0,0.8060201547172747
+5,36,2,13,0,0,0,8,0,[70-80),Female,AfricanAmerican,Emergency,Transferred to Inpatient Care,Emergency Room,Family/GeneralPractice,Circulatory,>8,None,No,Ch,Yes,0,0.6520963395772716
+10,79,0,28,0,0,0,9,0,[90-100),Female,Caucasian,Urgent,Transferred to SNF,Emergency Room,Emergency/Trauma,Circulatory,>8,None,Down,Ch,Yes,0,0.5210271440230337
+6,59,0,15,3,1,0,9,4,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.5482673491463593
+5,62,0,9,0,5,5,5,10,[40-50),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,No,No,0,0.7545460071565809
+3,40,1,6,0,0,0,6,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Emergency Room,Emergency/Trauma,Digestive,None,None,No,No,No,0,0.26543160246927705
+3,35,0,17,0,0,0,9,0,[80-90),Female,Caucasian,Elective,Transferred to SNF,Physician Referral,Unknown/Missing,Respiratory,None,None,Steady,No,Yes,0,0.5009871468878684
+6,64,2,31,1,0,0,9,1,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,Norm,None,Up,Ch,Yes,0,0.405112629826012
+11,68,6,32,0,0,3,8,3,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Neoplasms,None,None,Steady,Ch,Yes,0,0.6260423336016698
+7,36,2,9,0,0,0,5,0,[40-50),Male,Caucasian,Urgent,Discharged to Home,Clinic Referral,Unknown/Missing,Respiratory,None,None,Steady,No,Yes,0,0.3295754060272017
+4,54,6,14,0,0,0,7,0,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Urology,Neoplasms,None,None,No,Ch,Yes,1,0.40992666449854215
+5,65,0,18,0,0,0,3,0,[40-50),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Family/GeneralPractice,Respiratory,None,None,Steady,Ch,Yes,0,0.32718831263917275
+1,42,0,4,0,0,0,3,0,[70-80),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,No,Yes,0,0.41929584855198104
+12,24,2,12,0,0,0,9,0,[90-100),Female,AfricanAmerican,Elective,Home with Home Health,Hospital Transfer,Unknown/Missing,Other,None,None,Steady,Ch,Yes,0,0.40419513834519116
+4,25,1,14,0,0,0,4,0,[30-40),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,Norm,None,Up,Ch,Yes,0,0.37722166904723814
+4,69,0,13,2,0,1,9,3,[70-80),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Family/GeneralPractice,Circulatory,None,None,No,No,No,1,0.5163893011909845
+3,56,0,18,0,1,1,9,2,[80-90),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Respiratory,None,None,No,No,Yes,0,0.48930674343072206
+4,42,6,22,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.43222245071035387
+4,41,0,20,1,1,1,9,3,[90-100),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Genitourinary,None,None,Up,Ch,Yes,0,0.6159273912011793
+1,41,4,20,0,0,0,8,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Hospital Transfer,Cardiology,Circulatory,None,None,Steady,Ch,Yes,0,0.2979412724356274
+10,38,0,28,0,0,3,9,3,[70-80),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Unknown/Missing,Other,None,None,Up,Ch,Yes,0,0.7317137628868883
+2,64,0,7,0,2,1,9,3,[20-30),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,No,No,No,0,0.5239904033915372
+5,44,1,12,0,0,0,9,0,[70-80),Male,Caucasian,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.44894081650762885
+10,11,6,4,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Circulatory,None,None,Steady,No,Yes,0,0.4834440223275853
+3,64,0,11,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,Norm,None,Steady,No,Yes,0,0.4268859002254482
+11,53,5,33,0,2,3,8,5,[40-50),Male,AfricanAmerican,Emergency,Transferred to Short-term Hospital,Emergency Room,Nephrology,Other,None,None,No,No,No,0,0.8055028490483973
+3,61,0,9,0,0,1,9,1,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.46480737776826514
+4,50,1,21,0,0,0,9,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Down,Ch,Yes,0,0.45341809818700085
+4,71,3,28,0,1,0,9,1,[80-90),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,None,None,Steady,Ch,Yes,0,0.44548027917656124
+3,57,0,15,2,11,3,7,16,[40-50),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,Norm,None,Down,Ch,Yes,0,0.7895580490817493
+7,20,3,12,0,0,1,7,1,[80-90),Female,Caucasian,Elective,Unknown,Physician Referral,Unknown/Missing,Neoplasms,None,None,No,No,No,0,0.5385434634796973
+8,54,2,13,0,0,1,9,1,[40-50),Female,Hispanic,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.486506450680115
+8,36,1,27,0,4,1,8,5,[80-90),Female,AfricanAmerican,Elective,Home with Home Health,Physician Referral,InternalMedicine,Other,None,None,Up,Ch,Yes,0,0.6398809216734607
+1,35,0,6,0,0,0,8,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.35402558090781144
+1,55,0,16,0,0,1,9,1,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.4560945549978477
+5,55,1,14,0,0,0,4,0,[30-40),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Diabetes,>8,None,Down,Ch,Yes,0,0.3977217300443082
+11,61,2,16,0,0,0,9,0,[60-70),Male,Caucasian,Urgent,Home with Home Health,Physician Referral,InternalMedicine,Other,None,None,Up,Ch,Yes,1,0.5250871397305545
+6,50,0,20,0,0,5,9,5,[60-70),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Family/GeneralPractice,Respiratory,None,None,Down,Ch,Yes,0,0.7704013068279711
+7,23,2,7,0,0,0,5,0,[70-80),Male,Caucasian,Emergency,Transferred to Inpatient Care,Emergency Room,Other Specialty,Other,None,None,No,No,Yes,0,0.6417011877758818
+10,18,0,8,0,0,2,5,2,[70-80),Female,AfricanAmerican,Urgent,Discharged to Home,Hospital Transfer,Other Specialty,Other,None,None,Steady,No,Yes,0,0.5191000265447907
+1,35,0,5,3,1,1,6,5,[60-70),Female,AfricanAmerican,Not Available,Home with Home Health,Physician Referral,Unknown/Missing,Diabetes,None,None,No,No,Yes,0,0.5000596151301293
+6,52,0,20,0,1,2,9,3,[50-60),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Pulmonology,Other,None,None,No,Ch,Yes,0,0.5846132853711207
+2,71,0,15,0,1,0,7,1,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,>8,None,Up,Ch,Yes,0,0.4011512569283008
+2,25,0,11,0,0,0,9,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.4325303394438315
+3,25,0,11,1,1,2,7,4,[80-90),Male,Caucasian,Unknown,Not Mapped,Unknown,Unknown/Missing,Respiratory,None,>200,Up,Ch,Yes,0,0.5903206873459959
+9,68,0,35,0,0,3,9,3,[60-70),Male,Other,Emergency,Hospice / Medical Facility,Other Healthcare Transfer,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.37400151543807525
+3,34,0,16,0,0,1,9,1,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,1,0.5707298782113692
+7,54,0,19,0,0,1,9,1,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Other,None,None,Steady,Ch,Yes,0,0.6113169630557036
+5,65,0,16,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,InternalMedicine,Other,Norm,None,Steady,No,Yes,0,0.4682349869592419
+4,64,1,8,0,0,0,9,0,[80-90),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Digestive,None,None,No,No,No,0,0.4023711789728942
+8,60,3,24,0,0,0,9,0,[70-80),Female,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Circulatory,None,None,No,No,No,0,0.4317720864969989
+8,62,3,40,2,4,4,9,10,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,1,0.7510418535707456
+3,72,0,6,0,0,1,8,1,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Neoplasms,None,None,No,No,No,1,0.5863714904180476
+2,37,6,12,0,0,0,4,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.33872687831012477
+3,38,3,15,2,1,3,9,6,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,Yes,0,0.6030832768455592
+3,42,0,15,0,0,0,2,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Diabetes,None,None,Down,Ch,Yes,0,0.40627936482267774
+5,44,2,16,0,0,0,9,0,[80-90),Female,AfricanAmerican,Emergency,Transferred to SNF,Emergency Room,Emergency/Trauma,Circulatory,None,None,Up,Ch,Yes,0,0.5324564524449885
+1,42,0,2,0,0,0,5,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.3114884215912375
+5,44,0,9,0,0,0,4,0,[50-60),Female,Hispanic,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,No,0,0.25856619112494705
+2,30,1,8,0,0,0,9,0,[20-30),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.4258829553598581
+5,34,0,12,0,0,0,5,0,[30-40),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Diabetes,None,None,Down,Ch,Yes,0,0.4241656922177921
+4,37,1,27,1,0,0,7,1,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Digestive,None,None,Steady,No,Yes,0,0.37930963647917665
+5,43,1,26,0,0,0,5,0,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Injury,Norm,None,Steady,Ch,Yes,0,0.30418239943944286
+4,57,0,18,1,0,1,9,2,[90-100),Female,Caucasian,Not Available,Transferred to SNF,Physician Referral,Unknown/Missing,Circulatory,>8,None,Down,Ch,Yes,0,0.5924360950155476
+3,29,1,4,0,0,0,5,0,[70-80),Male,Unknown,Emergency,Discharged to Home,Other Healthcare Transfer,Urology,Neoplasms,None,None,No,No,No,0,0.342660948294709
+2,38,6,18,1,0,0,8,1,[60-70),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Family/GeneralPractice,Circulatory,None,None,Steady,Ch,Yes,1,0.40814893861650575
+5,61,1,24,2,0,0,9,2,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Other,None,None,No,Ch,Yes,0,0.48151417008040737
+4,50,0,9,0,0,0,6,0,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Circulatory,>8,None,Up,Ch,Yes,1,0.5220426460813921
+2,50,0,20,2,0,1,9,3,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,>8,None,No,Ch,Yes,0,0.40384439379113696
+9,52,3,18,0,2,1,9,3,[80-90),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.5756427203567677
+1,1,2,17,0,0,0,9,0,[50-60),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Musculoskeletal,None,None,Down,Ch,Yes,0,0.37345543845225115
+6,51,0,12,0,0,1,6,1,[70-80),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.5775755649907998
+2,20,2,23,0,0,0,9,0,[40-50),Female,Caucasian,Elective,Discharged to Home,Physician Referral,ObstetricsandGynecology,Neoplasms,None,None,No,No,No,0,0.26104173662388214
+3,38,3,7,0,0,1,9,1,[20-30),Male,Other,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Digestive,None,None,Steady,No,Yes,0,0.4666970380098711
+5,40,1,15,0,0,0,9,0,[50-60),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Other,>7,None,Up,Ch,Yes,0,0.44964524340298806
+5,54,0,15,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Home with Home Health,Physician Referral,Unknown/Missing,Genitourinary,Norm,None,No,No,No,0,0.41882213710087507
+2,48,5,19,0,1,3,9,4,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,1,0.5723997202639511
+4,52,0,14,6,0,0,9,6,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,1,0.418295870738732
+7,18,1,20,0,0,1,9,1,[70-80),Female,Caucasian,Urgent,Transferred to SNF,Physician Referral,Orthopedics-Reconstructive,Musculoskeletal,None,None,Steady,Ch,Yes,1,0.4586663260274623
+4,66,6,21,0,0,0,9,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,>7,None,No,No,No,0,0.4176299527104541
+13,52,4,36,1,0,0,9,1,[70-80),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Radiologist,Circulatory,Norm,None,Up,Ch,Yes,0,0.409345388059512
+7,62,0,22,0,0,0,9,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.4495082311976844
+5,75,1,14,0,0,0,9,0,[90-100),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Genitourinary,None,None,Steady,Ch,Yes,0,0.5081128801599906
+1,45,1,10,3,1,0,5,4,[60-70),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,None,None,Steady,No,Yes,0,0.38749083631067843
+9,43,3,26,9,0,2,9,11,[80-90),Male,AfricanAmerican,Urgent,Transferred to SNF,Physician Referral,Unknown/Missing,Other,None,None,Down,Ch,Yes,0,0.7226448492648394
+1,46,0,10,0,0,0,6,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.3687819570532287
+1,53,0,8,0,0,1,5,1,[80-90),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,None,None,No,No,No,0,0.42070607153044043
+2,18,3,6,0,0,0,4,0,[30-40),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Other,None,None,No,No,No,0,0.3189134409283517
+5,59,2,7,0,0,0,4,0,[80-90),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.38651970402961594
+1,1,1,6,0,0,0,5,0,[40-50),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Other,None,None,No,No,No,0,0.32199934022077853
+4,24,1,23,0,0,0,3,0,[40-50),Female,Caucasian,Unknown,Discharged to Home,Unknown,Orthopedics-Reconstructive,Musculoskeletal,None,None,No,No,No,0,0.19521052975181058
+1,36,6,21,0,0,1,9,1,[50-60),Female,AfricanAmerican,Urgent,Transferred to Inpatient Care,Hospital Transfer,Radiologist,Circulatory,None,None,Down,Ch,Yes,0,0.6690897219946549
+8,63,5,17,0,0,0,5,0,[60-70),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,0,0.48642262728641134
+2,34,5,16,1,0,1,6,2,[30-40),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Other,None,None,No,No,No,0,0.39970046395140024
+4,67,0,22,0,0,0,9,0,[60-70),Female,Caucasian,Not Available,Discharged to Home,Physician Referral,Unknown/Missing,Other,None,None,Down,Ch,Yes,0,0.4560627606253954
+3,45,0,9,0,1,0,5,1,[70-80),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,Yes,1,0.5324400894828932
+9,67,0,21,1,0,0,9,1,[80-90),Male,Caucasian,Emergency,Home with Home Health,Other Healthcare Transfer,Unknown/Missing,Other,None,None,No,No,No,0,0.4682176386170963
+10,82,2,32,0,0,0,8,0,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Emergency/Trauma,Respiratory,None,None,Down,Ch,Yes,0,0.3892774922447405
+6,45,3,25,0,0,1,9,1,[70-80),Male,Caucasian,Not Available,Transferred to SNF,Physician Referral,Unknown/Missing,Injury,None,None,No,No,Yes,1,0.587708077377516
+2,66,4,17,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Respiratory,None,None,No,No,No,0,0.30210692286915125
+3,40,3,19,5,0,0,9,5,[40-50),Female,Hispanic,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Other,None,None,Steady,No,Yes,0,0.3980619640354265
+3,35,0,8,0,0,0,6,0,[80-90),Female,Caucasian,Emergency,Transferred to Rehab,Emergency Room,InternalMedicine,Injury,None,None,No,No,Yes,0,0.6906473787143107
+2,37,0,12,0,0,0,5,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Other Healthcare Transfer,Family/GeneralPractice,Digestive,None,None,No,No,No,0,0.44360061100679793
+6,9,1,20,4,0,0,9,4,[80-90),Female,Caucasian,Not Available,Transferred to SNF,Unknown,Orthopedics-Reconstructive,Injury,None,Norm,No,No,Yes,0,0.36624642172196886
+4,40,0,22,0,0,0,5,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,Ch,Yes,0,0.3288568004238428
+1,30,3,11,1,0,0,6,1,[80-90),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Cardiology,Circulatory,None,None,No,No,No,0,0.3113544048717279
+7,46,1,17,0,0,0,6,0,[70-80),Female,Caucasian,Emergency,Other/Unknown,Emergency Room,InternalMedicine,Diabetes,>8,None,No,Ch,Yes,0,0.48215794038099546
+6,66,3,27,1,0,0,5,1,[70-80),Female,Caucasian,Not Mapped,Discharged to Home,Emergency Room,Orthopedics-Reconstructive,Injury,None,None,Down,Ch,Yes,1,0.2544877015178315
+2,62,0,8,0,2,1,7,3,[60-70),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Genitourinary,None,None,Steady,No,Yes,0,0.5054627869190517
+3,43,0,16,0,0,0,8,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,No,Yes,0,0.3885934757393888
+3,45,0,18,0,0,0,9,0,[60-70),Male,Caucasian,Urgent,Home with Home Health,Physician Referral,Cardiology,Circulatory,None,None,Steady,No,Yes,0,0.4695605293280419
+12,53,0,21,1,0,12,8,13,[40-50),Female,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,Yes,1,0.9695246319193613
+3,43,0,6,0,0,0,4,0,[70-80),Male,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,InternalMedicine,Diabetes,>7,None,No,No,No,0,0.36220623167398514
+1,36,0,11,0,0,0,9,0,[70-80),Female,AfricanAmerican,Elective,Transferred to Short-term Hospital,Emergency Room,Surgery-General,Circulatory,>7,None,No,No,No,0,0.5327838462215221
+7,42,0,8,0,0,0,6,0,[60-70),Male,Caucasian,Urgent,Discharged to Home,Physician Referral,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.44992384608526653
+4,51,0,14,0,0,0,7,0,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Cardiology,Diabetes,None,None,Steady,Ch,Yes,0,0.41620777928995134
+3,29,3,15,0,0,0,8,0,[20-30),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,ObstetricsandGynecology,Other,None,None,Steady,Ch,Yes,0,0.2733543297842686
+2,58,1,15,0,0,0,9,0,[50-60),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Other,>7,None,No,No,Yes,0,0.37546486644146254
+6,55,0,17,0,0,0,9,0,[70-80),Female,Caucasian,Elective,Transferred to SNF,Physician Referral,Unknown/Missing,Other,>7,None,Down,Ch,Yes,0,0.5756161100752185
+2,67,0,8,1,0,2,7,3,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.5950270964351271
+14,44,6,34,0,0,1,9,1,[60-70),Male,Caucasian,Elective,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.47108152403297426
+1,57,0,7,0,0,0,6,0,[50-60),Male,Hispanic,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Circulatory,>8,None,Up,Ch,Yes,0,0.31588278501563316
+9,52,3,24,0,0,0,9,0,[70-80),Female,Caucasian,Urgent,Transferred to SNF,Physician Referral,Unknown/Missing,Neoplasms,None,None,Steady,No,Yes,0,0.5946099039070943
+5,35,2,16,0,0,0,9,0,[50-60),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.43405961243789365
+2,35,0,8,1,1,2,9,4,[40-50),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Steady,Ch,Yes,0,0.5906051231998631
+5,9,0,11,0,0,0,8,0,[60-70),Male,Caucasian,Urgent,Unknown,Physician Referral,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.5461110112029641
+4,43,0,19,0,0,4,9,4,[70-80),Female,Caucasian,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Musculoskeletal,None,None,Steady,No,Yes,0,0.708929872000105
+4,40,1,19,0,0,2,6,2,[50-60),Male,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Injury,None,None,Steady,Ch,Yes,0,0.5350773646023257
+4,52,0,21,0,0,1,4,1,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.4218825245687007
+1,50,5,12,0,0,0,9,0,[70-80),Female,Caucasian,Urgent,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,Ch,Yes,0,0.4107222328683499
+3,66,0,22,0,0,0,9,0,[60-70),Male,Hispanic,Emergency,Discharged to Home,Emergency Room,Family/GeneralPractice,Circulatory,None,None,Steady,No,Yes,0,0.479751488628936
+1,19,4,15,1,0,0,9,1,[80-90),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Radiologist,Circulatory,None,None,Steady,No,Yes,0,0.37535375047367747
+3,19,2,21,0,0,1,8,1,[30-40),Female,Caucasian,Elective,Discharged to Home,Physician Referral,ObstetricsandGynecology,Other,None,None,No,No,No,0,0.29852629092964744
+3,10,0,14,1,0,0,5,1,[70-80),Male,Caucasian,Not Available,Discharged to Home,Unknown,Family/GeneralPractice,Circulatory,None,Norm,Steady,Ch,Yes,0,0.3852124716312557
+1,33,0,11,0,0,0,9,0,[70-80),Female,AfricanAmerican,Emergency,Transferred to Rehab,Emergency Room,Unknown/Missing,Diabetes,None,None,Steady,Ch,Yes,0,0.7484535510241317
+4,44,6,15,0,0,0,8,0,[40-50),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,No,No,No,0,0.3270894401901189
+3,42,4,15,4,0,0,8,4,[40-50),Male,AfricanAmerican,Not Available,Discharged to Home,Physician Referral,Unknown/Missing,Other,Norm,None,No,No,No,0,0.3193418408718106
+1,8,0,21,0,0,0,9,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Radiologist,Respiratory,None,None,Down,Ch,Yes,0,0.3180507722543742
+1,39,0,6,0,0,0,4,0,[60-70),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.353043675275913
+8,62,3,32,0,0,1,9,1,[70-80),Male,Caucasian,Elective,Transferred to Rehab,Physician Referral,Family/GeneralPractice,Other,None,None,No,No,No,0,0.7992837545451514
+1,11,0,4,0,0,0,6,0,[60-70),Male,Caucasian,Not Available,Discharged to Home,Unknown,Unknown/Missing,Circulatory,None,Norm,No,No,Yes,0,0.378086455262077
+10,51,0,28,0,0,2,9,2,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,None,None,Down,Ch,Yes,0,0.5604046572746298
+2,32,2,15,0,0,3,9,3,[40-50),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Orthopedics-Reconstructive,Injury,None,None,Steady,No,Yes,1,0.49568844469441226
+8,58,0,11,0,0,0,5,0,[50-60),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Psychiatry,Other,None,None,Steady,No,Yes,0,0.40335513379761495
+2,38,5,11,0,0,0,6,0,[40-50),Male,Caucasian,Elective,Discharged to Home,Physician Referral,Orthopedics,Injury,None,None,Steady,No,Yes,0,0.3167152488337876
+9,34,3,12,2,0,0,9,2,[60-70),Female,AfricanAmerican,Urgent,Discharged to Home,Physician Referral,Nephrology,Injury,None,None,Steady,No,Yes,0,0.47198444991747796
+4,46,0,17,0,0,0,8,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.34478134030447893
+3,41,1,13,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Transferred to SNF,Emergency Room,Unknown/Missing,Injury,None,None,Steady,No,Yes,0,0.5266759878346158
+2,51,0,10,1,0,0,4,1,[30-40),Female,Caucasian,Emergency,Discharged to Home,Physician Referral,Unknown/Missing,Diabetes,Norm,None,Up,Ch,Yes,0,0.3738202799904444
+2,52,0,10,0,0,0,6,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,InternalMedicine,Other,None,None,Down,Ch,Yes,1,0.4091998896381225
+4,32,0,24,0,0,0,7,0,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Genitourinary,>8,None,Down,Ch,Yes,0,0.3937210008574574
+6,44,4,17,0,0,0,9,0,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Other Specialty,Digestive,Norm,None,Steady,No,Yes,0,0.41151979467896
+2,33,1,13,0,5,10,7,15,[40-50),Male,Caucasian,Urgent,Home with Home Health,Emergency Room,Surgery-General,Diabetes,None,None,Down,Ch,Yes,0,0.9584219770119675
+1,30,4,9,0,0,0,8,0,[60-70),Female,AfricanAmerican,Urgent,Discharged to Home,Clinic Referral,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.36896768467668123
+2,53,0,10,0,0,0,6,0,[50-60),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Family/GeneralPractice,Genitourinary,None,None,Steady,Ch,Yes,0,0.3356567111880409
+14,66,3,30,0,0,0,5,0,[60-70),Male,AfricanAmerican,Emergency,Transferred to Inpatient Care,Emergency Room,Unknown/Missing,Musculoskeletal,None,None,Steady,No,Yes,0,0.6662276953997592
+1,22,4,15,0,1,0,9,1,[70-80),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Injury,None,None,No,No,No,0,0.3794842861026664
+1,6,0,7,0,1,0,9,1,[60-70),Male,Caucasian,Not Available,Transferred to Short-term Hospital,Physician Referral,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,0,0.6013483073628609
+2,36,1,14,0,0,2,9,2,[60-70),Male,Caucasian,Urgent,Home with Home Health,Emergency Room,Emergency/Trauma,Musculoskeletal,>8,None,Down,Ch,Yes,0,0.5463320579239354
+1,28,0,13,0,0,0,9,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,No,Yes,0,0.3938804068159132
+8,43,2,13,0,0,0,6,0,[80-90),Female,Caucasian,Unknown,Home with Home Health,Physician Referral,InternalMedicine,Diabetes,>8,Norm,Up,Ch,Yes,0,0.5250555972874523
+7,51,0,11,0,0,1,4,1,[50-60),Female,Caucasian,Emergency,Unknown,Emergency Room,Unknown/Missing,Other,Norm,None,No,No,Yes,0,0.4644963053835933
+2,2,0,11,0,0,1,5,1,[30-40),Female,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Genitourinary,None,None,No,No,Yes,0,0.46353403931856435
+3,40,0,4,0,0,0,7,0,[70-80),Male,AfricanAmerican,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Neoplasms,None,None,No,No,No,0,0.44959108303737944
+2,17,2,13,0,0,0,7,0,[80-90),Male,Caucasian,Unknown,Not Mapped,Unknown,Unknown/Missing,Injury,None,Norm,No,Ch,Yes,0,0.38547958054855236
+3,58,0,13,1,3,3,8,7,[70-80),Male,Caucasian,Emergency,Home with Home Health,Emergency Room,Unknown/Missing,Circulatory,None,None,Down,Ch,Yes,0,0.7742877786139302
+3,45,0,15,0,1,0,7,1,[60-70),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Injury,None,None,Up,Ch,Yes,0,0.4211407321042305
+2,17,0,6,4,0,0,8,4,[80-90),Female,Caucasian,Not Available,Discharged to Home,Unknown,InternalMedicine,Circulatory,None,Norm,No,No,Yes,0,0.3927255161326325
+8,57,1,18,1,0,0,5,1,[70-80),Female,Caucasian,Urgent,Home with Home Health,Physician Referral,Pulmonology,Diabetes,None,None,No,No,Yes,0,0.4663052780818607
+7,69,2,21,0,0,1,9,1,[40-50),Female,Caucasian,Urgent,Home with Home Health,Physician Referral,Unknown/Missing,Diabetes,None,None,Steady,Ch,Yes,0,0.5619293835952037
+6,35,0,14,0,0,1,9,1,[70-80),Male,Caucasian,Emergency,Transferred to SNF,SNF Transfer,Unknown/Missing,Circulatory,None,None,No,No,Yes,1,0.5731739774416479
+3,63,0,7,1,0,0,3,1,[40-50),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.31490288668776567
+2,23,0,18,3,0,0,8,3,[60-70),Male,Caucasian,Not Available,Transferred to Short-term Hospital,Unknown,Cardiology,Diabetes,None,>300,Down,Ch,Yes,0,0.5254531330272291
+2,31,0,10,0,9,2,5,11,[40-50),Female,Caucasian,Urgent,Discharged to Home,Physician Referral,Other Specialty,Other,None,None,Steady,No,Yes,0,0.6737286710492013
+9,81,4,49,0,0,0,9,0,[50-60),Male,Caucasian,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Injury,None,None,Up,Ch,Yes,0,0.42411303510340004
+2,45,0,13,0,0,0,9,0,[80-90),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,>7,None,Steady,Ch,Yes,0,0.43056361668917026
+3,72,1,20,2,1,0,8,3,[80-90),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Circulatory,None,None,No,No,Yes,0,0.5781839987548926
+3,37,0,9,0,0,0,4,0,[40-50),Male,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Diabetes,None,None,Up,Ch,Yes,0,0.399162676604433
+12,57,1,27,0,0,1,5,1,[70-80),Female,Unknown,Urgent,Transferred to ICF,Other Healthcare Transfer,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.5604378839590571
+2,33,0,4,0,0,0,3,0,[40-50),Male,Caucasian,Urgent,Discharged to Home,Emergency Room,Emergency/Trauma,Digestive,None,None,No,No,No,0,0.26738014633068946
+5,38,5,45,1,0,0,9,1,[50-60),Male,Caucasian,Elective,Home with Home Health,Physician Referral,Other Specialty,Circulatory,None,None,Steady,No,Yes,0,0.4899881069469712
+4,21,0,10,0,0,1,9,1,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Respiratory,None,None,Steady,Ch,Yes,0,0.4421702818886381
+6,44,0,15,0,0,0,7,0,[80-90),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Emergency/Trauma,Circulatory,None,None,Up,Ch,Yes,1,0.4454036915704899
+1,68,0,6,0,0,0,7,0,[70-80),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,>7,None,No,No,Yes,0,0.4169178940565816
+5,60,1,17,0,0,0,9,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Digestive,>8,None,Up,Ch,Yes,0,0.3902362107543306
+4,58,0,8,0,0,0,7,0,[50-60),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Cardiology,Circulatory,>8,None,No,No,Yes,0,0.30540157530663914
+3,59,0,8,0,1,0,6,1,[70-80),Female,AfricanAmerican,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,No,No,No,0,0.4070355550156239
+1,48,0,6,1,0,0,9,1,[50-60),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,No,Yes,0,0.41912265155820033
+1,4,0,4,0,0,0,5,0,[60-70),Female,Caucasian,Elective,Home with Home Health,Physician Referral,Other Specialty,Circulatory,None,None,No,No,No,0,0.38367223390961214
+5,44,3,18,0,0,0,5,0,[60-70),Male,AfricanAmerican,Emergency,Discharged to Home,Other Healthcare Transfer,Family/GeneralPractice,Respiratory,None,None,Steady,Ch,Yes,0,0.337887767544715
+2,74,0,9,0,0,0,9,0,[70-80),Male,Caucasian,Emergency,Discharged to Home,Emergency Room,Cardiology,Respiratory,None,None,No,No,No,0,0.31867142645704644
+1,14,0,10,0,0,0,5,0,[60-70),Male,Unknown,Urgent,Discharged to Home,Hospital Transfer,InternalMedicine,Circulatory,None,None,Steady,No,Yes,0,0.3478975443558611
+6,42,3,45,0,0,0,9,0,[50-60),Male,Caucasian,Elective,Discharged to Home,Hospital Transfer,Cardiology,Circulatory,Norm,None,Down,Ch,Yes,0,0.3543990247162719
+2,36,0,5,0,3,3,5,6,[50-60),Male,Caucasian,Emergency,Transferred to SNF,Emergency Room,InternalMedicine,Other,None,None,Steady,No,Yes,0,0.7097846185421836
+2,6,1,14,0,0,1,2,1,[70-80),Female,Caucasian,Elective,Discharged to Home,Physician Referral,Other Specialty,Musculoskeletal,None,None,Steady,Ch,Yes,0,0.3665919667629975
+3,45,0,12,0,0,0,5,0,[90-100),Female,AfricanAmerican,Emergency,Discharged to Home,Other Healthcare Transfer,Pulmonology,Respiratory,None,None,Steady,Ch,Yes,0,0.3073116667919046
+3,36,0,19,0,1,1,9,2,[50-60),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Circulatory,None,None,Steady,Ch,Yes,0,0.4911679057468187
+1,33,0,4,0,0,0,4,0,[50-60),Female,AfricanAmerican,Emergency,Unknown,Emergency Room,Unknown/Missing,Respiratory,None,None,No,No,Yes,0,0.36558259972451396
+1,13,0,17,0,0,1,7,1,[70-80),Male,Unknown,Elective,Discharged to Home,Physician Referral,Unknown/Missing,Other,None,None,No,Ch,Yes,0,0.42222425539890746
+1,56,0,4,0,0,0,4,0,[30-40),Female,Caucasian,Emergency,Discharged to Home,Emergency Room,Unknown/Missing,Other,None,None,No,No,No,0,0.3271825773983858
+1,49,0,8,3,0,0,9,3,[80-90),Male,Caucasian,Emergency,Left AMA,Emergency Room,Unknown/Missing,Digestive,None,None,Steady,No,Yes,0,0.5192333406932027
+3,50,2,16,0,0,2,6,2,[70-80),Female,Caucasian,Unknown,Discharged to Home,Unknown,Family/GeneralPractice,Respiratory,None,None,No,Ch,Yes,0,0.469592842876815
+3,10,3,18,0,0,0,9,0,[60-70),Female,AfricanAmerican,Elective,Discharged to Home,Physician Referral,Orthopedics,Musculoskeletal,None,None,No,No,No,0,0.3109628304495324
+5,39,0,20,0,0,1,9,1,[80-90),Female,Caucasian,Urgent,Transferred to SNF,Physician Referral,InternalMedicine,Other,None,None,Down,Ch,Yes,0,0.6550404384398105
+11,88,6,53,0,0,0,9,0,[50-60),Female,Unknown,Urgent,Discharged to Home,Hospital Transfer,Unknown/Missing,Circulatory,None,None,Up,Ch,Yes,1,0.42139965041750216

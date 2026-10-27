@@ -44,12 +44,11 @@ st.set_page_config(
 # Modern Clinical Studio: Rich Colors, Balanced Spacing, Glassmorphic Depth, Solid Card Borders
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap');
 
     :root {
-        --bg-main: #0A0E1A;
-        --card-bg: rgba(22, 30, 49, 0.82);
-        --card-border: rgba(99, 102, 241, 0.25);
+        --bg-main: #090D16;
+        --card-border: #334155;
         --text-primary: #F8FAFC;
         --text-secondary: #CBD5E1;
         --text-muted: #94A3B8;
@@ -60,22 +59,22 @@ st.markdown("""
         color: var(--text-primary);
     }
 
+    /* Architectural Dark Canvas - Clean, Zero Neon Glare */
     .stApp {
-        background: 
-            radial-gradient(circle at 10% 12%, rgba(59, 130, 246, 0.18) 0%, transparent 40%),
-            radial-gradient(circle at 90% 18%, rgba(139, 92, 246, 0.18) 0%, transparent 40%),
-            radial-gradient(circle at 50% 88%, rgba(236, 72, 153, 0.12) 0%, transparent 50%),
-            #0A0E1A;
+        background-color: #090D16;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 32px 32px;
     }
 
-    /* Vibrant Top Studio Header */
+    /* Brutalist + Glassmorphic Studio Header */
     .studio-header {
-        background: linear-gradient(135deg, #1E1B4B 0%, #312E81 40%, #0F172A 100%);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(139, 92, 246, 0.35);
-        border-left: 6px solid #8B5CF6;
-        border-radius: 14px;
-        box-shadow: 0 12px 36px -4px rgba(49, 46, 129, 0.5);
+        background: rgba(20, 27, 45, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 2.5px solid #6366F1;
+        border-radius: 8px;
+        box-shadow: 5px 5px 0px #000000;
         padding: 1.45rem 1.85rem;
         margin-bottom: 1.5rem;
     }
@@ -83,99 +82,82 @@ st.markdown("""
     .header-badge {
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.72rem;
-        font-weight: 700;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
-        padding: 4px 11px;
-        border-radius: 999px;
+        letter-spacing: 0.06em;
+        padding: 4px 10px;
+        border-radius: 4px;
         display: inline-block;
-        margin-right: 6px;
+        margin-right: 8px;
         margin-bottom: 8px;
+        border: 1.5px solid #000000;
+        box-shadow: 2px 2px 0px #000000;
     }
 
-    .badge-gradient-purple {
-        background: linear-gradient(135deg, #6366F1, #8B5CF6);
-        color: #FFFFFF;
-        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
-    }
-    .badge-gradient-blue {
-        background: linear-gradient(135deg, #0284C7, #38BDF8);
-        color: #FFFFFF;
-        box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
-    }
-    .badge-gradient-emerald {
-        background: linear-gradient(135deg, #059669, #34D399);
-        color: #FFFFFF;
-        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
-    }
-    .badge-gradient-rose {
-        background: linear-gradient(135deg, #E11D48, #FB7185);
-        color: #FFFFFF;
-        box-shadow: 0 2px 8px rgba(244, 63, 94, 0.4);
-    }
+    .badge-indigo { background: #6366F1; color: #FFFFFF; }
+    .badge-sky { background: #0284C7; color: #FFFFFF; }
+    .badge-emerald { background: #059669; color: #FFFFFF; }
+    .badge-rose { background: #E11D48; color: #FFFFFF; }
 
     .hero-title {
         color: #FFFFFF;
         font-size: 2.15rem;
-        font-weight: 800;
+        font-weight: 900;
         letter-spacing: -0.025em;
         line-height: 1.2;
         margin-bottom: 0.4rem;
-        text-shadow: 0 2px 12px rgba(0,0,0,0.3);
     }
 
     .hero-subtitle {
         color: #CBD5E1;
-        font-size: 0.96rem;
+        font-size: 0.95rem;
         line-height: 1.55;
         max-width: 950px;
     }
 
-    /* Vibrant Rich Colorful Metric Cards */
+    /* Brutalist Frosted Metric Cards with Hard Shadows */
     .metric-card-box {
-        border-radius: 14px;
+        border-radius: 8px;
         padding: 1.35rem 1.45rem;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
         margin-bottom: 1.25rem;
         color: #FFFFFF;
-        position: relative;
-        overflow: hidden;
+        box-shadow: 4px 4px 0px #000000;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .metric-card-box:hover {
-        transform: translateY(-4px) scale(1.01);
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px #000000;
     }
 
     .card-blue {
-        background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 55%, #38BDF8 100%);
-        border: 1px solid rgba(147, 197, 253, 0.45);
-        box-shadow: 0 10px 25px -4px rgba(37, 99, 235, 0.45);
+        background: rgba(30, 58, 138, 0.7);
+        border: 2.5px solid #60A5FA;
     }
 
     .card-rose {
-        background: linear-gradient(135deg, #881337 0%, #BE123C 55%, #FB7185 100%);
-        border: 1px solid rgba(254, 205, 211, 0.45);
-        box-shadow: 0 10px 25px -4px rgba(225, 29, 72, 0.45);
+        background: rgba(159, 18, 57, 0.7);
+        border: 2.5px solid #FB7185;
     }
 
     .card-amber {
-        background: linear-gradient(135deg, #78350F 0%, #B45309 55%, #FBBF24 100%);
-        border: 1px solid rgba(253, 230, 138, 0.45);
-        box-shadow: 0 10px 25px -4px rgba(217, 119, 6, 0.45);
+        background: rgba(146, 64, 14, 0.7);
+        border: 2.5px solid #FBBF24;
     }
 
     .card-emerald {
-        background: linear-gradient(135deg, #064E3B 0%, #047857 55%, #34D399 100%);
-        border: 1px solid rgba(167, 243, 208, 0.45);
-        box-shadow: 0 10px 25px -4px rgba(5, 150, 105, 0.45);
+        background: rgba(6, 95, 70, 0.7);
+        border: 2.5px solid #34D399;
     }
 
     .metric-title {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.07em;
-        color: rgba(255, 255, 255, 0.88);
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.92);
         margin-bottom: 0.35rem;
         display: flex;
         align-items: center;
@@ -185,140 +167,166 @@ st.markdown("""
     .metric-number {
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-size: 2.35rem;
-        font-weight: 800;
+        font-weight: 900;
         color: #FFFFFF;
         line-height: 1.05;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        letter-spacing: -0.02em;
     }
 
     .metric-badge {
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.72rem;
-        font-weight: 700;
+        font-weight: 800;
         display: inline-flex;
         align-items: center;
         gap: 5px;
-        padding: 4px 10px;
-        border-radius: 999px;
-        margin-top: 0.55rem;
-        background: rgba(0, 0, 0, 0.28);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 4px 9px;
+        border-radius: 4px;
+        margin-top: 0.6rem;
+        background: rgba(0, 0, 0, 0.45);
+        border: 1.5px solid #000000;
+        box-shadow: 2px 2px 0px #000000;
         color: #FFFFFF;
-        backdrop-filter: blur(8px);
     }
 
     /* Content Box Containers */
     .content-box {
-        background: linear-gradient(145deg, rgba(26, 32, 54, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(99, 102, 241, 0.25);
-        border-radius: 14px;
+        background: rgba(18, 25, 40, 0.85);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 2px solid #334155;
+        border-radius: 8px;
         padding: 1.35rem 1.55rem;
-        box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.45);
+        box-shadow: 4px 4px 0px #000000;
         margin-bottom: 1.5rem;
     }
 
     .content-box-title {
         font-size: 1.15rem;
-        font-weight: 700;
+        font-weight: 800;
         color: #FFFFFF;
         margin-bottom: 0.85rem;
         display: flex;
         align-items: center;
         gap: 8px;
+        letter-spacing: -0.01em;
     }
 
-    /* Risk Badges */
+    /* Brutalist Risk Badges */
     .risk-pill-high {
-        background: linear-gradient(135deg, rgba(239, 68, 68, 0.35), rgba(185, 28, 28, 0.25));
-        border: 1px solid #EF4444;
-        color: #FECACA;
-        padding: 9px 20px;
-        border-radius: 8px;
+        background: rgba(159, 18, 57, 0.9);
+        border: 2px solid #FB7185;
+        color: #FFFFFF;
+        padding: 8px 18px;
+        border-radius: 6px;
         font-weight: 800;
-        font-size: 1rem;
+        font-size: 0.95rem;
         display: inline-block;
-        box-shadow: 0 0 18px rgba(239, 68, 68, 0.35);
+        box-shadow: 3px 3px 0px #000000;
     }
 
     .risk-pill-med {
-        background: linear-gradient(135deg, rgba(245, 158, 11, 0.35), rgba(180, 83, 9, 0.25));
-        border: 1px solid #F59E0B;
-        color: #FEF08A;
-        padding: 9px 20px;
-        border-radius: 8px;
+        background: rgba(146, 64, 14, 0.9);
+        border: 2px solid #FBBF24;
+        color: #FFFFFF;
+        padding: 8px 18px;
+        border-radius: 6px;
         font-weight: 800;
-        font-size: 1rem;
+        font-size: 0.95rem;
         display: inline-block;
-        box-shadow: 0 0 18px rgba(245, 158, 11, 0.35);
+        box-shadow: 3px 3px 0px #000000;
     }
 
     .risk-pill-low {
-        background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(4, 120, 87, 0.25));
-        border: 1px solid #10B981;
-        color: #A7F3D0;
-        padding: 9px 20px;
-        border-radius: 8px;
+        background: rgba(6, 95, 70, 0.9);
+        border: 2px solid #34D399;
+        color: #FFFFFF;
+        padding: 8px 18px;
+        border-radius: 6px;
         font-weight: 800;
-        font-size: 1rem;
+        font-size: 0.95rem;
         display: inline-block;
-        box-shadow: 0 0 18px rgba(16, 185, 129, 0.35);
+        box-shadow: 3px 3px 0px #000000;
     }
 
-    /* Tabs Styling - Vibrant Gradient Active Pill */
+    /* Brutalist Tabs Navigation */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
-        border: 1px solid rgba(99, 102, 241, 0.25);
-        border-radius: 12px;
-        padding: 7px;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(14px);
+        border: 2px solid #334155;
+        border-radius: 8px;
+        box-shadow: 4px 4px 0px #000000;
+        padding: 6px;
         margin-bottom: 1.5rem;
     }
 
     .stTabs [data-baseweb="tab"] {
-        border-radius: 8px;
-        padding: 9px 18px;
+        border-radius: 5px;
+        padding: 8px 18px;
         color: #CBD5E1;
         font-weight: 700;
         font-size: 0.92rem;
-        border: none !important;
-        transition: all 0.2s ease;
+        border: 1.5px solid transparent !important;
+        transition: all 0.12s ease;
     }
 
     .stTabs [data-baseweb="tab"]:hover {
         color: #FFFFFF;
-        background: rgba(99, 102, 241, 0.15);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1.5px solid #475569 !important;
     }
 
     .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%) !important;
+        background: #2563EB !important;
         color: #FFFFFF !important;
-        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45) !important;
+        border: 2px solid #000000 !important;
+        box-shadow: 3px 3px 0px #000000 !important;
     }
 
-    /* Vibrant Gradient Buttons */
+    /* Brutalist Tactile Buttons */
     .stButton>button {
-        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #DB2777 100%);
+        background: #2563EB;
         color: #FFFFFF;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 9px;
-        padding: 0.65rem 1.45rem;
-        font-weight: 700;
-        font-size: 0.94rem;
-        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
-        transition: all 0.2s ease;
+        border: 2.5px solid #000000;
+        border-radius: 6px;
+        padding: 0.65rem 1.4rem;
+        font-weight: 800;
+        font-size: 0.92rem;
+        letter-spacing: 0.02em;
+        box-shadow: 4px 4px 0px #000000;
+        transition: all 0.12s ease;
     }
 
     .stButton>button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(219, 39, 119, 0.5);
+        background: #1D4ED8;
+        transform: translate(-1px, -1px);
+        box-shadow: 5px 5px 0px #000000;
+        color: #FFFFFF;
     }
 
-    /* Form and Inputs */
+    .stButton>button:active {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px #000000;
+    }
+
+    /* Forms and Input Containers */
     div[data-testid="stForm"] {
-        border: 1px solid rgba(99, 102, 241, 0.3) !important;
-        border-radius: 12px !important;
-        background: rgba(22, 30, 49, 0.6) !important;
+        border: 2px solid #334155 !important;
+        border-radius: 8px !important;
+        background: rgba(18, 25, 40, 0.85) !important;
+        backdrop-filter: blur(14px) !important;
+        box-shadow: 4px 4px 0px #000000 !important;
+        padding: 1.25rem !important;
+    }
+
+    /* Native Vertical Border Container for Controls */
+    div[data-testid="stVerticalBlockBorderWrapper"] > div {
+        border: 2px solid #334155 !important;
+        border-radius: 8px !important;
+        background: rgba(18, 25, 40, 0.85) !important;
+        backdrop-filter: blur(14px) !important;
+        box-shadow: 4px 4px 0px #000000 !important;
         padding: 1.25rem !important;
     }
 </style>
@@ -386,9 +394,9 @@ except Exception as e:
 # ---------------------------------------------------------
 with st.sidebar:
     st.markdown("""
-    <div style="background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #1E3A8A 100%); border: 1px solid rgba(139, 92, 246, 0.4); border-left: 4px solid #8B5CF6; border-radius: 10px; padding: 14px; margin-bottom: 18px; box-shadow: 0 4px 16px rgba(49, 46, 129, 0.4);">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 700;">SYSTEM // CLINICAL CDS</div>
-        <div style="font-weight: 800; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare AI 🏥</div>
+    <div style="background: rgba(18, 25, 40, 0.9); border: 2px solid #38BDF8; border-radius: 8px; padding: 14px; margin-bottom: 18px; box-shadow: 4px 4px 0px #000000;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 800;">SYSTEM // CLINICAL CDS</div>
+        <div style="font-weight: 900; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare AI 🏥</div>
         <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 3px;">Hospital Readmission Risk Suite</div>
     </div>
     """, unsafe_allow_html=True)
@@ -425,8 +433,8 @@ with st.sidebar:
     st.markdown(f"**Filtered Cohort:** `{len(filtered_df):,}` / `{len(df):,}`")
 
     st.markdown("""
-    <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 12px; margin-top: 15px;">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818CF8; font-weight: 700;">ASSIGNMENT INFO</div>
+    <div style="background: rgba(18, 25, 40, 0.9); border: 2px solid #475569; border-radius: 8px; padding: 12px; margin-top: 15px; box-shadow: 3px 3px 0px #000000;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818CF8; font-weight: 800;">ASSIGNMENT INFO</div>
         <div style="font-weight: 800; color: #F1F5F9; font-size: 0.9rem;">INT315 — Project 23</div>
         <div style="font-size: 0.76rem; color: #94A3B8;">UCI 130-US Hospitals (1999–2008)</div>
     </div>
@@ -438,10 +446,10 @@ with st.sidebar:
 st.markdown("""
 <div class="studio-header">
     <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-        <span class="header-badge badge-gradient-purple">INT315 PROJECT 23</span>
-        <span class="header-badge badge-gradient-blue">APACHE SPARK ML</span>
-        <span class="header-badge badge-gradient-emerald">DECISION TREE CLASSIFIER</span>
-        <span class="header-badge badge-gradient-rose">30-DAY INPATIENT TRIAGE</span>
+        <span class="header-badge badge-indigo">INT315 PROJECT 23</span>
+        <span class="header-badge badge-sky">APACHE SPARK ML</span>
+        <span class="header-badge badge-emerald">DECISION TREE CLASSIFIER</span>
+        <span class="header-badge badge-rose">30-DAY INPATIENT TRIAGE</span>
     </div>
     <div class="hero-title">Hospital Readmission Prediction Platform</div>
     <div class="hero-subtitle">
@@ -528,12 +536,12 @@ with tab_overview:
                 for excess readmissions. Diabetic patients present higher readmission rates due to multi-organ comorbidities and complex medication regimens.
             </p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-                <div style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(15, 23, 42, 0.7)); border-left: 4px solid #38BDF8; padding: 12px 14px; border-radius: 8px;">
-                    <div style="font-weight: 700; font-size: 0.88rem; color: #38BDF8;">Rare Outcome (Class Imbalance)</div>
+                <div style="background: rgba(30, 58, 138, 0.45); border: 2px solid #38BDF8; box-shadow: 3px 3px 0px #000000; padding: 12px 14px; border-radius: 6px;">
+                    <div style="font-weight: 800; font-size: 0.88rem; color: #38BDF8;">Rare Outcome (Class Imbalance)</div>
                     <div style="color: #CBD5E1; font-size: 0.82rem; margin-top: 4px;">Only 11.3% of patients return within 30 days. Standard models fail by guessing "No one returns". We apply positive class weighting to catch high-risk patients.</div>
                 </div>
-                <div style="background: linear-gradient(135deg, rgba(6, 78, 59, 0.4), rgba(15, 23, 42, 0.7)); border-left: 4px solid #34D399; padding: 12px 14px; border-radius: 8px;">
-                    <div style="font-weight: 700; font-size: 0.88rem; color: #34D399;">Doctor Action (Intervention)</div>
+                <div style="background: rgba(6, 78, 59, 0.45); border: 2px solid #34D399; box-shadow: 3px 3px 0px #000000; padding: 12px 14px; border-radius: 6px;">
+                    <div style="font-weight: 800; font-size: 0.88rem; color: #34D399;">Doctor Action (Intervention)</div>
                     <div style="color: #CBD5E1; font-size: 0.82rem; margin-top: 4px;">Stratifying patients before discharge allows care coordinators to trigger pharmacist medication reconciliation and 48-hour follow-up telephone check-ins.</div>
                 </div>
             </div>

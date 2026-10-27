@@ -41,317 +41,710 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Modern Clinical Studio: Rich Colors, Balanced Spacing, Glassmorphic Depth, Solid Card Borders
-st.markdown("""
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap');
+# ---------------------------------------------------------
+# Dynamic Theme State (Dark & Light Mode Switcher)
+# ---------------------------------------------------------
+if "theme_mode" not in st.session_state:
+    st.session_state["theme_mode"] = st.session_state.get("theme_mode_radio", "🌙 Dark Mode")
 
-    :root {
-        --bg-main: #090D16;
-        --card-border: #334155;
-        --text-primary: #F8FAFC;
-        --text-secondary: #CBD5E1;
-        --text-muted: #94A3B8;
-    }
-
-    html, body, [class*="css"] {
-        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-        color: var(--text-primary);
-    }
-
-    /* Architectural Dark Canvas - Clean, Zero Neon Glare */
-    .stApp {
-        background-color: #090D16;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        background-size: 32px 32px;
-    }
-
-    /* Brutalist + Glassmorphic Studio Header */
-    .studio-header {
-        background: rgba(20, 27, 45, 0.85);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 2.5px solid #6366F1;
-        border-radius: 8px;
-        box-shadow: 5px 5px 0px #000000;
-        padding: 1.45rem 1.85rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .header-badge {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.72rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        padding: 4px 10px;
-        border-radius: 4px;
-        display: inline-block;
-        margin-right: 8px;
-        margin-bottom: 8px;
-        border: 1.5px solid #000000;
-        box-shadow: 2px 2px 0px #000000;
-    }
-
-    .badge-indigo { background: #6366F1; color: #FFFFFF; }
-    .badge-sky { background: #0284C7; color: #FFFFFF; }
-    .badge-emerald { background: #059669; color: #FFFFFF; }
-    .badge-rose { background: #E11D48; color: #FFFFFF; }
-
-    .hero-title {
-        color: #FFFFFF;
-        font-size: 2.15rem;
-        font-weight: 900;
-        letter-spacing: -0.025em;
-        line-height: 1.2;
-        margin-bottom: 0.4rem;
-    }
-
-    .hero-subtitle {
-        color: #CBD5E1;
-        font-size: 0.95rem;
-        line-height: 1.55;
-        max-width: 950px;
-    }
-
-    /* Brutalist Frosted Metric Cards with Hard Shadows */
-    .metric-card-box {
-        border-radius: 8px;
-        padding: 1.35rem 1.45rem;
-        margin-bottom: 1.25rem;
-        color: #FFFFFF;
-        box-shadow: 4px 4px 0px #000000;
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .metric-card-box:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 6px 6px 0px #000000;
-    }
-
-    .card-blue {
-        background: rgba(30, 58, 138, 0.7);
-        border: 2.5px solid #60A5FA;
-    }
-
-    .card-rose {
-        background: rgba(159, 18, 57, 0.7);
-        border: 2.5px solid #FB7185;
-    }
-
-    .card-amber {
-        background: rgba(146, 64, 14, 0.7);
-        border: 2.5px solid #FBBF24;
-    }
-
-    .card-emerald {
-        background: rgba(6, 95, 70, 0.7);
-        border: 2.5px solid #34D399;
-    }
-
-    .metric-title {
-        font-size: 0.78rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: rgba(255, 255, 255, 0.92);
-        margin-bottom: 0.35rem;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .metric-number {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 2.35rem;
-        font-weight: 900;
-        color: #FFFFFF;
-        line-height: 1.05;
-        letter-spacing: -0.02em;
-    }
-
-    .metric-badge {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.72rem;
-        font-weight: 800;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 4px 9px;
-        border-radius: 4px;
-        margin-top: 0.6rem;
-        background: rgba(0, 0, 0, 0.45);
-        border: 1.5px solid #000000;
-        box-shadow: 2px 2px 0px #000000;
-        color: #FFFFFF;
-    }
-
-    /* Content Box Containers */
-    .content-box {
-        background: rgba(18, 25, 40, 0.85);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border: 2px solid #334155;
-        border-radius: 8px;
-        padding: 1.35rem 1.55rem;
-        box-shadow: 4px 4px 0px #000000;
-        margin-bottom: 1.5rem;
-    }
-
-    .content-box-title {
-        font-size: 1.15rem;
-        font-weight: 800;
-        color: #FFFFFF;
-        margin-bottom: 0.85rem;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        letter-spacing: -0.01em;
-    }
-
-    /* Brutalist Risk Badges */
-    .risk-pill-high {
-        background: rgba(159, 18, 57, 0.9);
-        border: 2px solid #FB7185;
-        color: #FFFFFF;
-        padding: 8px 18px;
-        border-radius: 6px;
-        font-weight: 800;
-        font-size: 0.95rem;
-        display: inline-block;
-        box-shadow: 3px 3px 0px #000000;
-    }
-
-    .risk-pill-med {
-        background: rgba(146, 64, 14, 0.9);
-        border: 2px solid #FBBF24;
-        color: #FFFFFF;
-        padding: 8px 18px;
-        border-radius: 6px;
-        font-weight: 800;
-        font-size: 0.95rem;
-        display: inline-block;
-        box-shadow: 3px 3px 0px #000000;
-    }
-
-    .risk-pill-low {
-        background: rgba(6, 95, 70, 0.9);
-        border: 2px solid #34D399;
-        color: #FFFFFF;
-        padding: 8px 18px;
-        border-radius: 6px;
-        font-weight: 800;
-        font-size: 0.95rem;
-        display: inline-block;
-        box-shadow: 3px 3px 0px #000000;
-    }
-
-    /* Brutalist Tabs Navigation */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-        background: rgba(15, 23, 42, 0.9);
-        backdrop-filter: blur(14px);
-        border: 2px solid #334155;
-        border-radius: 8px;
-        box-shadow: 4px 4px 0px #000000;
-        padding: 6px;
-        margin-bottom: 1.5rem;
-    }
-
-    .stTabs [data-baseweb="tab"] {
-        border-radius: 5px;
-        padding: 8px 18px;
-        color: #CBD5E1;
-        font-weight: 700;
-        font-size: 0.92rem;
-        border: 1.5px solid transparent !important;
-        transition: all 0.12s ease;
-    }
-
-    .stTabs [data-baseweb="tab"]:hover {
-        color: #FFFFFF;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1.5px solid #475569 !important;
-    }
-
-    .stTabs [aria-selected="true"] {
-        background: #2563EB !important;
-        color: #FFFFFF !important;
-        border: 2px solid #000000 !important;
-        box-shadow: 3px 3px 0px #000000 !important;
-    }
-
-    /* Brutalist Tactile Buttons */
-    .stButton>button {
-        background: #2563EB;
-        color: #FFFFFF;
-        border: 2.5px solid #000000;
-        border-radius: 6px;
-        padding: 0.65rem 1.4rem;
-        font-weight: 800;
-        font-size: 0.92rem;
-        letter-spacing: 0.02em;
-        box-shadow: 4px 4px 0px #000000;
-        transition: all 0.12s ease;
-    }
-
-    .stButton>button:hover {
-        background: #1D4ED8;
-        transform: translate(-1px, -1px);
-        box-shadow: 5px 5px 0px #000000;
-        color: #FFFFFF;
-    }
-
-    .stButton>button:active {
-        transform: translate(2px, 2px);
-        box-shadow: 1px 1px 0px #000000;
-    }
-
-    /* Forms and Input Containers */
-    div[data-testid="stForm"] {
-        border: 2px solid #334155 !important;
-        border-radius: 8px !important;
-        background: rgba(18, 25, 40, 0.85) !important;
-        backdrop-filter: blur(14px) !important;
-        box-shadow: 4px 4px 0px #000000 !important;
-        padding: 1.25rem !important;
-    }
-
-    /* Native Vertical Border Container for Controls */
-    div[data-testid="stVerticalBlockBorderWrapper"] > div {
-        border: 2px solid #334155 !important;
-        border-radius: 8px !important;
-        background: rgba(18, 25, 40, 0.85) !important;
-        backdrop-filter: blur(14px) !important;
-        box-shadow: 4px 4px 0px #000000 !important;
-        padding: 1.25rem !important;
-    }
-</style>
-""", unsafe_allow_html=True)
+is_dark = (st.session_state["theme_mode"] == "🌙 Dark Mode")
 
 # ---------------------------------------------------------
-# Plotly Unified Studio Theme
+# Brutalism + Glassmorphism Theme System (Dark & Light)
 # ---------------------------------------------------------
-PLOTLY_LAYOUT = dict(
-    paper_bgcolor="rgba(0,0,0,0)",
-    plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(family="Plus Jakarta Sans, sans-serif", color="#94A3B8", size=11),
-    margin=dict(l=35, r=25, t=35, b=35),
-    xaxis=dict(
-        gridcolor="rgba(255, 255, 255, 0.07)",
-        zerolinecolor="rgba(255, 255, 255, 0.12)",
-        tickfont=dict(color="#94A3B8")
-    ),
-    yaxis=dict(
-        gridcolor="rgba(255, 255, 255, 0.07)",
-        zerolinecolor="rgba(255, 255, 255, 0.12)",
-        tickfont=dict(color="#94A3B8")
-    ),
-    legend=dict(font=dict(color="#E2E8F0", size=11))
-)
+if is_dark:
+    st.markdown("""
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap');
+
+        :root {
+            --bg-main: #090D16;
+            --card-border: #334155;
+            --text-primary: #F8FAFC;
+            --text-secondary: #CBD5E1;
+            --text-muted: #94A3B8;
+        }
+
+        html, body, [class*="css"], .stApp {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            color: var(--text-primary);
+        }
+
+        .stApp {
+            background-color: #090D16 !important;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .studio-header {
+            background: rgba(20, 27, 45, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2.5px solid #6366F1;
+            border-radius: 8px;
+            box-shadow: 5px 5px 0px #000000;
+            padding: 1.45rem 1.85rem;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
+        }
+
+        .header-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1.5px solid #000000;
+            box-shadow: 2px 2px 0px #000000;
+        }
+
+        .badge-indigo { background: #6366F1; color: #FFFFFF; }
+        .badge-sky { background: #0284C7; color: #FFFFFF; }
+        .badge-emerald { background: #059669; color: #FFFFFF; }
+        .badge-rose { background: #E11D48; color: #FFFFFF; }
+
+        .hero-title {
+            color: #FFFFFF !important;
+            font-size: 2.15rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-subtitle {
+            color: #CBD5E1 !important;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            max-width: 950px;
+        }
+
+        .metric-card-box {
+            border-radius: 8px;
+            padding: 1.35rem 1.45rem;
+            margin-bottom: 1.25rem;
+            color: #FFFFFF;
+            box-shadow: 4px 4px 0px #000000;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .metric-card-box:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        .card-blue {
+            background: rgba(30, 58, 138, 0.7);
+            border: 2.5px solid #60A5FA;
+        }
+
+        .card-rose {
+            background: rgba(159, 18, 57, 0.7);
+            border: 2.5px solid #FB7185;
+        }
+
+        .card-amber {
+            background: rgba(146, 64, 14, 0.7);
+            border: 2.5px solid #FBBF24;
+        }
+
+        .card-emerald {
+            background: rgba(6, 95, 70, 0.7);
+            border: 2.5px solid #34D399;
+        }
+
+        .metric-title {
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.92) !important;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .metric-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.35rem;
+            font-weight: 900;
+            color: #FFFFFF !important;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        .metric-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 9px;
+            border-radius: 4px;
+            margin-top: 0.6rem;
+            background: rgba(0, 0, 0, 0.45);
+            border: 1.5px solid #000000;
+            box-shadow: 2px 2px 0px #000000;
+            color: #FFFFFF;
+        }
+
+        .content-box {
+            background: rgba(18, 25, 40, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 2px solid #334155;
+            border-radius: 8px;
+            padding: 1.35rem 1.55rem;
+            box-shadow: 4px 4px 0px #000000;
+            margin-bottom: 1.5rem;
+            color: #F8FAFC;
+        }
+
+        .content-box-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #FFFFFF !important;
+            margin-bottom: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .content-box p {
+            color: #CBD5E1 !important;
+        }
+
+        .context-subbox-blue {
+            background: rgba(30, 58, 138, 0.45);
+            border: 2px solid #38BDF8;
+            box-shadow: 3px 3px 0px #000000;
+            padding: 12px 14px;
+            border-radius: 6px;
+        }
+
+        .context-subbox-emerald {
+            background: rgba(6, 78, 59, 0.45);
+            border: 2px solid #34D399;
+            box-shadow: 3px 3px 0px #000000;
+            padding: 12px 14px;
+            border-radius: 6px;
+        }
+
+        .context-title-blue {
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #38BDF8 !important;
+        }
+
+        .context-title-emerald {
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #34D399 !important;
+        }
+
+        .risk-pill-high {
+            background: rgba(159, 18, 57, 0.9);
+            border: 2px solid #FB7185;
+            color: #FFFFFF;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-block;
+            box-shadow: 3px 3px 0px #000000;
+        }
+
+        .risk-pill-med {
+            background: rgba(146, 64, 14, 0.9);
+            border: 2px solid #FBBF24;
+            color: #FFFFFF;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-block;
+            box-shadow: 3px 3px 0px #000000;
+        }
+
+        .risk-pill-low {
+            background: rgba(6, 95, 70, 0.9);
+            border: 2px solid #34D399;
+            color: #FFFFFF;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-block;
+            box-shadow: 3px 3px 0px #000000;
+        }
+
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 8px;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(14px);
+            border: 2px solid #334155;
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px #000000;
+            padding: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .stTabs [data-baseweb="tab"] {
+            border-radius: 5px;
+            padding: 8px 18px;
+            color: #CBD5E1 !important;
+            font-weight: 700;
+            font-size: 0.92rem;
+            border: 1.5px solid transparent !important;
+            transition: all 0.12s ease;
+        }
+
+        .stTabs [data-baseweb="tab"]:hover {
+            color: #FFFFFF !important;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1.5px solid #475569 !important;
+        }
+
+        .stTabs [aria-selected="true"] {
+            background: #2563EB !important;
+            color: #FFFFFF !important;
+            border: 2px solid #000000 !important;
+            box-shadow: 3px 3px 0px #000000 !important;
+        }
+
+        .stButton>button,
+        div[data-testid="stButton"] button,
+        button[data-testid*="stBaseButton"] {
+            background: #1E293B !important;
+            color: #F8FAFC !important;
+            border: 2px solid #6366F1 !important;
+            border-radius: 6px !important;
+            padding: 0.65rem 1.4rem !important;
+            font-weight: 800 !important;
+            font-size: 0.92rem !important;
+            letter-spacing: 0.02em !important;
+            box-shadow: 4px 4px 0px #000000 !important;
+            transition: all 0.12s ease !important;
+        }
+
+        .stButton>button:hover,
+        div[data-testid="stButton"] button:hover,
+        button[data-testid*="stBaseButton"]:hover {
+            background: #2563EB !important;
+            color: #FFFFFF !important;
+            border-color: #38BDF8 !important;
+            transform: translate(-1px, -1px) !important;
+            box-shadow: 5px 5px 0px #000000 !important;
+        }
+
+        .stButton>button:active,
+        div[data-testid="stButton"] button:active,
+        button[data-testid*="stBaseButton"]:active {
+            transform: translate(2px, 2px) !important;
+            box-shadow: 1px 1px 0px #000000 !important;
+        }
+
+        div[data-testid="stForm"] {
+            border: 2px solid #334155 !important;
+            border-radius: 8px !important;
+            background: rgba(18, 25, 40, 0.85) !important;
+            backdrop-filter: blur(14px) !important;
+            box-shadow: 4px 4px 0px #000000 !important;
+            padding: 1.25rem !important;
+        }
+
+        div[data-testid="stVerticalBlockBorderWrapper"] > div {
+            border: 2px solid #334155 !important;
+            border-radius: 8px !important;
+            background: rgba(18, 25, 40, 0.85) !important;
+            backdrop-filter: blur(14px) !important;
+            box-shadow: 4px 4px 0px #000000 !important;
+            padding: 1.25rem !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap');
+
+        :root {
+            --bg-main: #F4F4F0;
+            --card-border: #000000;
+            --text-primary: #0F172A;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+        }
+
+        html, body, [class*="css"], .stApp {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            color: #0F172A !important;
+            background-color: #F4F4F0 !important;
+        }
+
+        .stApp {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        [data-testid="stSidebar"] {
+            background-color: #FFFFFF !important;
+            border-right: 2.5px solid #000000 !important;
+        }
+        [data-testid="stSidebar"] p,
+        [data-testid="stSidebar"] label,
+        [data-testid="stSidebar"] h1,
+        [data-testid="stSidebar"] h2,
+        [data-testid="stSidebar"] h3,
+        [data-testid="stSidebar"] h4,
+        [data-testid="stSidebar"] span {
+            color: #0F172A !important;
+        }
+
+        .studio-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2.5px solid #000000;
+            border-radius: 8px;
+            box-shadow: 5px 5px 0px #000000;
+            padding: 1.45rem 1.85rem;
+            margin-bottom: 1.5rem;
+            color: #0F172A;
+        }
+
+        .header-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1.5px solid #000000;
+            box-shadow: 2px 2px 0px #000000;
+        }
+
+        .badge-indigo { background: #4F46E5; color: #FFFFFF; }
+        .badge-sky { background: #0284C7; color: #FFFFFF; }
+        .badge-emerald { background: #059669; color: #FFFFFF; }
+        .badge-rose { background: #E11D48; color: #FFFFFF; }
+
+        .hero-title {
+            color: #0F172A !important;
+            font-size: 2.15rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-subtitle {
+            color: #334155 !important;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            max-width: 950px;
+        }
+
+        .metric-card-box {
+            border-radius: 8px;
+            padding: 1.35rem 1.45rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 4px 4px 0px #000000;
+            border: 2.5px solid #000000 !important;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .metric-card-box:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        .card-blue { background: #DBEAFE !important; }
+        .card-blue .metric-title { color: #1E40AF !important; }
+        .card-blue .metric-number { color: #1E3A8A !important; }
+
+        .card-rose { background: #FFE4E6 !important; }
+        .card-rose .metric-title { color: #BE123C !important; }
+        .card-rose .metric-number { color: #9F1239 !important; }
+
+        .card-amber { background: #FEF3C7 !important; }
+        .card-amber .metric-title { color: #B45309 !important; }
+        .card-amber .metric-number { color: #92400E !important; }
+
+        .card-emerald { background: #D1FAE5 !important; }
+        .card-emerald .metric-title { color: #047857 !important; }
+        .card-emerald .metric-number { color: #065F46 !important; }
+
+        .metric-title {
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .metric-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.35rem;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        .metric-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 9px;
+            border-radius: 4px;
+            margin-top: 0.6rem;
+            background: #000000 !important;
+            border: 1.5px solid #000000 !important;
+            box-shadow: 2px 2px 0px #000000 !important;
+            color: #FFFFFF !important;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 2.5px solid #000000;
+            border-radius: 8px;
+            padding: 1.35rem 1.55rem;
+            box-shadow: 4px 4px 0px #000000;
+            margin-bottom: 1.5rem;
+            color: #0F172A;
+        }
+
+        .content-box-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0F172A !important;
+            margin-bottom: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .content-box p {
+            color: #334155 !important;
+        }
+
+        .context-subbox-blue {
+            background: #DBEAFE;
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px #000000;
+            padding: 12px 14px;
+            border-radius: 6px;
+            color: #0F172A;
+        }
+
+        .context-subbox-emerald {
+            background: #D1FAE5;
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px #000000;
+            padding: 12px 14px;
+            border-radius: 6px;
+            color: #0F172A;
+        }
+
+        .context-title-blue {
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #1E40AF !important;
+        }
+
+        .context-title-emerald {
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #065F46 !important;
+        }
+
+        .risk-pill-high {
+            background: #FFE4E6;
+            border: 2px solid #000000;
+            color: #9F1239;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-block;
+            box-shadow: 3px 3px 0px #000000;
+        }
+
+        .risk-pill-med {
+            background: #FEF3C7;
+            border: 2px solid #000000;
+            color: #92400E;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-block;
+            box-shadow: 3px 3px 0px #000000;
+        }
+
+        .risk-pill-low {
+            background: #D1FAE5;
+            border: 2px solid #000000;
+            color: #065F46;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-block;
+            box-shadow: 3px 3px 0px #000000;
+        }
+
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(14px);
+            border: 2.5px solid #000000;
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px #000000;
+            padding: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .stTabs [data-baseweb="tab"] {
+            border-radius: 5px;
+            padding: 8px 18px;
+            color: #334155 !important;
+            font-weight: 700;
+            font-size: 0.92rem;
+            border: 1.5px solid transparent !important;
+            transition: all 0.12s ease;
+        }
+
+        .stTabs [data-baseweb="tab"]:hover {
+            color: #000000 !important;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1.5px solid #000000 !important;
+        }
+
+        .stTabs [aria-selected="true"] {
+            background: #2563EB !important;
+            color: #FFFFFF !important;
+            border: 2px solid #000000 !important;
+            box-shadow: 3px 3px 0px #000000 !important;
+        }
+
+        .stButton>button,
+        div[data-testid="stButton"] button,
+        button[data-testid*="stBaseButton"] {
+            background: #FFFFFF !important;
+            color: #0F172A !important;
+            border: 2.5px solid #000000 !important;
+            border-radius: 6px !important;
+            padding: 0.65rem 1.4rem !important;
+            font-weight: 800 !important;
+            font-size: 0.92rem !important;
+            letter-spacing: 0.02em !important;
+            box-shadow: 4px 4px 0px #000000 !important;
+            transition: all 0.12s ease !important;
+        }
+
+        .stButton>button:hover,
+        div[data-testid="stButton"] button:hover,
+        button[data-testid*="stBaseButton"]:hover {
+            background: #2563EB !important;
+            color: #FFFFFF !important;
+            transform: translate(-1px, -1px) !important;
+            box-shadow: 5px 5px 0px #000000 !important;
+        }
+
+        .stButton>button:active,
+        div[data-testid="stButton"] button:active,
+        button[data-testid*="stBaseButton"]:active {
+            transform: translate(2px, 2px) !important;
+            box-shadow: 1px 1px 0px #000000 !important;
+        }
+
+        div[data-testid="stForm"] {
+            border: 2.5px solid #000000 !important;
+            border-radius: 8px !important;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(14px) !important;
+            box-shadow: 4px 4px 0px #000000 !important;
+            padding: 1.25rem !important;
+        }
+
+        div[data-testid="stVerticalBlockBorderWrapper"] > div {
+            border: 2.5px solid #000000 !important;
+            border-radius: 8px !important;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(14px) !important;
+            box-shadow: 4px 4px 0px #000000 !important;
+            padding: 1.25rem !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+# ---------------------------------------------------------
+# Dynamic Plotly Studio Theme (Syncs with Theme Mode)
+# ---------------------------------------------------------
+if is_dark:
+    PLOTLY_LAYOUT = dict(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Plus Jakarta Sans, sans-serif", color="#CBD5E1", size=11),
+        margin=dict(l=35, r=25, t=35, b=35),
+        xaxis=dict(
+            gridcolor="rgba(255, 255, 255, 0.08)",
+            zerolinecolor="rgba(255, 255, 255, 0.15)",
+            tickfont=dict(color="#94A3B8")
+        ),
+        yaxis=dict(
+            gridcolor="rgba(255, 255, 255, 0.08)",
+            zerolinecolor="rgba(255, 255, 255, 0.15)",
+            tickfont=dict(color="#94A3B8")
+        ),
+        legend=dict(font=dict(color="#E2E8F0", size=11))
+    )
+else:
+    PLOTLY_LAYOUT = dict(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Plus Jakarta Sans, sans-serif", color="#0F172A", size=11),
+        margin=dict(l=35, r=25, t=35, b=35),
+        xaxis=dict(
+            gridcolor="rgba(0, 0, 0, 0.08)",
+            zerolinecolor="rgba(0, 0, 0, 0.2)",
+            tickfont=dict(color="#334155")
+        ),
+        yaxis=dict(
+            gridcolor="rgba(0, 0, 0, 0.08)",
+            zerolinecolor="rgba(0, 0, 0, 0.2)",
+            tickfont=dict(color="#334155")
+        ),
+        legend=dict(font=dict(color="#0F172A", size=11))
+    )
 
 # ---------------------------------------------------------
 # Data & Cache Loaders
@@ -393,14 +786,38 @@ except Exception as e:
 # Sidebar Slicers
 # ---------------------------------------------------------
 with st.sidebar:
-    st.markdown("""
-    <div style="background: rgba(18, 25, 40, 0.9); border: 2px solid #38BDF8; border-radius: 8px; padding: 14px; margin-bottom: 18px; box-shadow: 4px 4px 0px #000000;">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 800;">SYSTEM // CLINICAL CDS</div>
-        <div style="font-weight: 900; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare ML 🏥</div>
-        <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 3px;">Hospital Readmission Prediction Suite</div>
-    </div>
-    """, unsafe_allow_html=True)
+    if is_dark:
+        st.markdown("""
+        <div style="background: rgba(18, 25, 40, 0.95); border: 2.5px solid #38BDF8; border-radius: 8px; padding: 14px; margin-bottom: 14px; box-shadow: 4px 4px 0px #000000;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 800;">SYSTEM // CLINICAL CDS</div>
+            <div style="font-weight: 900; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare ML 🏥</div>
+            <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 3px;">Hospital Readmission Prediction Suite</div>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="background: #FFFFFF; border: 2.5px solid #000000; border-radius: 8px; padding: 14px; margin-bottom: 14px; box-shadow: 4px 4px 0px #000000;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #0284C7; font-weight: 800;">SYSTEM // CLINICAL CDS</div>
+            <div style="font-weight: 900; font-size: 1.25rem; color: #0F172A; letter-spacing: -0.01em;">PulseCare ML 🏥</div>
+            <div style="font-size: 0.8rem; color: #475569; margin-top: 3px;">Hospital Readmission Prediction Suite</div>
+        </div>
+        """, unsafe_allow_html=True)
 
+    st.markdown("#### 🎨 Interface Theme")
+    theme_choice = st.segmented_control(
+        "Interface Theme",
+        options=["🌙 Dark Mode", "☀️ Light Mode"],
+        default=st.session_state["theme_mode"],
+        key="theme_mode_selector",
+        selection_mode="single",
+        label_visibility="collapsed"
+    )
+    if theme_choice and theme_choice != st.session_state["theme_mode"]:
+        st.session_state["theme_mode"] = theme_choice
+        st.session_state["theme_mode_radio"] = theme_choice
+        st.rerun()
+
+    st.markdown("---")
     st.markdown("#### 🎛️ Population Filters")
 
     selected_age = st.multiselect(
@@ -432,25 +849,45 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(f"**Filtered Cohort:** `{len(filtered_df):,}` / `{len(df):,}`")
 
-    st.markdown("""
-    <div style="background: rgba(18, 25, 40, 0.9); border: 2px solid #475569; border-radius: 8px; padding: 12px; margin-top: 15px; box-shadow: 3px 3px 0px #000000;">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818CF8; font-weight: 800;">ASSIGNMENT INFO</div>
-        <div style="font-weight: 800; color: #F1F5F9; font-size: 0.9rem;">INT315 — Project 23</div>
-        <div style="font-size: 0.76rem; color: #94A3B8;">UCI 130-US Hospitals (1999–2008)</div>
-    </div>
-    """, unsafe_allow_html=True)
+    if is_dark:
+        st.markdown("""
+        <div style="background: rgba(18, 25, 40, 0.95); border: 2px solid #475569; border-radius: 8px; padding: 12px; margin-top: 15px; box-shadow: 3px 3px 0px #000000;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818CF8; font-weight: 800;">ASSIGNMENT INFO</div>
+            <div style="font-weight: 800; color: #F1F5F9; font-size: 0.9rem;">INT315 — Project 23</div>
+            <div style="font-size: 0.76rem; color: #94A3B8;">UCI 130-US Hospitals (1999–2008)</div>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="background: #FFFFFF; border: 2.5px solid #000000; border-radius: 8px; padding: 12px; margin-top: 15px; box-shadow: 3px 3px 0px #000000;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #4F46E5; font-weight: 800;">ASSIGNMENT INFO</div>
+            <div style="font-weight: 800; color: #0F172A; font-size: 0.9rem;">INT315 — Project 23</div>
+            <div style="font-size: 0.76rem; color: #64748B;">UCI 130-US Hospitals (1999–2008)</div>
+        </div>
+        """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
 # Studio Header
 # ---------------------------------------------------------
-st.markdown("""
-<div class="studio-header">
-    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+col_head_left, col_head_right = st.columns([4, 1.2])
+with col_head_left:
+    st.markdown("""
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
         <span class="header-badge badge-indigo">INT315 PROJECT 23</span>
         <span class="header-badge badge-sky">APACHE SPARK ML</span>
         <span class="header-badge badge-emerald">DECISION TREE CLASSIFIER</span>
         <span class="header-badge badge-rose">30-DAY INPATIENT TRIAGE</span>
     </div>
+    """, unsafe_allow_html=True)
+with col_head_right:
+    quick_theme_label = "☀️ Light Mode" if is_dark else "🌙 Dark Mode"
+    if st.button(quick_theme_label, key="quick_theme_toggle_btn", use_container_width=True, help="Click to toggle Light / Dark theme mode"):
+        st.session_state["theme_mode"] = "☀️ Light Mode" if is_dark else "🌙 Dark Mode"
+        st.session_state["theme_mode_radio"] = st.session_state["theme_mode"]
+        st.rerun()
+
+st.markdown("""
+<div class="studio-header" style="margin-top: 4px;">
     <div class="hero-title">Hospital Readmission Prediction Platform</div>
     <div class="hero-subtitle">
         Predicting 30-day inpatient readmissions using Apache Spark (PySpark) big data pipelines and machine learning. 
@@ -536,13 +973,13 @@ with tab_overview:
                 for excess readmissions. Diabetic patients present higher readmission rates due to multi-organ comorbidities and complex medication regimens.
             </p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-                <div style="background: rgba(30, 58, 138, 0.45); border: 2px solid #38BDF8; box-shadow: 3px 3px 0px #000000; padding: 12px 14px; border-radius: 6px;">
-                    <div style="font-weight: 800; font-size: 0.88rem; color: #38BDF8;">Rare Outcome (Class Imbalance)</div>
-                    <div style="color: #CBD5E1; font-size: 0.82rem; margin-top: 4px;">Only 11.3% of patients return within 30 days. Standard models fail by guessing "No one returns". We apply positive class weighting to catch high-risk patients.</div>
+                <div class="context-subbox-blue">
+                    <div class="context-title-blue">Rare Outcome (Class Imbalance)</div>
+                    <div style="font-size: 0.82rem; margin-top: 4px; opacity: 0.95;">Only 11.3% of patients return within 30 days. Standard models fail by guessing "No one returns". We apply positive class weighting to catch high-risk patients.</div>
                 </div>
-                <div style="background: rgba(6, 78, 59, 0.45); border: 2px solid #34D399; box-shadow: 3px 3px 0px #000000; padding: 12px 14px; border-radius: 6px;">
-                    <div style="font-weight: 800; font-size: 0.88rem; color: #34D399;">Doctor Action (Intervention)</div>
-                    <div style="color: #CBD5E1; font-size: 0.82rem; margin-top: 4px;">Stratifying patients before discharge allows care coordinators to trigger pharmacist medication reconciliation and 48-hour follow-up telephone check-ins.</div>
+                <div class="context-subbox-emerald">
+                    <div class="context-title-emerald">Doctor Action (Intervention)</div>
+                    <div style="font-size: 0.82rem; margin-top: 4px; opacity: 0.95;">Stratifying patients before discharge allows care coordinators to trigger pharmacist medication reconciliation and 48-hour follow-up telephone check-ins.</div>
                 </div>
             </div>
         </div>

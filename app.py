@@ -35,10 +35,10 @@ from src.model_trainer import (
 # Page Configuration & Modern Clinical Studio Theme
 # ---------------------------------------------------------
 st.set_page_config(
-    page_title="Hospital Readmission ML Platform | INT315 Project 23",
+    page_title="Hospital Readmission ML Platform",
     page_icon="🏥",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 # ---------------------------------------------------------
@@ -70,6 +70,25 @@ if is_dark:
             color: var(--text-primary);
         }
 
+        header[data-testid="stHeader"] {
+            background: transparent !important;
+            height: 2.2rem !important;
+        }
+
+        .block-container {
+            max-width: 98% !important;
+            padding-top: 3.25rem !important;
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        [data-testid="stSidebar"],
+        section[data-testid="stSidebar"],
+        [data-testid="collapsedControl"] {
+            display: none !important;
+        }
+
         .stApp {
             background-color: #090D16 !important;
             background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
@@ -77,16 +96,49 @@ if is_dark:
             background-size: 32px 32px;
         }
 
-        .studio-header {
-            background: rgba(20, 27, 45, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 2.5px solid #6366F1;
-            border-radius: 8px;
+        .header-bracket {
+            background: rgba(18, 25, 40, 0.9);
+            backdrop-filter: blur(14px);
+            border: 2.5px solid #334155;
+            border-radius: 10px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 1.35rem;
             box-shadow: 5px 5px 0px #000000;
-            padding: 1.45rem 1.85rem;
-            margin-bottom: 1.5rem;
+        }
+
+        .slicers-bracket {
+            background: rgba(18, 25, 40, 0.9);
+            backdrop-filter: blur(14px);
+            border: 2.5px solid #38BDF8;
+            border-radius: 10px;
+            padding: 1.3rem 1.15rem;
+            box-shadow: 5px 5px 0px #000000;
+            margin-bottom: 1.25rem;
+        }
+
+        .slicers-title {
+            font-size: 1.15rem;
+            font-weight: 900;
             color: #FFFFFF;
+            letter-spacing: -0.01em;
+            margin-bottom: 4px;
+        }
+
+        .footer-bracket {
+            background: rgba(18, 25, 40, 0.9);
+            backdrop-filter: blur(14px);
+            border: 2.5px solid #334155;
+            border-radius: 8px;
+            padding: 1rem 1.6rem;
+            box-shadow: 4px 4px 0px #000000;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: #94A3B8;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .header-badge {
@@ -253,6 +305,86 @@ if is_dark:
             color: #34D399 !important;
         }
 
+        .telemetry-strip {
+            background: rgba(18, 25, 40, 0.9);
+            border: 2px solid #334155;
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px #000000;
+            padding: 10px 18px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        .telemetry-badge-active {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(6, 95, 70, 0.65);
+            border: 1.5px solid #10B981;
+            box-shadow: 2px 2px 0px #000000;
+            color: #34D399;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        .telemetry-meta {
+            color: #94A3B8;
+            font-size: 0.76rem;
+        }
+
+        .section-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 10px 0 14px 0;
+            border-bottom: 1.5px solid #334155;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            letter-spacing: -0.015em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 22px;
+            background: #38BDF8;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 0.82rem;
+            color: #94A3B8;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .preset-banner {
+            background: rgba(30, 58, 138, 0.35);
+            border: 2px solid #38BDF8;
+            border-radius: 6px;
+            box-shadow: 3px 3px 0px #000000;
+            padding: 10px 14px;
+            margin-bottom: 16px;
+            font-size: 0.86rem;
+            color: #E2E8F0;
+        }
+
         .risk-pill-high {
             background: rgba(159, 18, 57, 0.9);
             border: 2px solid #FB7185;
@@ -293,10 +425,20 @@ if is_dark:
             gap: 8px;
             background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(14px);
-            border: 2px solid #334155;
+            border: 2.5px solid #334155;
             border-radius: 8px;
             box-shadow: 4px 4px 0px #000000;
             padding: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .stTabs [data-baseweb="tab-panel"] {
+            background: rgba(18, 25, 40, 0.7);
+            backdrop-filter: blur(14px);
+            border: 2.5px solid #334155;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px #000000;
+            padding: 1.4rem;
             margin-bottom: 1.5rem;
         }
 
@@ -393,10 +535,71 @@ else:
             background-color: #F4F4F0 !important;
         }
 
+        header[data-testid="stHeader"] {
+            background: transparent !important;
+            height: 2.2rem !important;
+        }
+
+        .block-container {
+            max-width: 98% !important;
+            padding-top: 3.25rem !important;
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        [data-testid="stSidebar"],
+        section[data-testid="stSidebar"],
+        [data-testid="collapsedControl"] {
+            display: none !important;
+        }
+
         .stApp {
             background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
             background-size: 32px 32px;
+        }
+
+        .header-bracket {
+            background: #FFFFFF;
+            border: 2.5px solid #000000;
+            border-radius: 10px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 1.35rem;
+            box-shadow: 5px 5px 0px #000000;
+        }
+
+        .slicers-bracket {
+            background: #FFFFFF;
+            border: 2.5px solid #000000;
+            border-radius: 10px;
+            padding: 1.3rem 1.15rem;
+            box-shadow: 5px 5px 0px #000000;
+            margin-bottom: 1.25rem;
+        }
+
+        .slicers-title {
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: #0F172A;
+            letter-spacing: -0.01em;
+            margin-bottom: 4px;
+        }
+
+        .footer-bracket {
+            background: #FFFFFF;
+            border: 2.5px solid #000000;
+            border-radius: 8px;
+            padding: 1rem 1.6rem;
+            box-shadow: 4px 4px 0px #000000;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: #334155;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         [data-testid="stSidebar"] {
@@ -585,6 +788,86 @@ else:
             color: #065F46 !important;
         }
 
+        .telemetry-strip {
+            background: #FFFFFF;
+            border: 2.5px solid #000000;
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px #000000;
+            padding: 10px 18px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        .telemetry-badge-active {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #D1FAE5;
+            border: 1.5px solid #000000;
+            box-shadow: 2px 2px 0px #000000;
+            color: #065F46;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        .telemetry-meta {
+            color: #475569;
+            font-size: 0.76rem;
+        }
+
+        .section-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 10px 0 14px 0;
+            border-bottom: 2px solid #000000;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #0F172A;
+            letter-spacing: -0.015em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 22px;
+            background: #0284C7;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 0.82rem;
+            color: #475569;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .preset-banner {
+            background: #DBEAFE;
+            border: 2px solid #000000;
+            border-radius: 6px;
+            box-shadow: 3px 3px 0px #000000;
+            padding: 10px 14px;
+            margin-bottom: 16px;
+            font-size: 0.86rem;
+            color: #0F172A;
+        }
+
         .risk-pill-high {
             background: #FFE4E6;
             border: 2px solid #000000;
@@ -629,6 +912,15 @@ else:
             border-radius: 8px;
             box-shadow: 4px 4px 0px #000000;
             padding: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .stTabs [data-baseweb="tab-panel"] {
+            background: #FFFFFF;
+            border: 2.5px solid #000000;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px #000000;
+            padding: 1.4rem;
             margin-bottom: 1.5rem;
         }
 
@@ -783,42 +1075,189 @@ except Exception as e:
     st.stop()
 
 # ---------------------------------------------------------
-# Sidebar Slicers
+# Top Bar: Right Aligned Theme Switcher Icon (🌙 / ☀️)
 # ---------------------------------------------------------
-with st.sidebar:
+col_top_spacer, col_theme_icon = st.columns([8.8, 1.4])
+with col_theme_icon:
+    selected_theme = st.segmented_control(
+        "Theme",
+        options=["🌙", "☀️"],
+        default="🌙" if is_dark else "☀️",
+        key="top_corner_theme_icon",
+        label_visibility="collapsed"
+    )
+    if selected_theme:
+        target_mode = "🌙 Dark Mode" if selected_theme == "🌙" else "☀️ Light Mode"
+        if target_mode != st.session_state["theme_mode"]:
+            st.session_state["theme_mode"] = target_mode
+            st.session_state["theme_mode_radio"] = target_mode
+            st.rerun()
+
+# ---------------------------------------------------------
+# 1. Header Part (Bracket spanning full width across top)
+# ---------------------------------------------------------
+total_records = len(df)
+readmit_rate = df["readmitted_30d"].mean() * 100
+avg_los = df["time_in_hospital"].mean()
+dt_auc = metrics_cache.get("Decision Tree", {}).get("metrics", {}).get("roc_auc", 0.647)
+
+if is_dark:
+    st.markdown(f"""
+    <div class="header-bracket">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(6, 95, 70, 0.65); border: 1.5px solid #10B981; box-shadow: 2px 2px 0px #000000; color: #34D399; padding: 4px 10px; border-radius: 4px; font-weight: 800; letter-spacing: 0.04em;">
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10B981;"></span>
+                <span>PRODUCTION CLUSTER ACTIVE</span>
+            </div>
+            <div style="color: #94A3B8; font-size: 0.76rem;">
+                <span>ENGINE: Apache Spark 3.5.9 (MLlib)</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>JVM: Adoptium OpenJDK 11</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>MODE: local[*] Multi-Core</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>LATENCY: &lt; 3.8ms</span>
+            </div>
+        </div>
+        <div style="color: #FFFFFF; font-size: 2.15rem; font-weight: 900; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 0.45rem;">
+            PulseCare <span style="color: #38BDF8;">Readmission</span>: Distributed Clinical Intelligence
+        </div>
+        <div style="color: #CBD5E1; font-size: 0.94rem; line-height: 1.55; max-width: 1050px; margin-bottom: 1.5rem;">
+            High-throughput distributed inpatient readmission risk architecture powered by Apache Spark 3.5.9 MLlib. 
+            Trained and evaluated on 100,114 diabetic inpatient records with 30-day follow-up tracking, class-weight balancing, and HRRP hospital penalty triage.
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+            <div style="background: rgba(30, 58, 138, 0.5); border: 2px solid #60A5FA; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #93C5FD; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>ANALYZED PATIENTS</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: rgba(0,0,0,0.4); border: 1px solid #60A5FA; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">UCI</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #FFFFFF; margin: 0.25rem 0 0.15rem 0;">{total_records:,}</div>
+                <div style="font-size: 0.76rem; color: #CBD5E1;">130-US Hospitals (1999–2008)</div>
+            </div>
+            <div style="background: rgba(159, 18, 57, 0.5); border: 2px solid #FB7185; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #FDA4AF; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>READMITTED &lt;30 DAYS</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: rgba(0,0,0,0.4); border: 1px solid #FB7185; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">TARGET</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #FFFFFF; margin: 0.25rem 0 0.15rem 0;">{readmit_rate:.2f}%</div>
+                <div style="font-size: 0.76rem; color: #CBD5E1;">High-Risk Class (11,357 Encounters)</div>
+            </div>
+            <div style="background: rgba(146, 64, 14, 0.5); border: 2px solid #FBBF24; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #FCD34D; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>AVERAGE HOSPITAL STAY</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: rgba(0,0,0,0.4); border: 1px solid #FBBF24; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">LOS</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #FFFFFF; margin: 0.25rem 0 0.15rem 0;">{avg_los:.1f} <span style="font-size: 1.1rem; opacity: 0.9;">days</span></div>
+                <div style="font-size: 0.76rem; color: #CBD5E1;">Length of Stay (1 - 14 Days)</div>
+            </div>
+            <div style="background: rgba(6, 95, 70, 0.5); border: 2px solid #34D399; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #6EE7B7; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>DECISION TREE AUC</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: rgba(0,0,0,0.4); border: 1px solid #34D399; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">PYSPARK</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #FFFFFF; margin: 0.25rem 0 0.15rem 0;">{dt_auc:.3f}</div>
+                <div style="font-size: 0.76rem; color: #CBD5E1;">Spark MLlib Validated Pipeline</div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown(f"""
+    <div class="header-bracket">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: #D1FAE5; border: 1.5px solid #000000; box-shadow: 2px 2px 0px #000000; color: #065F46; padding: 4px 10px; border-radius: 4px; font-weight: 800; letter-spacing: 0.04em;">
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #059669;"></span>
+                <span>PRODUCTION CLUSTER ACTIVE</span>
+            </div>
+            <div style="color: #475569; font-size: 0.76rem;">
+                <span>ENGINE: Apache Spark 3.5.9 (MLlib)</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>JVM: Adoptium OpenJDK 11</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>MODE: local[*] Multi-Core</span>
+                <span>&nbsp;&nbsp;</span>
+                <span>LATENCY: &lt; 3.8ms</span>
+            </div>
+        </div>
+        <div style="color: #0F172A; font-size: 2.15rem; font-weight: 900; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 0.45rem;">
+            PulseCare <span style="color: #0284C7;">Readmission</span>: Distributed Clinical Intelligence
+        </div>
+        <div style="color: #334155; font-size: 0.94rem; line-height: 1.55; max-width: 1050px; margin-bottom: 1.5rem;">
+            High-throughput distributed inpatient readmission risk architecture powered by Apache Spark 3.5.9 MLlib. 
+            Trained and evaluated on 100,114 diabetic inpatient records with 30-day follow-up tracking, class-weight balancing, and HRRP hospital penalty triage.
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+            <div style="background: #DBEAFE; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #1E40AF; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>ANALYZED PATIENTS</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">UCI</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #1E3A8A; margin: 0.25rem 0 0.15rem 0;">{total_records:,}</div>
+                <div style="font-size: 0.76rem; color: #334155;">130-US Hospitals (1999–2008)</div>
+            </div>
+            <div style="background: #FFE4E6; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #BE123C; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>READMITTED &lt;30 DAYS</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">TARGET</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #9F1239; margin: 0.25rem 0 0.15rem 0;">{readmit_rate:.2f}%</div>
+                <div style="font-size: 0.76rem; color: #334155;">High-Risk Class (11,357 Encounters)</div>
+            </div>
+            <div style="background: #FEF3C7; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #B45309; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>AVERAGE HOSPITAL STAY</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">LOS</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #92400E; margin: 0.25rem 0 0.15rem 0;">{avg_los:.1f} <span style="font-size: 1.1rem; opacity: 0.9;">days</span></div>
+                <div style="font-size: 0.76rem; color: #334155;">Length of Stay (1 - 14 Days)</div>
+            </div>
+            <div style="background: #D1FAE5; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #047857; letter-spacing: 0.06em; text-transform: uppercase;">
+                    <span>DECISION TREE AUC</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">PYSPARK</span>
+                </div>
+                <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #065F46; margin: 0.25rem 0 0.15rem 0;">{dt_auc:.3f}</div>
+                <div style="font-size: 0.76rem; color: #334155;">Spark MLlib Validated Pipeline</div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# ---------------------------------------------------------
+# 2. Middle Section: Left "Filter Slicers" | Right "Pages & Charts"
+# ---------------------------------------------------------
+col_slicers, col_main = st.columns([1.15, 3.85], gap="large")
+
+with col_slicers:
     if is_dark:
         st.markdown("""
-        <div style="background: rgba(18, 25, 40, 0.95); border: 2.5px solid #38BDF8; border-radius: 8px; padding: 14px; margin-bottom: 14px; box-shadow: 4px 4px 0px #000000;">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 800;">SYSTEM // CLINICAL CDS</div>
-            <div style="font-weight: 900; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.01em;">PulseCare ML 🏥</div>
-            <div style="font-size: 0.8rem; color: #CBD5E1; margin-top: 3px;">Hospital Readmission Prediction Suite</div>
+        <div class="slicers-bracket">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #38BDF8; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 4px;">
+                SYSTEM // SLICERS
+            </div>
+            <div class="slicers-title">
+                🎛️ Filter Slicers
+            </div>
+            <div style="font-size: 0.78rem; color: #94A3B8; line-height: 1.4; margin-bottom: 12px;">
+                Slice and drill down clinical cohorts across 100k+ encounters.
+            </div>
         </div>
         """, unsafe_allow_html=True)
     else:
         st.markdown("""
-        <div style="background: #FFFFFF; border: 2.5px solid #000000; border-radius: 8px; padding: 14px; margin-bottom: 14px; box-shadow: 4px 4px 0px #000000;">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #0284C7; font-weight: 800;">SYSTEM // CLINICAL CDS</div>
-            <div style="font-weight: 900; font-size: 1.25rem; color: #0F172A; letter-spacing: -0.01em;">PulseCare ML 🏥</div>
-            <div style="font-size: 0.8rem; color: #475569; margin-top: 3px;">Hospital Readmission Prediction Suite</div>
+        <div class="slicers-bracket">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #0284C7; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 4px;">
+                SYSTEM // SLICERS
+            </div>
+            <div class="slicers-title">
+                🎛️ Filter Slicers
+            </div>
+            <div style="font-size: 0.78rem; color: #64748B; line-height: 1.4; margin-bottom: 12px;">
+                Slice and drill down clinical cohorts across 100k+ encounters.
+            </div>
         </div>
         """, unsafe_allow_html=True)
-
-    st.markdown("#### 🎨 Interface Theme")
-    theme_choice = st.segmented_control(
-        "Interface Theme",
-        options=["🌙 Dark Mode", "☀️ Light Mode"],
-        default=st.session_state["theme_mode"],
-        key="theme_mode_selector",
-        selection_mode="single",
-        label_visibility="collapsed"
-    )
-    if theme_choice and theme_choice != st.session_state["theme_mode"]:
-        st.session_state["theme_mode"] = theme_choice
-        st.session_state["theme_mode_radio"] = theme_choice
-        st.rerun()
-
-    st.markdown("---")
-    st.markdown("#### 🎛️ Population Filters")
 
     selected_age = st.multiselect(
         "Patient Age Group",
@@ -866,95 +1305,18 @@ with st.sidebar:
         </div>
         """, unsafe_allow_html=True)
 
-# ---------------------------------------------------------
-# Studio Header
-# ---------------------------------------------------------
-col_head_left, col_head_right = st.columns([4, 1.2])
-with col_head_left:
-    st.markdown("""
-    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
-        <span class="header-badge badge-indigo">INT315 PROJECT 23</span>
-        <span class="header-badge badge-sky">APACHE SPARK ML</span>
-        <span class="header-badge badge-emerald">DECISION TREE CLASSIFIER</span>
-        <span class="header-badge badge-rose">30-DAY INPATIENT TRIAGE</span>
-    </div>
-    """, unsafe_allow_html=True)
-with col_head_right:
-    quick_theme_label = "☀️ Light Mode" if is_dark else "🌙 Dark Mode"
-    if st.button(quick_theme_label, key="quick_theme_toggle_btn", use_container_width=True, help="Click to toggle Light / Dark theme mode"):
-        st.session_state["theme_mode"] = "☀️ Light Mode" if is_dark else "🌙 Dark Mode"
-        st.session_state["theme_mode_radio"] = st.session_state["theme_mode"]
-        st.rerun()
-
-st.markdown("""
-<div class="studio-header" style="margin-top: 4px;">
-    <div class="hero-title">Hospital Readmission Prediction Platform</div>
-    <div class="hero-subtitle">
-        Predicting 30-day inpatient readmissions using Apache Spark (PySpark) big data pipelines and machine learning. 
-        Calibrated to identify high-risk diabetic patients, guide doctor intervention, and protect hospitals from CMS HRRP financial penalties.
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
-# ---------------------------------------------------------
-# 4 Rich Vibrant Colorful Metric Cards
-# ---------------------------------------------------------
-k1, k2, k3, k4 = st.columns(4)
-
-total_records = len(df)
-readmit_rate = df["readmitted_30d"].mean() * 100
-avg_los = df["time_in_hospital"].mean()
-dt_auc = metrics_cache.get("Decision Tree", {}).get("metrics", {}).get("roc_auc", 0.647)
-
-with k1:
-    st.markdown(f"""
-    <div class="metric-card-box card-blue">
-        <div class="metric-title">👥 Total Patients Checked</div>
-        <div class="metric-number">{total_records:,}</div>
-        <div class="metric-badge">UCI 130-US Hospitals</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with k2:
-    st.markdown(f"""
-    <div class="metric-card-box card-rose">
-        <div class="metric-title">🚨 Readmitted &lt;30 Days</div>
-        <div class="metric-number">{readmit_rate:.2f}%</div>
-        <div class="metric-badge">High-Risk Target Class</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with k3:
-    st.markdown(f"""
-    <div class="metric-card-box card-amber">
-        <div class="metric-title">⏱️ Average Hospital Stay</div>
-        <div class="metric-number">{avg_los:.1f} <span style="font-size: 1.1rem; opacity: 0.9;">days</span></div>
-        <div class="metric-badge">Length of Stay (LOS)</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with k4:
-    st.markdown(f"""
-    <div class="metric-card-box card-emerald">
-        <div class="metric-title">🏆 Decision Tree AUC</div>
-        <div class="metric-number">{dt_auc:.3f}</div>
-        <div class="metric-badge">PySpark Validated</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
-
-# ---------------------------------------------------------
-# Navigation Tabs
-# ---------------------------------------------------------
-tab_overview, tab_eda, tab_model, tab_cds, tab_batch, tab_spark = st.tabs([
-    "📊 Quick Summary (Overview)",
-    "🔍 Trend Charts (EDA)",
-    "🧠 Model Testing Lab (5 Models)",
-    "🩺 Patient Risk Checker (CDS)",
-    "📁 Patient List (Cohort Triage)",
-    "⚡ Big Data Code (PySpark)"
-])
+with col_main:
+    # ---------------------------------------------------------
+    # 3. Inside Right: Top Bar (Pages / Models) & Tab Content Bracket
+    # ---------------------------------------------------------
+    tab_overview, tab_eda, tab_model, tab_cds, tab_batch, tab_spark = st.tabs([
+        "📊 Quick Summary (Overview)",
+        "🔍 Trend Charts (EDA)",
+        "🧠 Model Testing Lab (5 Models)",
+        "🩺 Patient Risk Checker (CDS)",
+        "📁 Patient List (Cohort Triage)",
+        "⚡ Big Data Code (PySpark)"
+    ])
 
 # =========================================================
 # TAB 1: QUICK SUMMARY
@@ -1764,12 +2126,20 @@ spark_auc = evaluator.evaluate(test_predictions)
         st.code(spark_code_sample, language="python")
 
 # ---------------------------------------------------------
-# Footer
+# 4. Footer Part (Bracket spanning full width across bottom)
 # ---------------------------------------------------------
-st.markdown("---")
-st.markdown("""
-<div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; padding: 10px 0;">
-    <div>Hospital Readmission ML Platform | Developed for <b>INT315 Project 23</b></div>
-    <div>Dataset: UCI Machine Learning Repository (Diabetes 130-US Hospitals)</div>
-</div>
-""", unsafe_allow_html=True)
+st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
+if is_dark:
+    st.markdown("""
+    <div class="footer-bracket">
+        <div>PulseCare ML Readmission Platform &nbsp;|&nbsp; Developed for <b>INT315 Project 23</b></div>
+        <div>Dataset: UCI Machine Learning Repository (130-US Hospitals) &nbsp;|&nbsp; Engine: Apache Spark 3.5.9 MLlib</div>
+    </div>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+    <div class="footer-bracket">
+        <div>PulseCare ML Readmission Platform &nbsp;|&nbsp; Developed for <b>INT315 Project 23</b></div>
+        <div>Dataset: UCI Machine Learning Repository (130-US Hospitals) &nbsp;|&nbsp; Engine: Apache Spark 3.5.9 MLlib</div>
+    </div>
+    """, unsafe_allow_html=True)

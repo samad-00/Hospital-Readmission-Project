@@ -3,7 +3,7 @@ import json
 import joblib
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
@@ -118,6 +118,22 @@ def get_classifier(model_name="Decision Tree", **kwargs):
         )
     else:
         raise ValueError(f"Unsupported model name: {model_name}")
+
+def evaluate_stratified_cv(df, model_name="Decision Tree", n_splits=5, **kwargs):
+    """
+    Evaluates classifier with Stratified K-Fold Cross-Validation (default k=5).
+    Guarantees consistent ~11.3% class ratio in every fold.
+    """
+    X = df[NUMERIC_FEATURES + CATEGORICAL_FEATURES]
+    y = df["readmitted_30d"]
+    cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
+    clf = get_classifier(model_name, **kwargs)
+    pipeline = Pipeline(steps=[
+        ("preprocessor", build_preprocessor()),
+        ("classifier", clf)
+    ])
+    scores = cross_val_score(pipeline, X, y, cv=cv, scoring="roc_auc", n_jobs=-1)
+    return float(scores.mean()), float(scores.std()), [float(s) for s in scores]
 
 def train_and_evaluate_model(
     df,

@@ -969,6 +969,17 @@ else:
             -webkit-text-fill-color: #FFFFFF !important;
         }
 
+        /* KPI Bracket Tag: Force crisp white text on black tag */
+        .kpi-bracket-tag,
+        .stApp .kpi-bracket-tag,
+        span.kpi-bracket-tag,
+        div .kpi-bracket-tag {
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+            background: #000000 !important;
+            font-weight: 800 !important;
+        }
+
         /* Global Text Visibility in Light Mode */
         html, body, [class*="css"], .stApp,
         .stApp p, .stApp span, .stApp label,
@@ -1304,7 +1315,7 @@ else:
             <div style="background: #DBEAFE; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
                 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #1E40AF; letter-spacing: 0.06em; text-transform: uppercase;">
                     <span>ANALYZED PATIENTS</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">UCI</span>
+                    <span class="kpi-bracket-tag" style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; background: #000000 !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; padding: 2px 7px; border-radius: 4px; display: inline-block; letter-spacing: 0.05em;">UCI</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #1E3A8A; margin: 0.25rem 0 0.15rem 0;">{total_records:,}</div>
                 <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">130-US Hospitals (1999–2008)</div>
@@ -1312,7 +1323,7 @@ else:
             <div style="background: #FFE4E6; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
                 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #BE123C; letter-spacing: 0.06em; text-transform: uppercase;">
                     <span>READMITTED &lt;30 DAYS</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">TARGET</span>
+                    <span class="kpi-bracket-tag" style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; background: #000000 !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; padding: 2px 7px; border-radius: 4px; display: inline-block; letter-spacing: 0.05em;">TARGET</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #9F1239; margin: 0.25rem 0 0.15rem 0;">{readmit_rate:.2f}%</div>
                 <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">High-Risk Class (11,357 Encounters)</div>
@@ -1320,7 +1331,7 @@ else:
             <div style="background: #FEF3C7; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
                 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #B45309; letter-spacing: 0.06em; text-transform: uppercase;">
                     <span>AVERAGE HOSPITAL STAY</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">LOS</span>
+                    <span class="kpi-bracket-tag" style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; background: #000000 !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; padding: 2px 7px; border-radius: 4px; display: inline-block; letter-spacing: 0.05em;">LOS</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #92400E; margin: 0.25rem 0 0.15rem 0;">{avg_los:.1f} <span style="font-size: 1.1rem; opacity: 0.9;">days</span></div>
                 <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">Length of Stay (1 - 14 Days)</div>
@@ -1328,7 +1339,7 @@ else:
             <div style="background: #D1FAE5; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
                 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #047857; letter-spacing: 0.06em; text-transform: uppercase;">
                     <span>DECISION TREE AUC</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">PYSPARK</span>
+                    <span class="kpi-bracket-tag" style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; background: #000000 !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; padding: 2px 7px; border-radius: 4px; display: inline-block; letter-spacing: 0.05em;">PYSPARK</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #065F46; margin: 0.25rem 0 0.15rem 0;">{dt_auc:.3f}</div>
                 <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">Spark MLlib Validated Pipeline</div>

@@ -906,9 +906,8 @@ else:
 
         .stTabs [data-baseweb="tab-list"] {
             gap: 8px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(14px);
-            border: 2.5px solid #000000;
+            background: #FFFFFF !important;
+            border: 2.5px solid #000000 !important;
             border-radius: 8px;
             box-shadow: 4px 4px 0px #000000;
             padding: 6px;
@@ -927,24 +926,132 @@ else:
         .stTabs [data-baseweb="tab"] {
             border-radius: 5px;
             padding: 8px 18px;
-            color: #334155 !important;
-            font-weight: 700;
-            font-size: 0.92rem;
+            background: transparent !important;
             border: 1.5px solid transparent !important;
             transition: all 0.12s ease;
         }
 
-        .stTabs [data-baseweb="tab"]:hover {
+        /* Inactive Tab Labels: Bold Solid Black */
+        .stTabs [data-baseweb="tab"],
+        .stTabs [data-baseweb="tab"] *,
+        .stTabs [data-baseweb="tab"] p,
+        .stTabs [data-baseweb="tab"] span,
+        .stTabs [data-baseweb="tab"] div {
             color: #000000 !important;
-            background: rgba(0, 0, 0, 0.05);
+            font-weight: 800 !important;
+            font-size: 0.92rem;
+            -webkit-text-fill-color: #000000 !important;
+        }
+
+        .stTabs [data-baseweb="tab"]:hover {
+            background: rgba(0, 0, 0, 0.08) !important;
             border: 1.5px solid #000000 !important;
         }
 
-        .stTabs [aria-selected="true"] {
+        .stTabs [data-baseweb="tab"]:hover * {
+            color: #000000 !important;
+            -webkit-text-fill-color: #000000 !important;
+        }
+
+        /* Active Tab Label: White text on Blue background */
+        .stTabs [aria-selected="true"],
+        .stTabs button[aria-selected="true"] {
             background: #2563EB !important;
-            color: #FFFFFF !important;
             border: 2px solid #000000 !important;
             box-shadow: 3px 3px 0px #000000 !important;
+        }
+
+        .stTabs [aria-selected="true"] *,
+        .stTabs [aria-selected="true"] p,
+        .stTabs [aria-selected="true"] span,
+        .stTabs [aria-selected="true"] div {
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+        }
+
+        /* Global Text Visibility in Light Mode */
+        html, body, [class*="css"], .stApp,
+        .stApp p, .stApp span, .stApp label,
+        .stApp div[data-testid="stMarkdownContainer"] p,
+        .stApp div[data-testid="stMarkdownContainer"] span,
+        .stApp div[data-testid="stMarkdownContainer"] li,
+        .stApp div[data-testid="stCaptionContainer"] p,
+        .stApp div[data-testid="stCaptionContainer"] {
+            color: #000000 !important;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #000000 !important;
+        }
+
+        .content-box,
+        .content-box p,
+        .content-box span,
+        .content-box div,
+        .content-box li,
+        .content-box table,
+        .content-box td,
+        .content-box th {
+            color: #000000 !important;
+        }
+
+        .content-box-title {
+            color: #000000 !important;
+        }
+
+        .section-title {
+            color: #000000 !important;
+        }
+
+        .section-subtitle {
+            color: #000000 !important;
+            font-weight: 700 !important;
+        }
+
+        .slicers-bracket p,
+        .slicers-bracket span,
+        .slicers-bracket div,
+        .slicers-bracket label {
+            color: #000000 !important;
+        }
+
+        .slicers-title {
+            color: #000000 !important;
+        }
+
+        /* Multiselect and tags in light mode */
+        div[data-baseweb="select"] * {
+            color: #000000 !important;
+        }
+
+        div[data-baseweb="tag"] {
+            background-color: #E2E8F0 !important;
+            border: 1.5px solid #000000 !important;
+        }
+
+        div[data-baseweb="tag"] span {
+            color: #000000 !important;
+            font-weight: 700 !important;
+        }
+
+        table, th, td {
+            color: #000000 !important;
+        }
+
+        /* Force Plotly SVG text, axis titles, and ticks to black in light mode */
+        .js-plotly-plot text,
+        .js-plotly-plot .xtitle,
+        .js-plotly-plot .ytitle,
+        .js-plotly-plot .g-xtitle text,
+        .js-plotly-plot .g-ytitle text,
+        .js-plotly-plot .g-title text,
+        .js-plotly-plot .xtick text,
+        .js-plotly-plot .ytick text,
+        .js-plotly-plot .legendtext,
+        .js-plotly-plot .annotation-text {
+            fill: #000000 !important;
+            color: #000000 !important;
+            -webkit-text-fill-color: #000000 !important;
         }
 
         .stButton>button,
@@ -1021,21 +1128,27 @@ if is_dark:
     )
 else:
     PLOTLY_LAYOUT = dict(
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(family="Plus Jakarta Sans, sans-serif", color="#0F172A", size=11),
-        margin=dict(l=35, r=25, t=35, b=35),
+        font=dict(family="Plus Jakarta Sans, sans-serif", color="#000000", size=12),
+        margin=dict(l=40, r=25, t=40, b=40),
+        title=dict(font=dict(color="#000000", size=14, family="Plus Jakarta Sans, sans-serif")),
         xaxis=dict(
-            gridcolor="rgba(0, 0, 0, 0.08)",
-            zerolinecolor="rgba(0, 0, 0, 0.2)",
-            tickfont=dict(color="#334155")
+            gridcolor="rgba(0, 0, 0, 0.12)",
+            zerolinecolor="rgba(0, 0, 0, 0.25)",
+            tickfont=dict(color="#000000", size=11),
+            title_font=dict(color="#000000", size=12),
+            color="#000000"
         ),
         yaxis=dict(
-            gridcolor="rgba(0, 0, 0, 0.08)",
-            zerolinecolor="rgba(0, 0, 0, 0.2)",
-            tickfont=dict(color="#334155")
+            gridcolor="rgba(0, 0, 0, 0.12)",
+            zerolinecolor="rgba(0, 0, 0, 0.25)",
+            tickfont=dict(color="#000000", size=11),
+            title_font=dict(color="#000000", size=12),
+            color="#000000"
         ),
-        legend=dict(font=dict(color="#0F172A", size=11))
+        legend=dict(font=dict(color="#000000", size=11))
     )
 
 # ---------------------------------------------------------
@@ -1170,7 +1283,7 @@ else:
                 <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #059669;"></span>
                 <span>PRODUCTION CLUSTER ACTIVE</span>
             </div>
-            <div style="color: #475569; font-size: 0.76rem;">
+            <div style="color: #000000; font-size: 0.76rem; font-weight: 700;">
                 <span>ENGINE: Apache Spark 3.5.9 (MLlib)</span>
                 <span>&nbsp;&nbsp;</span>
                 <span>JVM: Adoptium OpenJDK 11</span>
@@ -1180,10 +1293,10 @@ else:
                 <span>LATENCY: &lt; 3.8ms</span>
             </div>
         </div>
-        <div style="color: #0F172A; font-size: 2.15rem; font-weight: 900; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 0.45rem;">
+        <div style="color: #000000; font-size: 2.15rem; font-weight: 900; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 0.45rem;">
             PulseCare <span style="color: #0284C7;">Readmission</span>: Distributed Clinical Intelligence
         </div>
-        <div style="color: #334155; font-size: 0.94rem; line-height: 1.55; max-width: 1050px; margin-bottom: 1.5rem;">
+        <div style="color: #000000; font-size: 0.94rem; line-height: 1.55; max-width: 1050px; margin-bottom: 1.5rem; font-weight: 600;">
             High-throughput distributed inpatient readmission risk architecture powered by Apache Spark 3.5.9 MLlib. 
             Trained and evaluated on 100,114 diabetic inpatient records with 30-day follow-up tracking, class-weight balancing, and HRRP hospital penalty triage.
         </div>
@@ -1194,7 +1307,7 @@ else:
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">UCI</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #1E3A8A; margin: 0.25rem 0 0.15rem 0;">{total_records:,}</div>
-                <div style="font-size: 0.76rem; color: #334155;">130-US Hospitals (1999–2008)</div>
+                <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">130-US Hospitals (1999–2008)</div>
             </div>
             <div style="background: #FFE4E6; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
                 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #BE123C; letter-spacing: 0.06em; text-transform: uppercase;">
@@ -1202,7 +1315,7 @@ else:
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">TARGET</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #9F1239; margin: 0.25rem 0 0.15rem 0;">{readmit_rate:.2f}%</div>
-                <div style="font-size: 0.76rem; color: #334155;">High-Risk Class (11,357 Encounters)</div>
+                <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">High-Risk Class (11,357 Encounters)</div>
             </div>
             <div style="background: #FEF3C7; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
                 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #B45309; letter-spacing: 0.06em; text-transform: uppercase;">
@@ -1210,7 +1323,7 @@ else:
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">LOS</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #92400E; margin: 0.25rem 0 0.15rem 0;">{avg_los:.1f} <span style="font-size: 1.1rem; opacity: 0.9;">days</span></div>
-                <div style="font-size: 0.76rem; color: #334155;">Length of Stay (1 - 14 Days)</div>
+                <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">Length of Stay (1 - 14 Days)</div>
             </div>
             <div style="background: #D1FAE5; border: 2.5px solid #000000; border-radius: 8px; padding: 1.1rem 1.25rem; box-shadow: 4px 4px 0px #000000;">
                 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #047857; letter-spacing: 0.06em; text-transform: uppercase;">
@@ -1218,7 +1331,7 @@ else:
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: #000000; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">PYSPARK</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #065F46; margin: 0.25rem 0 0.15rem 0;">{dt_auc:.3f}</div>
-                <div style="font-size: 0.76rem; color: #334155;">Spark MLlib Validated Pipeline</div>
+                <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">Spark MLlib Validated Pipeline</div>
             </div>
         </div>
     </div>
@@ -1253,7 +1366,7 @@ with col_slicers:
             <div class="slicers-title">
                 🎛️ Filter Slicers
             </div>
-            <div style="font-size: 0.78rem; color: #64748B; line-height: 1.4; margin-bottom: 12px;">
+            <div style="font-size: 0.78rem; color: #000000; line-height: 1.4; margin-bottom: 12px; font-weight: 600;">
                 Slice and drill down clinical cohorts across 100k+ encounters.
             </div>
         </div>
@@ -1301,7 +1414,7 @@ with col_slicers:
         <div style="background: #FFFFFF; border: 2.5px solid #000000; border-radius: 8px; padding: 12px; margin-top: 15px; box-shadow: 3px 3px 0px #000000;">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #4F46E5; font-weight: 800;">ASSIGNMENT INFO</div>
             <div style="font-weight: 800; color: #0F172A; font-size: 0.9rem;">INT315 — Project 23</div>
-            <div style="font-size: 0.76rem; color: #64748B;">UCI 130-US Hospitals (1999–2008)</div>
+            <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">UCI 130-US Hospitals (1999–2008)</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -1329,7 +1442,7 @@ with tab_overview:
         st.markdown("""
         <div class="content-box">
             <div class="content-box-title">🏥 Clinical Context &amp; Hospital Readmissions Reduction Program (HRRP)</div>
-            <p style="color: #E2E8F0; font-size: 0.94rem; line-height: 1.6; margin-bottom: 15px;">
+            <p style="font-size: 0.94rem; line-height: 1.6; margin-bottom: 15px;">
                 Unplanned 30-day readmissions cost the US healthcare system over $17B annually. Under the 
                 <b>CMS Hospital Readmissions Reduction Program (HRRP)</b>, acute care facilities face major financial penalties 
                 for excess readmissions. Diabetic patients present higher readmission rates due to multi-organ comorbidities and complex medication regimens.
@@ -1971,7 +2084,7 @@ with tab_cds:
             if not recs:
                 recs.append("Patient demonstrates standard low-risk indicators. Standard discharge education, telephone follow-up at 7 days, primary care review at 14 days.")
 
-            recs_items = "".join([f"<div style='margin-bottom: 9px; color: #CBD5E1; font-size: 0.91rem; line-height: 1.5;'>• {r}</div>" for r in recs])
+            recs_items = "".join([f"<div style='margin-bottom: 9px; font-size: 0.91rem; line-height: 1.5;'>• {r}</div>" for r in recs])
             st.markdown(f"""
             <div class="content-box">
                 <div class="content-box-title">📋 Recommended Transition-of-Care Action Plan</div>
@@ -2051,7 +2164,7 @@ with tab_spark:
         st.markdown("""
         <div class="content-box">
             <div class="content-box-title">📋 Academic Rubric Compliance Matrix</div>
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; color: #E2E8F0;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
                 <tr style="border-bottom: 2px solid rgba(255,255,255,0.15);">
                     <th style="text-align: left; padding: 8px 4px;">Task Requirement</th>
                     <th style="text-align: right; padding: 8px 4px;">Status</th>
@@ -2087,7 +2200,7 @@ with tab_spark:
         st.markdown("""
         <div class="content-box">
             <div class="content-box-title">⚡ Distributed Spark ML vs Scikit-Learn In-Memory</div>
-            <p style="color: #94A3B8; font-size: 0.88rem; line-height: 1.55;">
+            <p style="font-size: 0.88rem; line-height: 1.55;">
                 In hospital enterprise environments with multi-terabyte Electronic Health Record (EHR) logs, Spark distributed DataFrames and ML pipelines enable horizontal scaling across hospital cloud clusters. For rapid clinical decision support and interactive dashboarding, the trained weights are compiled into high-efficiency inference pipelines.
             </p>
         </div>
@@ -2132,14 +2245,14 @@ st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
 if is_dark:
     st.markdown("""
     <div class="footer-bracket">
-        <div>PulseCare ML Readmission Platform &nbsp;|&nbsp; Developed for <b>INT315 Project 23</b></div>
+        <div>PulseCare ML Readmission Platform &nbsp;|&nbsp; Developed for <b>INT315 Project </b></div>
         <div>Dataset: UCI Machine Learning Repository (130-US Hospitals) &nbsp;|&nbsp; Engine: Apache Spark 3.5.9 MLlib</div>
     </div>
     """, unsafe_allow_html=True)
 else:
     st.markdown("""
     <div class="footer-bracket">
-        <div>PulseCare ML Readmission Platform &nbsp;|&nbsp; Developed for <b>INT315 Project 23</b></div>
+        <div>PulseCare ML Readmission Platform &nbsp;|&nbsp; Developed for <b>INT315 Project</b></div>
         <div>Dataset: UCI Machine Learning Repository (130-US Hospitals) &nbsp;|&nbsp; Engine: Apache Spark 3.5.9 MLlib</div>
     </div>
     """, unsafe_allow_html=True)

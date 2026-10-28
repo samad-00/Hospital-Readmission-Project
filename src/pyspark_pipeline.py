@@ -1,6 +1,6 @@
 """
 INT315 - Hospital Readmission Prediction with PySpark
-Implementation based on Project 23 requirements:
+Implementation based on INT315 requirements:
 - Load patient discharge records into Spark DataFrame
 - Handle null values in admission and discharge fields
 - Encode categorical data (diagnosis type, department, etc.)
@@ -58,7 +58,7 @@ def run_spark_pipeline(data_path="data/raw/diabetic_data.csv"):
     )
     print(f"Total encounters loaded: {raw_df.count()}, Total columns: {len(raw_df.columns)}")
 
-    # 1. Handle missing/null values in admission and discharge fields (Project 23 requirement)
+    # 1. Handle missing/null values in admission and discharge fields (INT315 requirement)
     required_id_fields = [
         "admission_type_id",
         "discharge_disposition_id",
@@ -217,7 +217,7 @@ def run_spark_pipeline(data_path="data/raw/diabetic_data.csv"):
     accuracy = evaluator_acc.evaluate(test_pred)
 
     print("\n" + "="*56)
-    print("=== INT315 PROJECT 23: PYSPARK EVALUATION RESULTS ===")
+    print("=== INT315 PYSPARK EVALUATION RESULTS ===")
     print("="*56)
     print(f"  Classifier Model:     PySpark DecisionTreeClassifier")
     print(f"  Class Balancing:      Weighting ({pos_weight:.2f}x)")

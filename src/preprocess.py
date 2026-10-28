@@ -124,7 +124,7 @@ def load_and_preprocess_data(csv_path="data/raw/diabetic_data.csv", exclude_expi
 
     df = pd.read_csv(csv_path, low_memory=False)
 
-    # 1. Handle missing/null values in admission & discharge fields explicitly (Project 23 Requirement)
+    # 1. Handle missing/null values in admission & discharge fields explicitly (INT315 Requirement)
     # Replace '?' and nulls with appropriate categories
     for col in ["admission_type_id", "discharge_disposition_id", "admission_source_id"]:
         df[col] = pd.to_numeric(df[col], errors="coerce").fillna(-1).astype(int)
@@ -138,13 +138,13 @@ def load_and_preprocess_data(csv_path="data/raw/diabetic_data.csv", exclude_expi
         expired_ids = [11, 19, 20, 21]
         df = df[~df["discharge_disposition_id"].isin(expired_ids)].copy()
 
-    # 2. Binary Target for 30-day readmission (Project 23 Requirement)
+    # 2. Binary Target for 30-day readmission (INT315 Requirement)
     # 1 = readmitted <30 days; 0 = readmitted >30 days or NO readmission
     df["readmitted_30d"] = (df["readmitted"] == "<30").astype(int)
     # Multi-class target preserved for exploratory analysis: 'NO', '>30', '<30'
     df["readmitted_multiclass"] = df["readmitted"].astype(str)
 
-    # 3. Handle diagnosis encoding into clinical categories (Project 23 Requirement)
+    # 3. Handle diagnosis encoding into clinical categories (INT315 Requirement)
     df["primary_diagnosis"] = df["diag_1"].apply(map_icd9_category)
     df["secondary_diagnosis"] = df["diag_2"].apply(map_icd9_category)
     df["additional_diagnosis"] = df["diag_3"].apply(map_icd9_category)

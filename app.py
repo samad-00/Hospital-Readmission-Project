@@ -1416,7 +1416,7 @@ with col_slicers:
         st.markdown("""
         <div style="background: rgba(18, 25, 40, 0.95); border: 2px solid #475569; border-radius: 8px; padding: 12px; margin-top: 15px; box-shadow: 3px 3px 0px #000000;">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #818CF8; font-weight: 800;">ASSIGNMENT INFO</div>
-            <div style="font-weight: 800; color: #F1F5F9; font-size: 0.9rem;">INT315 — Project 23</div>
+            <div style="font-weight: 800; color: #F1F5F9; font-size: 0.9rem;">INT315 — Project</div>
             <div style="font-size: 0.76rem; color: #94A3B8;">UCI 130-US Hospitals (1999–2008)</div>
         </div>
         """, unsafe_allow_html=True)
@@ -1424,7 +1424,7 @@ with col_slicers:
         st.markdown("""
         <div style="background: #FFFFFF; border: 2.5px solid #000000; border-radius: 8px; padding: 12px; margin-top: 15px; box-shadow: 3px 3px 0px #000000;">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #4F46E5; font-weight: 800;">ASSIGNMENT INFO</div>
-            <div style="font-weight: 800; color: #0F172A; font-size: 0.9rem;">INT315 — Project 23</div>
+            <div style="font-weight: 800; color: #0F172A; font-size: 0.9rem;">INT315 — Project</div>
             <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">UCI 130-US Hospitals (1999–2008)</div>
         </div>
         """, unsafe_allow_html=True)
@@ -1544,7 +1544,7 @@ with tab_overview:
 # =========================================================
 with tab_eda:
     st.markdown("### 🔍 Population Trends & Illness Insights (EDA)")
-    st.caption("Fulfilling Project 23 Tasks: 'Visualize readmission trends by department and patient age' with balanced, spaced charts.")
+    st.caption("Fulfilling INT315 Project Tasks: 'Visualize readmission trends by department and patient age' with balanced, spaced charts.")
 
     st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
@@ -1673,7 +1673,7 @@ with tab_eda:
 # =========================================================
 with tab_model:
     st.markdown("### 🧠 Machine Learning Studio (5 Models Benchmarked)")
-    st.caption("Addressing Project 23 Tasks: 'Build a Decision Tree classifier to predict readmission likelihood. Evaluate model using accuracy and ROC-AUC.'")
+    st.caption("Addressing INT315 Project Tasks: 'Build a Decision Tree classifier to predict readmission likelihood. Evaluate model using accuracy and ROC-AUC.'")
 
     st.markdown("#### 🏆 Performance Matrix (All 5 Models Tested on Real Patient Data)")
     
@@ -2185,7 +2185,7 @@ with tab_batch:
 # =========================================================
 with tab_spark:
     st.markdown("### ⚡ PySpark Distributed Pipeline & INT315 Rubric Alignment")
-    st.caption("Technical architectural review of the big data PySpark ML pipeline implemented for INT315 Project 23.")
+    st.caption("Technical architectural review of the big data PySpark ML pipeline implemented for INT315 Project.")
 
     sp_col1, sp_col2 = st.columns([1, 1])
 

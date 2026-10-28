@@ -19,9 +19,9 @@ The interface features brutalist glassmorphic card layouts, real-time hyperparam
 
 ---
 
-## 🎯 INT315 Project 23: Rubric Compliance & Objectives
+## 🎯 INT315 Project: Rubric Compliance & Objectives
 
-This project strictly satisfies all requirements specified in **Project 23: Hospital Readmission Prediction**:
+This project strictly satisfies all requirements specified in **Hospital Readmission Prediction**:
 
 | Academic Task Requirement | Implementation Details | Status |
 |:---|:---|:---:|
@@ -247,5 +247,5 @@ python src/pyspark_pipeline.py
 
 ## 👨‍💻 Author & Acknowledgements
 
-Developed by **Samad** for **INT315 — Hospital Readmission Prediction (Project 23)**.  
+Developed by **Samad** for **INT315 — Hospital Readmission Prediction (INT315)**.  
 For questions or collaborations, visit the [GitHub Repository](https://github.com/samad-00/Hospital-Readmission-Project).

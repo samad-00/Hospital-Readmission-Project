@@ -33,7 +33,7 @@ ENV/
 *.swp
 *.swo
 
-# Presentation Guide (Local only)
+# Presentation and local notes (Private)
 PRESENTATION_GUIDE.md
 
 # OS files

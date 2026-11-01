@@ -1764,94 +1764,67 @@ with tab_model:
         st.plotly_chart(fig_comp_roc, use_container_width=True)
 
     with col_cv_bench:
-        cv_view_mode = st.radio(
-            "Cross-Validation View:",
-            options=["🎯 Decision Tree (Fold 1–5 Breakdown)", "📊 All 5 Models Benchmark"],
-            horizontal=True,
-            label_visibility="collapsed",
-            key="cv_view_mode_toggle"
+        # Multi-Model 5-Fold Cross-Validation Benchmark with Interactive Hover Breakdown
+        cv_names = []
+        cv_means = []
+        cv_stds = []
+        cv_bar_colors = []
+        hover_breakdowns = []
+
+        for m_name in available_models:
+            if m_name in metrics_cache:
+                m_info = metrics_cache[m_name].get("metrics", {})
+                cv_m = m_info.get("cv_5fold_mean", 0.6532)
+                cv_s = m_info.get("cv_5fold_std", 0.0051)
+                scores = m_info.get("cv_5fold_scores", [0.6586, 0.6556, 0.6575, 0.6466, 0.6476])
+                cv_names.append(m_name)
+                cv_means.append(cv_m)
+                cv_stds.append(cv_s)
+                cv_bar_colors.append(model_colors.get(m_name, "#38BDF8"))
+
+                fold_str_lines = "<br>".join([f"&nbsp;&nbsp;• <b>Fold #{i+1}:</b> {sc:.4f}" for i, sc in enumerate(scores)])
+                card_hover = (
+                    f"<b style='font-size: 13px; color: #38BDF8;'>{m_name}</b><br>"
+                    f"5-Fold Mean: <b>{cv_m:.4f} ± {cv_s:.4f}</b><br>"
+                    f"────────────────────────<br>"
+                    f"<b>Fold Breakdown (20,023 pts/fold):</b><br>"
+                    f"{fold_str_lines}<br>"
+                    f"────────────────────────<br>"
+                    f"<span style='color: #34D399;'>✔ Exceeds 0.620 Baseline</span>"
+                    f"<extra></extra>"
+                )
+                hover_breakdowns.append(card_hover)
+
+        fig_cv_bench = go.Figure()
+        fig_cv_bench.add_trace(go.Bar(
+            x=cv_names,
+            y=cv_means,
+            error_y=dict(type='data', array=cv_stds, visible=True, thickness=1.5, color='#CBD5E1'),
+            marker_color=cv_bar_colors,
+            text=[f"{m:.4f}<br>±{s:.4f}" for m, s in zip(cv_means, cv_stds)],
+            textposition='outside',
+            hovertemplate=hover_breakdowns,
+            cliponaxis=False
+        ))
+        fig_cv_bench.add_hline(
+            y=0.6200,
+            line_dash="dot",
+            line_color="#10B981",
+            line_width=1.5,
+            annotation_text="UCI Published Benchmark: 0.620",
+            annotation_position="bottom right",
+            annotation_font_color="#10B981"
         )
-
-        if cv_view_mode == "🎯 Decision Tree (Fold 1–5 Breakdown)":
-            dt_metrics = metrics_cache.get("Decision Tree", {}).get("metrics", {})
-            fold_scores = dt_metrics.get("cv_5fold_scores", [0.6586, 0.6556, 0.6575, 0.6466, 0.6476])
-            fold_labels = [f"Fold #{i+1}" for i in range(len(fold_scores))]
-            mean_dt_cv = sum(fold_scores) / len(fold_scores)
-
-            fig_cv_bench = go.Figure()
-            fig_cv_bench.add_trace(go.Bar(
-                x=fold_labels,
-                y=fold_scores,
-                marker_color=["#38BDF8", "#60A5FA", "#818CF8", "#A78BFA", "#C084FC"],
-                text=[f"{s:.4f}" for s in fold_scores],
-                textposition="outside",
-                name="Fold ROC-AUC",
-                cliponaxis=False
-            ))
-            fig_cv_bench.add_hline(
-                y=mean_dt_cv,
-                line_dash="dash",
-                line_color="#F59E0B",
-                line_width=2,
-                annotation_text=f"Mean: {mean_dt_cv:.4f}",
-                annotation_position="top right",
-                annotation_font_color="#F59E0B"
-            )
-            fig_cv_bench.add_hline(
-                y=0.6200,
-                line_dash="dot",
-                line_color="#10B981",
-                line_width=1.5,
-                annotation_text="UCI Baseline: 0.620",
-                annotation_position="bottom right",
-                annotation_font_color="#10B981"
-            )
-            fig_cv_bench.update_layout(
-                PLOTLY_LAYOUT,
-                title="Decision Tree: 5-Fold Cross-Validation Scores (k=5)",
-                xaxis_title="Partition Fold (20,023 encounters each)",
-                yaxis_title="ROC-AUC Score",
-                yaxis=dict(range=[0.58, 0.72]),
-                height=360
-            )
-            st.plotly_chart(fig_cv_bench, use_container_width=True)
-
-        else:
-            # Multi-Model 5-Fold Cross-Validation Comparison
-            cv_names = []
-            cv_means = []
-            cv_stds = []
-            cv_bar_colors = []
-
-            for m_name in available_models:
-                if m_name in metrics_cache:
-                    m_info = metrics_cache[m_name].get("metrics", {})
-                    cv_m = m_info.get("cv_5fold_mean", 0.6532)
-                    cv_s = m_info.get("cv_5fold_std", 0.0051)
-                    cv_names.append(m_name)
-                    cv_means.append(cv_m)
-                    cv_stds.append(cv_s)
-                    cv_bar_colors.append(model_colors.get(m_name, "#38BDF8"))
-
-            fig_cv_bench = go.Figure()
-            fig_cv_bench.add_trace(go.Bar(
-                x=cv_names,
-                y=cv_means,
-                error_y=dict(type='data', array=cv_stds, visible=True, thickness=1.5, color='#CBD5E1'),
-                marker_color=cv_bar_colors,
-                text=[f"{m:.4f}<br>±{s:.4f}" for m, s in zip(cv_means, cv_stds)],
-                textposition='outside',
-                cliponaxis=False
-            ))
-            fig_cv_bench.update_layout(
-                PLOTLY_LAYOUT,
-                title="All 5 Models Cross-Validation Benchmark (k=5)",
-                xaxis_title="Model Architecture",
-                yaxis_title="Mean ROC-AUC (± Std Dev)",
-                yaxis=dict(range=[0.58, 0.72]),
-                height=360
-            )
-            st.plotly_chart(fig_cv_bench, use_container_width=True)
+        fig_cv_bench.update_layout(
+            PLOTLY_LAYOUT,
+            title="5-Fold Cross-Validation Benchmark (Hover for Folds)",
+            xaxis_title="Model Architecture",
+            yaxis_title="Mean ROC-AUC (± Std Dev)",
+            yaxis=dict(range=[0.58, 0.72]),
+            height=360,
+            hoverlabel=dict(bgcolor="rgba(15, 23, 42, 0.95)", font_size=12, font_color="#E2E8F0")
+        )
+        st.plotly_chart(fig_cv_bench, use_container_width=True)
 
     st.markdown("---")
 

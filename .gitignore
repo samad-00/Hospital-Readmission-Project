@@ -36,7 +36,9 @@ ENV/
 # Presentation and local notes (Private)
 PRESENTATION_GUIDE.md
 
-# Project Report files (Private / Local only)
+# Project Report & Notebook files (Private / Local only)
+*.pdf
+*.ipynb
 *Project_Report*
 INT315_Project_Report.md
 INT315_Project_Report.pdf

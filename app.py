@@ -1999,44 +1999,17 @@ with tab_model:
         col_cv_table, col_cv_chart = st.columns([1, 1.35])
 
         with col_cv_table:
-            table_rows = ""
+            row_list = []
             for i in range(len(fold_scores)):
                 auc_val = fold_scores[i]
                 status_badge = "<span style='color: #10B981; font-weight: 700;'>✅ Exceeds Baseline (>0.62)</span>" if auc_val >= 0.62 else "<span style='color: #F59E0B; font-weight: 700;'>⚠️ Near Baseline</span>"
-                table_rows += f"""
-                    <tr style='border-bottom: 1px solid rgba(255,255,255,0.08);'>
-                        <td style='padding: 8px 10px; font-weight: 600; color: #E2E8F0;'>Fold #{i+1}</td>
-                        <td style='padding: 8px 10px; color: #94A3B8;'>20,023 pts</td>
-                        <td style='padding: 8px 10px; color: #38BDF8; font-weight: 700;'>{auc_val:.4f}</td>
-                        <td style='padding: 8px 10px;'>{status_badge}</td>
-                    </tr>"""
+                row_list.append(f"<tr style='border-bottom: 1px solid rgba(255,255,255,0.08);'><td style='padding: 8px 10px; font-weight: 600; color: #E2E8F0;'>Fold #{i+1}</td><td style='padding: 8px 10px; color: #94A3B8;'>20,023 pts</td><td style='padding: 8px 10px; color: #38BDF8; font-weight: 700;'>{auc_val:.4f}</td><td style='padding: 8px 10px;'>{status_badge}</td></tr>")
 
-            # Add summary mean row
-            table_rows += f"""
-                <tr style='background: rgba(56, 189, 248, 0.12); font-weight: 700; border-top: 2px solid rgba(56, 189, 248, 0.4);'>
-                    <td style='padding: 10px; color: #38BDF8;'>5-Fold Mean</td>
-                    <td style='padding: 10px; color: #E2E8F0;'>100,114 pts</td>
-                    <td style='padding: 10px; color: #38BDF8; font-size: 0.95rem;'>{mean_cv:.4f} ± {std_cv:.4f}</td>
-                    <td style='padding: 10px; color: #10B981;'>🏆 Stable Model</td>
-                </tr>"""
+            row_list.append(f"<tr style='background: rgba(56, 189, 248, 0.12); font-weight: 700; border-top: 2px solid rgba(56, 189, 248, 0.4);'><td style='padding: 10px; color: #38BDF8;'>5-Fold Mean</td><td style='padding: 10px; color: #E2E8F0;'>100,114 pts</td><td style='padding: 10px; color: #38BDF8; font-size: 0.95rem;'>{mean_cv:.4f} ± {std_cv:.4f}</td><td style='padding: 10px; color: #10B981;'>🏆 Stable Model</td></tr>")
 
-            table_html = f"""
-            <div style='background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-top: 10px;'>
-                <table style='width: 100%; border-collapse: collapse; text-align: left; font-size: 0.84rem;'>
-                    <thead>
-                        <tr style='background: rgba(30, 41, 59, 0.8); border-bottom: 2px solid rgba(255,255,255,0.12);'>
-                            <th style='padding: 10px; color: #94A3B8; font-weight: 600;'>Split Fold</th>
-                            <th style='padding: 10px; color: #94A3B8; font-weight: 600;'>Partition Size</th>
-                            <th style='padding: 10px; color: #94A3B8; font-weight: 600;'>ROC-AUC Score</th>
-                            <th style='padding: 10px; color: #94A3B8; font-weight: 600;'>Performance Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {table_rows}
-                    </tbody>
-                </table>
-            </div>"""
-            st.markdown(table_html, unsafe_allow_html=True)
+            rows_str = "".join(row_list)
+            clean_html = f"<div style='background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-top: 10px;'><table style='width: 100%; border-collapse: collapse; text-align: left; font-size: 0.84rem;'><thead><tr style='background: rgba(30, 41, 59, 0.8); border-bottom: 2px solid rgba(255,255,255,0.12);'><th style='padding: 10px; color: #94A3B8; font-weight: 600;'>Split Fold</th><th style='padding: 10px; color: #94A3B8; font-weight: 600;'>Partition Size</th><th style='padding: 10px; color: #94A3B8; font-weight: 600;'>ROC-AUC Score</th><th style='padding: 10px; color: #94A3B8; font-weight: 600;'>Performance Status</th></tr></thead><tbody>{rows_str}</tbody></table></div>"
+            st.markdown(clean_html, unsafe_allow_html=True)
 
         with col_cv_chart:
             fold_labels = [f"Fold #{i+1}" for i in range(len(fold_scores))]

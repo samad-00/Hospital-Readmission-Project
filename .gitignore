@@ -44,6 +44,10 @@ INT315_Project_Report.md
 INT315_Project_Report.pdf
 generate_pdf.py
 
+# Allow submission of the authentic project notebook and execution PDF
+!INT315_Hospital_Readmission_Project.ipynb
+!INT315_Hospital_Readmission_Project.pdf
+
 # OS files
 .DS_Store
 Thumbs.db

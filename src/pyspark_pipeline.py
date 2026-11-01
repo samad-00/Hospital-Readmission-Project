@@ -16,7 +16,7 @@ import sys
 os.environ["PYSPARK_PYTHON"] = sys.executable
 os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
 
-def run_spark_pipeline(data_path="data/raw/diabetic_data.csv"):
+def run_spark_pipeline(data_path="data/raw/diabetic_data.csv", enable_cv=True):
     try:
         from pyspark.sql import SparkSession
         import pyspark.sql.functions as F
@@ -28,6 +28,7 @@ def run_spark_pipeline(data_path="data/raw/diabetic_data.csv"):
         )
         from pyspark.ml.classification import DecisionTreeClassifier
         from pyspark.ml.evaluation import BinaryClassificationEvaluator, MulticlassClassificationEvaluator
+        from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
     except ImportError as e:
         print(f"PySpark not found or import error: {e}")
         return
@@ -194,14 +195,6 @@ def run_spark_pipeline(data_path="data/raw/diabetic_data.csv"):
 
     pipeline = Pipeline(stages=indexers + [encoder, assembler, dt])
 
-    print("Training PySpark Weighted Decision Tree...")
-    model = pipeline.fit(train_weighted)
-    print("Model training complete!")
-
-    # 8. Test Set Evaluation
-    print("Evaluating model predictions on held-out test data...")
-    test_pred = model.transform(test_df)
-
     evaluator_roc = BinaryClassificationEvaluator(
         labelCol="label", rawPredictionCol="probability", metricName="areaUnderROC"
     )
@@ -211,6 +204,47 @@ def run_spark_pipeline(data_path="data/raw/diabetic_data.csv"):
     evaluator_acc = MulticlassClassificationEvaluator(
         labelCol="label", predictionCol="prediction", metricName="accuracy"
     )
+
+    if enable_cv:
+        # 8. 5-Fold PySpark Cross-Validation (INT315 Requirement)
+        print("\n--- Running PySpark 5-Fold Cross-Validation ---")
+        param_grid = (
+            ParamGridBuilder()
+            .addGrid(dt.maxDepth, [4, 6])
+            .build()
+        )
+        cross_val = CrossValidator(
+            estimator=pipeline,
+            estimatorParamMaps=param_grid,
+            evaluator=evaluator_roc,
+            numFolds=5,
+            seed=42,
+            parallelism=2
+        )
+        print("Fitting 5-fold cross-validation grid across worker nodes...")
+        cv_model = cross_val.fit(train_weighted)
+        best_pipeline_model = cv_model.bestModel
+        best_dt_stage = best_pipeline_model.stages[-1]
+        best_cv_roc = max(cv_model.avgMetrics)
+
+        print("\n" + "="*56)
+        print("=== 5-FOLD PYSPARK CROSS-VALIDATION RESULTS ===")
+        print("="*56)
+        for i, (params, score) in enumerate(zip(param_grid, cv_model.avgMetrics)):
+            depth_val = params.get(dt.maxDepth, "default")
+            print(f"  Config {i+1} (maxDepth={depth_val}): Mean 5-Fold ROC-AUC = {score:.4f}")
+        print(f"  Selected Best maxDepth: {best_dt_stage.getMaxDepth()}")
+        print(f"  Best 5-Fold CV ROC-AUC: {best_cv_roc:.4f}")
+        print("="*56 + "\n")
+        active_model = best_pipeline_model
+    else:
+        print("Training PySpark Weighted Decision Tree...")
+        active_model = pipeline.fit(train_weighted)
+        print("Model training complete!")
+
+    # 9. Test Set Evaluation on held-out test data
+    print("Evaluating best model predictions on held-out test data...")
+    test_pred = active_model.transform(test_df)
 
     roc_auc = evaluator_roc.evaluate(test_pred)
     pr_auc = evaluator_pr.evaluate(test_pred)

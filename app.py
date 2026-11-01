@@ -1282,7 +1282,7 @@ if is_dark:
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; background: rgba(0,0,0,0.4); border: 1px solid #34D399; padding: 2px 6px; border-radius: 3px; color: #FFFFFF;">PYSPARK</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #FFFFFF; margin: 0.25rem 0 0.15rem 0;">{dt_auc:.3f}</div>
-                <div style="font-size: 0.76rem; color: #CBD5E1;">Spark MLlib Validated Pipeline</div>
+                <div style="font-size: 0.76rem; color: #CBD5E1;">Spark MLlib (5-Fold CV: 0.653)</div>
             </div>
         </div>
     </div>
@@ -1343,7 +1343,7 @@ else:
                     <span class="kpi-bracket-tag" style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; background: #000000 !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; padding: 2px 7px; border-radius: 4px; display: inline-block; letter-spacing: 0.05em;">PYSPARK</span>
                 </div>
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 900; color: #065F46; margin: 0.25rem 0 0.15rem 0;">{dt_auc:.3f}</div>
-                <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">Spark MLlib Validated Pipeline</div>
+                <div style="font-size: 0.76rem; color: #000000; font-weight: 600;">Spark MLlib (5-Fold CV: 0.653)</div>
             </div>
         </div>
     </div>

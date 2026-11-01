@@ -36,6 +36,12 @@ ENV/
 # Presentation and local notes (Private)
 PRESENTATION_GUIDE.md
 
+# Project Report files (Private / Local only)
+*Project_Report*
+INT315_Project_Report.md
+INT315_Project_Report.pdf
+generate_pdf.py
+
 # OS files
 .DS_Store
 Thumbs.db
